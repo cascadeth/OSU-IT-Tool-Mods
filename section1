@@ -1,0 +1,264 @@
+/********************************************************************************************************************************************
+
+### Title     -    Lit By Linear Embers for TeamDynamix
+### author    -    Maximillian Schmidt
+### version   -    v1.2.1
+#@# section1
+	### apply -    URLs starting with: https://oregonstate.teamdynamix.com/
+
+#@# section2
+    ### apply -    URLs starting with: https://oregonstate.teamdynamix.com/TDNext/Apps/425/Tickets/TicketNew*
+	### apply -    URLs starting with: https://oregonstate.teamdynamix.com/TDNext/Apps/425/Tickets/TicketEdit*
+
+### revisions -    vX.Y.Z 
+				     - X: For TeamDynamix.
+                     - Y: Updated every major block style change(large div, applies to lots of elements, etc)
+					 - Z: Single line changes, only effects one style, etc
+
+********************************************************************************************************************************************/
+
+/* Set the main background and size */
+body, #divHeader {
+    
+    background-color: #181818 !important;
+    background-image: url("https://realtimevfx.com/uploads/default/original/2X/f/ffa4335fa10903ca2f9c36852cb8184bd9fa9fb5.gif");
+    
+	/*Old static wallpaper: http://nexus-wallpaper.com/wp-content/uploads/2014/04/orange-grunge-stripes.png*/
+    
+    /* Customize the size to your monitor */
+    
+    background-size: 1500px 1700px;
+    border-color: #777777;
+}
+
+/* ALTERING OF THE MAIN DESKTOP */
+
+.organization-link a {
+    
+    color: #ff7800;
+}
+
+i.fa .fa-user {
+    
+    color: white !important;
+}
+
+#ApplicationsMenu, 
+.panel-heading.clearfix.draggable.module-header.ui-sortable-handle, #divTabHeader {
+    
+    color: #777777;
+    background-color: #252525;
+    border-color: #777777;
+}
+
+.desktop-module, th {
+    
+    background-color: #bbb;
+    border-color: #777777;
+}
+
+.organization-link {
+    
+    margin: 2px;
+}
+
+/* END OF MAIN DESKTOP ALTERING */
+
+
+
+/* Change the main color text in tickets to X
+   Remove first ' /* ' to use that color
+*/ 
+#upDetails, .control-label, h1,  h2, label, #ttDescription, 
+.gutter-top-xs, .gray, .absoluteDate, .gutter-left-sm, #divToDos, 
+.btn.btn-link.dropdown-toggle.black, .feed-reply, .label-success {
+    
+    /*color: #0078ff;       /* BLUE   */
+    color: #dd32cc;       /* MAGENTA */
+    /*color: #ff7800;       /* ORANGE */
+    /*color: #aaa;          /* GREY   */
+    border-color: #777777;
+}
+
+
+/* Allow replies in feeds to have darker transparent backgrounds */
+.feed-reply {
+
+	background-color: rgba(17, 17, 17, 0.85) !important;
+}
+
+
+/* Increasing the text size of the Service Request ID: 1234567 */
+.gutter-left-sm {
+
+	font-size: 150%;
+}
+
+
+/* Change the viewing number colors */
+.label-success {
+
+	background-color: #444444;
+	color: white;
+}
+
+
+/* Just in case, clickable links are now blue and underlined everywhere */
+a {
+    
+    color: #0078ff;
+    text-decoration: underline;
+}
+
+
+/* ALTERING OF TASKS AND REQUESTOR CARDS */
+
+.TDAlternatingRow, .rss-container, #divTabHeader.navbar.navbar-fixed-top.tab-row,
+#divTabHeader.navbar.tab-row.gutter-bottom-none, .panel-body, .gutter-top .padding, .block-actions {
+    
+    background-color: #414141;
+    border-color: #777777;
+    color: #777777;
+}
+
+.gutter-top .panel-heading, .btn-primary, .apps-tab {
+    
+	background-color: #ff7800;
+	color: white;
+}
+
+/* END OF TASKS AND REQUESTOR CARDS ALTERING */ 
+
+
+.TDAlternatingRow  a, .TDAlternatingRow td {
+    
+    color: white;
+    border-color: #777777;
+}
+
+#thTicket_lblStatus {
+    
+     color: #ff7800 !important;
+}
+
+td a {
+    
+    color: black;
+}
+
+
+/* Additions for moving fields around - credit: Gina Phipps*/
+
+
+/* Outer container of the fields {} */
+#fieldsContainer {
+    
+    display: flex;
+    flex-wrap: wrap;
+}
+
+/* Template {} */
+#divTemplate {
+    
+    width: 100px;
+    margin: 0px 5px 10px 5px;
+}
+
+/* Requestor {} */
+#divRequestor {
+    
+    width: 300px;
+    margin: 0px 5px 10px 5px;
+}
+
+/* Acct/Dept {} */
+#fieldsContainer > div:nth-child(3) {
+    
+    width: 350px;
+    margin: 0px 5px 10px 5px;
+}
+
+/* Title {} */
+#fieldsContainer > div:nth-child(4) {
+    
+    width: 300px;
+    margin: 0px 5px 10px 5px;
+}
+
+/* Description {} */
+#fieldsContainer > div:nth-child(5) {
+    
+    display: block;
+    width: 100%;
+    margin: 10px 5px 15px 5px;
+}
+
+/* Ticket Type {} */
+#fieldsContainer > div:nth-child(6) {
+    
+    width: 350px;
+    margin: 0px 5px 10px 5px;
+}
+
+/* Priority { */
+#fieldsContainer > div:nth-child(7) {
+    
+    margin: 0px 5px 10px 5px;
+}
+
+/* Responsible {} */
+#divResponsible {
+    
+    width: 300px;
+    margin: 0px 5px 10px 5px;
+}
+
+/* Source { }*/
+#fieldsContainer > div:nth-child(9) {
+    
+    margin: 0px 5px 10px 5px;
+}
+
+/* Attachment {} */
+#fieldsContainer > div:nth-child(10) {
+    
+    width: 400px;
+    margin: 0px 5px 10px 5px;
+}
+
+/* Start Date {} */
+#divStartDate {
+    
+    margin: 0px 5px 10px 5px;
+}
+
+/* Due Date {} */
+#divDueDate {
+    
+    margin: 0px 5px 10px 5px;
+}
+
+/* Status {} */
+#divStatus {
+    
+    margin: 0px 5px 10px 5px;
+    order: -1;
+}
+
+/* Service Level Agreement {} */
+#divSLA {
+    
+    margin: 0px 5px 10px 5px;
+}
+
+/* Task Template {} */
+#fieldsContainer > div:nth-child(16) {
+    
+    margin: 0px 5px 10px 5px;
+}
+
+/* Container for most of the things past Task Template */
+#upnlAttributes {
+    
+    width: 100%;
+}
