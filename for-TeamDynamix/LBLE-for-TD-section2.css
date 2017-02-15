@@ -1,62 +1,209 @@
-/* Uncomment each of these (remove the '/*' and inverse around the item) to hide things that you probably don't use: */
+/* Additions for moving fields around - credit: Gina Phipps*/
 
 
-/*
-/* Template {} 
-#divTemplate {
-    display: none;
+/* Outer container of the fields {} */
+#fieldsContainer {
+	
+    display: flex;
+    flex-wrap: wrap;
 }
-*/
+
+/* Template {} */
+#divTemplate {
+	
+    width: 100px;
+    margin: 0px 5px 10px 5px;
+}
+
+/* Requestor {} */
+#divRequestor {
+	
+    width: 300px;
+    margin: 0px 5px 10px 5px;
+}
+
+/* Acct/Dept {} */
+#fieldsContainer > div:nth-child(3) {
+	
+    width: 400px;
+    margin: 0px 5px 10px 5px;
+}
+
+/* Title {} */
+#fieldsContainer > div:nth-child(4) {
+	
+    width: 100%;
+    margin: 0px 5px 10px 5px;
+}
+
+/* Description {} */
+#fieldsContainer > div:nth-child(5) {
+	
+    display: block;
+    width: 100%;
+    margin: 10px 5px 15px 5px;
+}
+
+/* Ticket Type {} */
+#fieldsContainer > div:nth-child(6) {
+	
+    width: 500px;
+    margin: 0px 5px 0px 5px;
+}
+
+/* Priority {} */
+#fieldsContainer > div:nth-child(7) {
+	
+    margin: 0px 5px 0px 5px;
+}
+
+/* Responsible {} */
+#divResponsible {
+	
+    width: 300px;
+    margin: 0px 5px 0px 5px;
+}
+
+/* Source {} */
+#fieldsContainer > div:nth-child(9) {
+	
+    margin: 0px 5px 10px 5px;
+}
+
+/* Attachment {} */
+#fieldsContainer > div:nth-child(10) {
+	
+    width: 500px;
+    margin: 0px 5px 20px 5px;
+}
 
 /* Start Date {} */
 #divStartDate {
-    
-    display: none;
+	
+	margin: 0px 5px 10px 5px;
 }
 
 /* Due Date {} */
 #divDueDate {
-    
-    display: none;
+	
+	margin: 0px 5px 10px 5px;
 }
 
-/*Service Level Agreement {}
+/* Status {} */
+#divStatus {
+	
+    margin: 0px 5px 10px 5px;
+    order: -2;
+}
+
+/* Goes Off Hold {} */
+#divGoesOffHold {
+	
+    margin: 0px 5px 10px 5px;
+    order: -1;
+}
+
+/* Service Level Agreement {} */
 #divSLA {
-
-    display: none;
+	
+    margin: 0px 5px 10px 5px;
 }
-*/
-
-/*Requestor Card Removal {}
-#form1 > div.container-fluid > div.row > div.col-sm-4.hidden-xs.gutter-top {
-
-    display: none;
-}*/
-
-/*Resize Column (only tested/works if requestor card removed) {}
-@media (min-width: 768px) {
-
-    #divContent {
-        width: 100%;
-        padding: 5px 40px 0px 40px;
-    }
-}*/
-
-/* Source {} */
-#fieldsContainer > div:nth-child(9) {
-    
-    display: none;
-}
-
 
 /* Task Template {} */
 #fieldsContainer > div:nth-child(16) {
-    
-    display: none;
+	
+    margin: 0px 5px 10px 5px;
 }
 
-/* COHO Ticket Info {} */
+/* All the things that are past Task Template: */
+
+/* Container for most of the things past Task Template {} */
+#upnlAttributes {
+	
+    width: 100%;
+    display: flex;
+    flex-wrap: wrap;
+}
+
+/* Application Name(s) {} */
+#divAttribute25371 {
+	
+    width: 250px;
+    margin: 0px 5px 10px 5px;
+}
+
+/* Something to do with COHO ticket transferring {} */
 #divAttribute25936 {
-    
-    display: none;
+	
+    width: 250px;
+    margin: 0px 5px 10px 5px;
+}
+
+/* ComputerDevice Name {} */
+#divAttribute25382 {
+	
+    width: 250px;
+    margin: 0px 5px 10px 5px;
+}
+
+/* Customer Location {} */ 
+#divAttribute25386 {
+	
+    width: 250px;
+    margin: 0px 5px 10px 5px;
+}
+
+/* Device manufacturer model {} */
+#divAttribute25737 {
+	
+    width: 250px;
+    margin: 0px 5px 10px 5px;
+}
+
+/* Device Notes {} */
+#divAttribute25376 {
+	
+    width: 350px;
+    margin: 0px 5px 10px 5px;
+}
+
+/* Device operating system {} */
+#divAttribute25738 {
+	
+    width: 200px;
+    margin: 0px 5px 10px 5px;
+}
+
+/*  Device Type {} */
+#divAttribute25385 {
+	
+    width: 150px;
+    margin: 0px 5px 10px 5px;
+}
+
+/* E-mail Provider {} */
+#divAttribute25398 {
+	
+    width: 200px;
+    margin: 0px 5px 10px 5px;
+}
+
+/* Extension Customer {} */
+#divAttribute25373 {
+    width: 160px;
+    margin: 0px 5px 10px 5px;
+}
+
+/* Related Tickets {} */
+#divAttribute26857 {
+	
+    width: 250px;
+    margin: 0px 5px 10px 5px;
+}
+
+/* Walkup Customer {} */
+#divAttribute25384 {
+	
+    width: 250px;
+    margin: 0px 5px 10px 5px;
 }
