@@ -2,13 +2,16 @@
 
 ### Title     -    Lit By Linear Embers for TeamDynamix
 ### author    -    Maximillian Schmidt, Gina Phipps
-### version   -    v1.3.0
+### version   -    v1.3.1
 #@# section1
-	### apply -    URLs starting with: https://oregonstate.teamdynamix.com/
+    ### apply -    URLs starting with: https://oregonstate.teamdynamix.com/
 
 #@# section2
-    ### apply -    URLs starting with: https://oregonstate.teamdynamix.com/TDNext/Apps/425/Tickets/TicketNew*
-	### apply -    URLs starting with: https://oregonstate.teamdynamix.com/TDNext/Apps/425/Tickets/TicketEdit*
+    ### apply -    URLs starting with: https://oregonstate.teamdynamix.com/TDNext/Apps/425/Tickets/TicketNew
+    ### apply -    URLs starting with: https://oregonstate.teamdynamix.com/TDNext/Apps/425/Tickets/TicketEdit
+
+#@# section3
+    ### apply -    URLs starting with: https://oregonstate.teamdynamix.com/TDNext/Apps/425/Tickets/TicketUpdate
 
 ### revisions -    vX.Y.Z 
 				     - X: For TeamDynamix.
