@@ -119,7 +119,8 @@ a {
 /* ALTERING OF TASKS AND REQUESTOR CARDS */
 
 .TDAlternatingRow, .rss-container, #divTabHeader.navbar.navbar-fixed-top.tab-row,
-#divTabHeader.navbar.tab-row.gutter-bottom-none, .panel-body, .gutter-top .padding, .block-actions {
+#divTabHeader.navbar.tab-row.gutter-bottom-none, .panel-body, .gutter-top .padding, 
+#txtComments_fdTicketFeed, .block-actions {
     
     
 	background-color: rgba(17, 17, 17, 0.85) !important;
