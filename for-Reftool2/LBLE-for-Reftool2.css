@@ -2,14 +2,14 @@
 
 ### Title     -    Lit By Linear Embers for Reftool 2
 ### author    -    Maximillian Schmidt
-### version   -    v1.2.6
+### version   -    v1.3.0
 ### apply     -    URLs starting with: https://tools.is.oregonstate.edu/reftool2/
 
 
 ### revisions -    vX.Y.Z 
-				     - X: For Reftool2.  If Reftool3 existed, this would be updated to v2
+		     - X: For Reftool2.  If Reftool3 existed, this would be updated to v2
                      - Y: Updated every major block style change(large div, applies to lots of elements, etc)
-					 - Z: Single line changes, only effects one style, etc
+		     - Z: Single line changes, only effects one style, etc
 
 ********************************************************************************************************************************************/
 
@@ -27,10 +27,8 @@ body {
     https://realtimevfx.com/uploads/default/original/2X/f/ffa4335fa10903ca2f9c36852cb8184bd9fa9fb5.gif
     
     */
-    
-    /* Customize the size to your monitor */
-    
-    background-size: 1260px 1800px;
+
+    background-size: 100% 100%;
     color: #ee5800;
 }
 
@@ -69,19 +67,19 @@ div.input-group,
     /*color: #ee5800;    /* Orange */
     color: #df32cc;      /* Magenta */
     border: #000000;
-	border-radius: 10px;
+    border-radius: 10px;
 }
 
 
 .panel, .list-group-item, .container-fluid, #customer-details, .well {
 
-	background-color: rgba(02, 02, 02, 0.2);
-	border-radius: 10px;
+    background-color: rgba(02, 02, 02, 0.2);
+    border-radius: 10px;
 }
 
 .warning {
 
-	background-color: rgba(77, 02, 02, 0.85);
+    background-color: rgba(77, 02, 02, 0.85);
     color: white;
     padding-top: 10px;
 }
@@ -95,7 +93,7 @@ div.input-group,
 
 #ldap {
 
-	color: #ee5800;
+    color: #ee5800;
 }
 
 
@@ -112,14 +110,14 @@ pre {
 
 .lrp[_ngcontent-kwa-7], .lrp[_ngcontent-olx-8] {
 
-	background-color: #ff9900 !important;
+    background-color: #ff9900 !important;
     border: 3px solid #ffbb00 !important;
     color: #111 !important;
 }
 
 .vip[_ngcontent-kwa-7], .vip[_ngcontent-olx-8] {
 
-	background-color: #ff4444 !important;
+    background-color: #ff4444 !important;
     border: 3px solid #dd0000 !important;
     color: #111 !important;
 }
@@ -133,6 +131,6 @@ pre {
 
 .disabled[_ngcontent-kwa-7], .disabled[_ngcontent-olx-8] {
 
-	border: 3px solid #bbb !important;
+    border: 3px solid #bbb !important;
     color: #ccc !important;
 }
