@@ -5,7 +5,7 @@
 ## Main Contact/Dev: 
 
 cascadeth (Max Schmidt)
-cascadeth@gmail.com
+cascadeth(at)gmail.com
 
 For OSU IT Contacts:
 Slack IM Handle - @schmidtm
