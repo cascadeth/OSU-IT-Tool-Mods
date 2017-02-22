@@ -1,0 +1,45 @@
+@-moz-document url-prefix("chrome-extension://fjnbnpbmkenffdnngjfgmeleoegfcffe/") {
+/********************************************************************************************************************************************
+
+### Title     -    Lit By Linear Embers for Stylish Manager (Stylishception)
+### author    -    Maximillian Schmidt
+### version   -    v1.0.1
+### apply     -    URLs starting with: "chrome-extension://fjnbnpbmkenffdnngjfgmeleoegfcffe/"
+
+
+### revisions -    vX.Y.Z 
+				     - X: For Sytlish extension.  If a newer existed, this would be updated to v2
+                     - Y: Updated every major block style change(large div, applies to lots of elements, etc)
+					 - Z: Single line changes, only effects one style, etc
+
+********************************************************************************************************************************************/
+
+body {
+    
+    background-image: url("https://realtimevfx.com/uploads/default/original/2X/f/ffa4335fa10903ca2f9c36852cb8184bd9fa9fb5.gif");
+    
+    /* Alternative Images / GIFs:
+    
+    http://wantedwallpapers.com/wp-content/uploads/2014/02/orange-thing-thunderbolt-abstract-desktop-1280x1024-wanted-wallpaper-.jpg
+    http://nexus-wallpaper.com/wp-content/uploads/2014/04/orange-grunge-stripes.png
+    https://68.media.tumblr.com/3a880ef6b2315404bcdfa74a6e24f706/tumblr_nj5nlbcyhY1s4fz4bo1_500.gif
+    https://d13yacurqjgara.cloudfront.net/users/400493/screenshots/2087456/squarepeg.gif
+    https://realtimevfx.com/uploads/default/original/2X/f/ffa4335fa10903ca2f9c36852cb8184bd9fa9fb5.gif
+    
+    */
+
+	background-size: 100% 100%;
+    color: #ee5800;
+}
+
+#header, body, input, button, select {
+
+	background-color: transparent;
+    color: #888888;
+}
+
+h1, h2, h3, h4, h5, h6 {
+
+	color: DarkMagenta;
+}
+}
