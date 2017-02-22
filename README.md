@@ -1,4 +1,4 @@
-# LBLE
+# LBLE - Lit by Linear Embers
 Provides a set of CSS customization for multiple sites that OSU IT services use
 
 The original design for most of these sites is very white.  
