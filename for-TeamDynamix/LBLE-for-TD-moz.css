@@ -2,7 +2,7 @@
 /********************************************************************************************************************************************
 ### Title     -    Lit By Linear Embers for TeamDynamix
 ### author    -    Maximillian Schmidt, Gina Phipps
-### version   -    v1.3.1
+### version   -    v1.3.2
 #@# section1
 	### apply -    URLs starting with: https://oregonstate.teamdynamix.com/
 
@@ -74,7 +74,9 @@ i.fa .fa-user {
 #upDetails, .control-label, h1,  h2, label, #ttDescription, 
 .gutter-top-xs, .gray, .absoluteDate, .gutter-left-sm, #divToDos, 
 .btn.btn-link.dropdown-toggle.black, .feed-reply, .label-success, 
-.form-control, .TDTextArea, .border-bottom, .alert, .maininput, span.bit-box {
+.form-control, #txtStatusComments, .border-bottom, .alert, .maininput, 
+#txtComments_fdTicketFeed, span.bit-box, .gutter .checkbox, .gutter .gutter-top, 
+.gutter span {
     
     /*color: #0078ff;       /* BLUE   */
     color: #dd32cc;       /* MAGENTA */
@@ -85,7 +87,9 @@ i.fa .fa-user {
 
 
 /* Allow replies in feeds to have darker transparent backgrounds */
-.feed-reply, .TabButtonCell, .gutter-bottom-none, .form-control, .TDTextArea, .border-bottom, .alert, .maininput, .btn-default, .bit-box {
+.feed-reply, .TabButtonCell, .gutter-bottom-none, .form-control, .TDTextArea, 
+.border-bottom, .alert, .maininput, .btn-default, .bit-box, .input-group, 
+.select2-input.select2-default, .comment, .ms-choice, .ms-drop ul {
 
 	background-color: rgba(17, 17, 17, 0.85) !important;
 }
