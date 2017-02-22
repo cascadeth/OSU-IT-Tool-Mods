@@ -1,34 +1,34 @@
 /********************************************************************************************************************************************
 ### Title     -    Lit By Linear Embers for TeamDynamix
 ### author    -    Maximillian Schmidt, Gina Phipps
-### version   -    v1.3.2
+### version   -    v1.4.0
 #@# section1
-	### apply -    URLs starting with: https://oregonstate.teamdynamix.com/
+    ### apply -    URLs starting with: https://oregonstate.teamdynamix.com/
 
 #@# section2
-	### apply -    URLs starting with: https://oregonstate.teamdynamix.com/TDNext/Apps/425/Tickets/TicketNew
-	### apply -    URLs starting with: https://oregonstate.teamdynamix.com/TDNext/Apps/425/Tickets/TicketEdit
+    ### apply -    URLs starting with: https://oregonstate.teamdynamix.com/TDNext/Apps/425/Tickets/TicketNew
+    ### apply -    URLs starting with: https://oregonstate.teamdynamix.com/TDNext/Apps/425/Tickets/TicketEdit
 
 #@# section3
-	### apply -    URLs starting with: https://oregonstate.teamdynamix.com/TDNext/Apps/425/Tickets/TicketUpdate
+    ### apply -    URLs starting with: https://oregonstate.teamdynamix.com/TDNext/Apps/425/Tickets/TicketUpdate
 
 ### revisions -    vX.Y.Z 
-				     - X: For TeamDynamix.
-                     - Y: Updated every major block style change(large div, applies to lots of elements, etc)
-					 - Z: Single line changes, only effects one style, etc
+	      - X: For TeamDynamix.
+	      - Y: Updated every major block style change(large div, applies to lots of elements, etc)
+ 	      - Z: Single line changes, only effects one style, etc
 ********************************************************************************************************************************************/
 
 /* Set the main background and size */
-body, #divHeader {
+body {
     
     background-color: #181818 !important;
     background-image: url("https://realtimevfx.com/uploads/default/original/2X/f/ffa4335fa10903ca2f9c36852cb8184bd9fa9fb5.gif");
     
-	/*Old static wallpaper: http://nexus-wallpaper.com/wp-content/uploads/2014/04/orange-grunge-stripes.png*/
+    /*Old static wallpaper: http://nexus-wallpaper.com/wp-content/uploads/2014/04/orange-grunge-stripes.png*/
     
     /* Customize the size to your monitor */
     
-    background-size: 1600px 1200px;
+    background-size: 100% 100%;
     border-color: #777777;
 }
 
@@ -88,9 +88,9 @@ i.fa .fa-user {
 /* Allow replies in feeds to have darker transparent backgrounds */
 .feed-reply, .TabButtonCell, .gutter-bottom-none, .form-control, .TDTextArea, 
 .border-bottom, .alert, .maininput, .btn-default, .bit-box, .input-group, 
-.select2-input.select2-default, .comment, .ms-choice, .ms-drop ul {
+.select2-input.select2-default, .comment, .ms-choice, .ms-drop ul, #divHeader {
 
-	background-color: rgba(17, 17, 17, 0.85) !important;
+    background-color: rgba(17, 17, 17, 0.85) !important;
 }
 
 
@@ -98,15 +98,15 @@ i.fa .fa-user {
 /* Increasing the text size of the Service Request ID: 1234567 */
 .gutter-left-sm {
 
-	font-size: 150%;
+    font-size: 150%;
 }
 
 
 /* Change the viewing number colors */
 .label-success {
 
-	background-color: #444444;
-	color: white;
+    background-color: #444444;
+    color: white;
 }
 
 
@@ -124,15 +124,15 @@ a {
 #divTabHeader.navbar.tab-row.gutter-bottom-none, .panel-body, .gutter-top .padding, .block-actions {
     
     
-	background-color: rgba(17, 17, 17, 0.85) !important;
+    background-color: rgba(17, 17, 17, 0.85) !important;
     border-color: #777777;
     color: #777777;
 }
 
 .gutter-top .panel-heading, .btn-primary, .apps-tab {
     
-	background-color: #ff7800;
-	color: white;
+    background-color: #ff7800;
+    color: white;
 }
 
 /* END OF TASKS AND REQUESTOR CARDS ALTERING */ 
