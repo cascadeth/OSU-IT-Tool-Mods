@@ -18,4 +18,11 @@
     $( btnMarkJunk ).css("float", "right");
     detailSaveBar.appendChild(btnMarkJunk);
 
+    //ticket type css selector: #upTicketType > div > div.form-control.talu_holder > span.bit-box
+    //set to: General / Junk / Delete this ticket
+
+    var tickTypeHolder = document.getElementById("upTicketType");
+    console.log(tickTypeHolder.innerHTML);
+    var closer = tickTypeHolder[1];
+    var there = closer[1];
 })();
