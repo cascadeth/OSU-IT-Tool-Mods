@@ -29,6 +29,12 @@
 
         //because TD sucks and we can't have nice things...
         //update the text
+        var tickName = document.getElementById("upTicketType");
+        tickName = tickName.children[0];   //input-group element
+        tickName = tickName.children[1];   //the div for the dalu_holder
+        tickName = tickName.children[1];   //the bit-box with the ticket type text
+        tickName.innerHTML = "General / Junk / Delete This Ticket<a class=\"closebutton\"> </a>";
+        console.log("Changed innerHTML of ticket type bit-box");
 
         //do Save action
         WebForm_DoPostBackWithOptions(new WebForm_PostBackOptions("btnSave", "", true, ";", "", false, false));
