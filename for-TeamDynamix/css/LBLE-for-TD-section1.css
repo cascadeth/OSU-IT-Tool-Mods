@@ -1,7 +1,7 @@
 /********************************************************************************************************************************************
-### Title     -    Lit By Linear Embers for TeamDynamix
+### Title     -    Lit By Lines for TeamDynamix
 ### author    -    Maximillian Schmidt, Gina Phipps
-### version   -    v1.4.0
+### version   -    v1.5.0
 #@# section1
     ### apply -    URLs starting with: https://oregonstate.teamdynamix.com/
 
@@ -14,19 +14,28 @@
 
 ### revisions -    vX.Y.Z 
 	      - X: For TeamDynamix.
-	      - Y: Updated every major block style change(large div, applies to lots of elements, etc)
- 	      - Z: Single line changes, only effects one style, etc
+    	      - Y: Updated every major block style change(large div, applies to lots of elements, etc)
+	      - Z: Single line changes, only effects one style, etc
 ********************************************************************************************************************************************/
 
 /* Set the main background and size */
 body {
     
     background-color: #181818 !important;
-    background-image: url("https://realtimevfx.com/uploads/default/original/2X/f/ffa4335fa10903ca2f9c36852cb8184bd9fa9fb5.gif");
+    background-image: url("http://il2.picdn.net/shutterstock/videos/15971149/thumb/12.jpg");
     
-    /*Old static wallpaper: http://nexus-wallpaper.com/wp-content/uploads/2014/04/orange-grunge-stripes.png*/
+    /*For the less graphically inclined, use a static photo*/
     
-    /* Customize the size to your monitor */
+    /*
+    Wallpaper Options: 
+    
+    https://realtimevfx.com/uploads/default/original/2X/f/ffa4335fa10903ca2f9c36852cb8184bd9fa9fb5.gif
+    http://www.twitrcovers.com/wp-content/uploads/2012/09/Abstract-Orange-l.jpg
+    http://nexus-wallpaper.com/wp-content/uploads/2014/04/orange-grunge-stripes.png
+    https://0.s3.envato.com/files/131819262/video_preview_0000.jpg
+    http://il2.picdn.net/shutterstock/videos/15971149/thumb/12.jpg
+    
+    */
     
     background-size: 100% 100%;
     border-color: #777777;
@@ -77,10 +86,11 @@ i.fa .fa-user {
 #txtComments_fdTicketFeed, span.bit-box, .gutter .checkbox, .gutter .gutter-top, 
 .gutter span {
     
-    /*color: #0078ff;       /* BLUE   */
-    color: #dd32cc;       /* MAGENTA */
-    /*color: #ff7800;       /* ORANGE */
-    /*color: #aaa;          /* GREY   */
+    /*color: #0078ff;       /* BLUE    */
+    /*color: #dd32cc;       /* MAGENTA */
+    /*color: #ff7800;       /* ORANGE  */
+    /*color: #aaa;          /* GREY    */
+    color: white;         /* WHITE   */
     border-color: #777777;
 }
 
@@ -90,7 +100,7 @@ i.fa .fa-user {
 .border-bottom, .alert, .maininput, .btn-default, .bit-box, .input-group, 
 .select2-input.select2-default, .comment, .ms-choice, .ms-drop ul, #divHeader {
 
-    background-color: rgba(17, 17, 17, 0.8) !important;
+     background-color: rgba(17, 17, 17, 0.85) !important;
 }
 
 
@@ -146,7 +156,7 @@ a {
 
 #thTicket_lblStatus {
     
-     color: #ff7800 !important;
+    color: #ff7800 !important;
 }
 
 td a {
