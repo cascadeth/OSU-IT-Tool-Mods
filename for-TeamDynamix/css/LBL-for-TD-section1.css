@@ -1,7 +1,7 @@
 /********************************************************************************************************************************************
 ### Title     -    Lit By Lines for TeamDynamix
 ### author    -    Maximillian Schmidt, Gina Phipps
-### version   -    v1.5.0
+### version   -    v1.5.1
 #@# section1
     ### apply -    URLs starting with: https://oregonstate.teamdynamix.com/
 
@@ -14,7 +14,7 @@
 
 ### revisions -    vX.Y.Z 
 	      - X: For TeamDynamix.
-    	      - Y: Updated every major block style change(large div, applies to lots of elements, etc)
+    	  - Y: Updated every major block style change(large div, applies to lots of elements, etc)
 	      - Z: Single line changes, only effects one style, etc
 ********************************************************************************************************************************************/
 
@@ -22,7 +22,7 @@
 body {
     
     background-color: #181818 !important;
-    background-image: url("http://il2.picdn.net/shutterstock/videos/15971149/thumb/12.jpg");
+    background-image: url("http://wallpapercave.com/wp/NDvehzR.jpg");
     
     /*For the less graphically inclined, use a static photo*/
     
@@ -31,10 +31,10 @@ body {
     
     https://realtimevfx.com/uploads/default/original/2X/f/ffa4335fa10903ca2f9c36852cb8184bd9fa9fb5.gif
     http://www.twitrcovers.com/wp-content/uploads/2012/09/Abstract-Orange-l.jpg
-    http://nexus-wallpaper.com/wp-content/uploads/2014/04/orange-grunge-stripes.png
+	http://nexus-wallpaper.com/wp-content/uploads/2014/04/orange-grunge-stripes.png
     https://0.s3.envato.com/files/131819262/video_preview_0000.jpg
     http://il2.picdn.net/shutterstock/videos/15971149/thumb/12.jpg
-    
+
     */
     
     background-size: 100% 100%;
@@ -95,12 +95,18 @@ i.fa .fa-user {
 }
 
 
+#fdTicketFeed {
+
+	background-color: rgba(17, 17, 17, 0.6) !important;
+}
+
+
 /* Allow replies in feeds to have darker transparent backgrounds */
 .feed-reply, .TabButtonCell, .gutter-bottom-none, .form-control, .TDTextArea, 
 .border-bottom, .alert, .maininput, .btn-default, .bit-box, .input-group, 
 .select2-input.select2-default, .comment, .ms-choice, .ms-drop ul, #divHeader {
 
-     background-color: rgba(17, 17, 17, 0.85) !important;
+     background-color: rgba(17, 17, 17, 0.75) !important;
 }
 
 
