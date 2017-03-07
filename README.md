@@ -1,4 +1,4 @@
-# LBLE - Lit by Linear Embers
+# LBLE - Lit by Lines
 
 ***
 
@@ -14,7 +14,7 @@ Please email me for questions, comments, suggestions, etc
 
 ***
 
-**LBLE** provides a set of CSS customizations* for multiple sites that OSU IT services use
+**LBL** provides a set of CSS customizations* for multiple sites that OSU IT services use
 
 The original design for most of these sites is very white.  
 These styles provide a darker, warmer environment to the sites. 
