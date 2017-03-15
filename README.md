@@ -15,7 +15,7 @@ Please email me for questions, comments, suggestions, etc
 ***
 
 This repo provides a set of user styles* for multiple sites
-that OSU IT services use, as well as a few user scripts.
+that OSU IT services use, as well as a few user scripts**.
 
 The original design for most of these sites is very white and
 required a decent amount of scrolling in some cases.  These 
@@ -24,4 +24,5 @@ a better looking and more functional environment to the sites.
 
 ***
 
-*<sub>Currently these CSS files are only tested and applied with the Chrome extension known as Stylish.</sub>  
+*<sub>Currently only tested and applied with Stylish.</sub>  
+**<sub>Currently only tested and applied with Tampermonkey.<sub>
