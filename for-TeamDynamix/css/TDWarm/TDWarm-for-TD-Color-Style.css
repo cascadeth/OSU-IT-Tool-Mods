@@ -1,7 +1,7 @@
 /********************************************************************************************************************************************
 ### Title     -    Lit By Lines for TeamDynamix
 ### author    -    Maximillian Schmidt, Gina Phipps
-### version   -    v1.5.3
+### version   -    v1.5.4
 #@# section1
     ### apply -    URLs starting with: https://oregonstate.teamdynamix.com/
 
@@ -26,7 +26,7 @@ body {
     background-image: url("https://www.123freevectors.com/wp-content/original/28561-dark-orange-background-pattern.jpg");
     /*For the less graphically inclined, use a static photo*/
     /*
-    Wallpaper Options: 
+    Wallpaper Options:
     
     https://realtimevfx.com/uploads/default/original/2X/f/ffa4335fa10903ca2f9c36852cb8184bd9fa9fb5.gif
     http://www.twitrcovers.com/wp-content/uploads/2012/09/Abstract-Orange-l.jpg
@@ -109,13 +109,8 @@ span.bit-box,
     border-color: #777777;
 }
 
-#fdTicketFeed,
-.bit-box {
-    background-color: rgba(17, 17, 17, 0.6) !important;
-}
 
-
-/* Allow replies in feeds to have darker transparent backgrounds */
+/* Allow replies in feeds and fields to have darker transparent backgrounds */
 
 .feed-reply,
 .TabButtonCell,
@@ -125,7 +120,7 @@ span.bit-box,
 .border-bottom,
 .alert,
 .btn-default,
-.select2-input.select2-default,
+#s2id_lstNotification,
 .comment,
 .ms-choice,
 .ms-drop ul,
@@ -133,7 +128,13 @@ span.bit-box,
     background-color: rgba(17, 17, 17, 0.75) !important;
 }
 
-.maininput {
+#fdTicketFeed,
+.bit-box {
+    background-color: rgba(17, 17, 17, 0.6) !important;
+}
+
+.maininput,
+#s2id_lstNotification * {
     background-color: rgba(17, 17, 17, 0) !important;
 }
 
@@ -167,12 +168,16 @@ a {
 .rss-container,
 #divTabHeader.navbar.navbar-fixed-top.tab-row,
 #divTabHeader.navbar.tab-row.gutter-bottom-none,
-.panel-body,
 .gutter-top .padding,
 .block-actions {
     background-color: rgba(17, 17, 17, 0.85) !important;
     border-color: #777777;
     color: #777777;
+}
+
+#pcRequestor_divPersonInfo,
+.panel.panel-default {
+    background-color: rgba(48, 0, 48, 0.4) !important;
 }
 
 .gutter-top .panel-heading,
