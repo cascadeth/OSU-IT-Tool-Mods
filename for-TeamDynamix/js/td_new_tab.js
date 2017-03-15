@@ -3,7 +3,7 @@
 // @namespace    https://oregonstate.teamdynamix.com
 // @version      0.1
 // @description  Override default TD "new tab" settings
-// @author       You
+// @author       Liv Vitale
 // @match        http://tampermonkey.net/index.php?version=4.2&ext=dhdg&updated=true
 // @grant        none
 // @include      https://oregonstate.teamdynamix.com/*
