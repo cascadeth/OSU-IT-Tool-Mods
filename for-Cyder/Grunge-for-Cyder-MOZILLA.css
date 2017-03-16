@@ -1,4 +1,18 @@
 @-moz-document url-prefix("https://cyder.oregonstate.edu/") {
+    /********************************************************************************************************************************************
+
+    ### Title     -    Grunge Orange for Cyder
+    ### author    -    Maximillian Schmidt
+    ### version   -    v1.2.4
+    ### apply     -    URLs starting with: https://cyder.oregonstate.edu/
+
+
+    ### revisions -    vX.Y.Z 
+	     	      - X: For Cyder.  If Cyder 2 existed, this would be updated to v2
+                  - Y: Updated every major block style change(large div, applies to lots of elements, etc)
+		          - Z: Single line changes, only effects one style, etc
+
+    ********************************************************************************************************************************************/
     body {
         background-image: url("http://nexus-wallpaper.com/wp-content/uploads/2014/04/orange-grunge-stripes.png");
         background-size: 100% 200%;
