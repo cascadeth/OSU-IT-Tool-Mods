@@ -1,24 +1,3 @@
-/********************************************************************************************************************************************
-### Title     -    TDWarm for TeamDynamix
-### author    -    Maximillian Schmidt - Colors/Styles, Gina Phipps - Field Positionings
-### version   -    v1.6.0
-#@# section1
-    ### apply -    URLs starting with: https://oregonstate.teamdynamix.com/
-
-#@# section2
-    ### apply -    URLs starting with: https://oregonstate.teamdynamix.com/TDNext/Apps/425/Tickets/TicketNew
-    ### apply -    URLs starting with: https://oregonstate.teamdynamix.com/TDNext/Apps/425/Tickets/TicketEdit
-
-#@# section3
-    ### apply -    URLs starting with: https://oregonstate.teamdynamix.com/TDNext/Apps/425/Tickets/TicketUpdate
-
-### revisions -    vX.Y.Z 
-	      - X: For TeamDynamix.
-    	      - Y: Updated every major block style change(large div, applies to lots of elements, etc)
-	      - Z: Single line changes, only effects one style, etc
-********************************************************************************************************************************************/
-
-
 /* Set the main background and size */
 
 body {
