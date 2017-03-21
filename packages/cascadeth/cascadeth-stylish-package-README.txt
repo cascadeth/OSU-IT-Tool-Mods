@@ -25,7 +25,3 @@ Package Contents and Accreditations/Source:
 	TDWarm for TD - @cascadeth
 
 	userstyles.org - blue custom - https://userstyles.org/styles/118410/userstyles-org-blue-custom
-
-
-	
-	
