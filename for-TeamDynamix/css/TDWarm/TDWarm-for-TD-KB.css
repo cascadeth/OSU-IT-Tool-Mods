@@ -21,3 +21,12 @@ small.gray,
 .breadcrumb {
     background-color: transparent;
 }
+
+
+/*Fix anchor points*/
+
+#ctl00_ctl00_cpContent_cpContent_divBody p a {
+    display: inline-block;
+    padding-top: 150px;
+    margin-top: -150px;
+}
