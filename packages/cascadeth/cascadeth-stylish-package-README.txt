@@ -1,5 +1,8 @@
-Package Backup for/by cascadeth
-Date: 3/21/2017
+Package/Backup for/by cascadeth
+Desc: A complete All-In-One packager(Stylish Backup) for all the sites
+that cascadeth uses in his browsers.  Free to use under the same license
+provided in the Git repository. ^_^
+
 
 Package Contents and Accreditations/Source: 
 	
