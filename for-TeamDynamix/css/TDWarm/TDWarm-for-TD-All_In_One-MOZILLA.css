@@ -14,9 +14,9 @@
     ### apply -    URLs starting with: https://oregonstate.teamdynamix.com/TDNext/Apps/425/Tickets/TicketUpdate
 
 ### revisions -    vX.Y.Z 
-	      - X: For TeamDynamix.
+	          - X: For TeamDynamix.
     	      - Y: Updated every major block style change(large div, applies to lots of elements, etc)
-	      - Z: Single line changes, only effects one style, etc
+	          - Z: Single line changes, only effects one style, etc
 ********************************************************************************************************************************************/
     /* Set the main background and size */
     body {
@@ -27,11 +27,6 @@
     Wallpaper Options:
     
     https://realtimevfx.com/uploads/default/original/2X/f/ffa4335fa10903ca2f9c36852cb8184bd9fa9fb5.gif
-    http://www.twitrcovers.com/wp-content/uploads/2012/09/Abstract-Orange-l.jpg
-	http://nexus-wallpaper.com/wp-content/uploads/2014/04/orange-grunge-stripes.png
-    https://0.s3.envato.com/files/131819262/video_preview_0000.jpg
-    http://il2.picdn.net/shutterstock/videos/15971149/thumb/12.jpg
-    http://wallpapercave.com/wp/NDvehzR.jpg
 
     */
         background-size: 100% 100%;
