@@ -11,19 +11,15 @@ small.gray,
 .gutter-top-sm.gray.fa.fa-4x.fa-fw {
     color: white !important;
 }
-
 #ctl00_ctl00_cpContent_cpContent_divCategoryDescription,
 .media.media-doubled.border.ellipsis,
 #divTabHeader {
     background-color: rgba(17, 17, 17, 0.35) !important;
 }
-
 .breadcrumb {
     background-color: transparent;
 }
-
-
-/*Fix anchor points*/
+/*Fix anchor points(push down)*/
 
 #ctl00_ctl00_cpContent_cpContent_divBody p a {
     display: inline-block;
