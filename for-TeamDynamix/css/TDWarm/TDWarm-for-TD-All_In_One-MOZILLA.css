@@ -1,8 +1,8 @@
 @-moz-document url-prefix("https://oregonstate.teamdynamix.com/") {
 /********************************************************************************************************************************************
-### Title     -    Lit By Lines for TeamDynamix
-### author    -    Maximillian Schmidt, Gina Phipps
-### version   -    v1.5.2
+### Title     -    TDWarm for TeamDynamix
+### author    -    Maximillian Schmidt - Colors/Styles, Gina Phipps - Field Positionings
+### version   -    v1.6.1
 #@# section1
     ### apply -    URLs starting with: https://oregonstate.teamdynamix.com/
 
@@ -14,372 +14,373 @@
     ### apply -    URLs starting with: https://oregonstate.teamdynamix.com/TDNext/Apps/425/Tickets/TicketUpdate
 
 ### revisions -    vX.Y.Z 
-	      - X: For TeamDynamix.
-    	  - Y: Updated every major block style change(large div, applies to lots of elements, etc)
-	      - Z: Single line changes, only effects one style, etc
+	          - X: For TeamDynamix.
+    	      - Y: Updated every major block style change(large div, applies to lots of elements, etc)
+	          - Z: Single line changes, only effects one style, etc
 ********************************************************************************************************************************************/
-
 /* Set the main background and size */
+
 body {
-    
     background-color: #181818 !important;
     background-image: url("https://www.123freevectors.com/wp-content/original/28561-dark-orange-background-pattern.jpg");
-    
     /*For the less graphically inclined, use a static photo*/
-    
     /*
-    Wallpaper Options: 
-    
+    Wallpaper Options:
+
     https://realtimevfx.com/uploads/default/original/2X/f/ffa4335fa10903ca2f9c36852cb8184bd9fa9fb5.gif
-    http://www.twitrcovers.com/wp-content/uploads/2012/09/Abstract-Orange-l.jpg
-	http://nexus-wallpaper.com/wp-content/uploads/2014/04/orange-grunge-stripes.png
-    https://0.s3.envato.com/files/131819262/video_preview_0000.jpg
-    http://il2.picdn.net/shutterstock/videos/15971149/thumb/12.jpg
-    http://wallpapercave.com/wp/NDvehzR.jpg
 
     */
     
     background-size: 100% 100%;
     border-color: #777777;
 }
-
 /* ALTERING OF THE MAIN DESKTOP */
 
 .organization-link a {
-    
     color: #ff7800;
 }
-
 i.fa .fa-user {
-    
     color: white !important;
 }
-
-#ApplicationsMenu, 
-.panel-heading.clearfix.draggable.module-header.ui-sortable-handle  {
-    
+#ApplicationsMenu,
+.panel-heading.clearfix.draggable.module-header.ui-sortable-handle {
     color: #777777;
     background-color: #252525;
     border-color: #777777;
 }
-
-.desktop-module, th {
-    
+.desktop-module,
+th {
     background-color: #bbb;
     border-color: #777777;
 }
-
 .organization-link {
-    
     margin: 2px;
 }
-
 /* END OF MAIN DESKTOP ALTERING */
-
-
-
 /* Change the main color text in tickets to X
-   Remove first ' /* ' to use that color
-*/ 
-#upDetails, .control-label, h1,  h2, label, #ttDescription, 
-.gutter-top-xs, .gray, .absoluteDate, .gutter-left-sm, #divToDos, 
-.btn.btn-link.dropdown-toggle.black, .feed-reply, .label-success, 
-.form-control, #txtStatusComments, .border-bottom, .alert, .maininput, 
-#txtComments_fdTicketFeed, span.bit-box, .gutter .checkbox, .gutter .gutter-top, 
+Remove first ' /* ' to use that color
+*/
+
+#upDetails,
+.control-label,
+h1,
+h2,
+label,
+#ttDescription,
+.gutter-top-xs,
+.gray,
+.absoluteDate,
+.gutter-left-sm,
+#divToDos,
+.btn.btn-link.dropdown-toggle.black,
+.feed-reply,
+.label-success,
+.form-control,
+#txtStatusComments,
+.border-bottom,
+.alert,
+.maininput,
+#txtComments_fdTicketFeed,
+span.bit-box,
+.gutter .checkbox,
+.gutter .gutter-top,
 .gutter span {
-    
     /*color: #0078ff;       /* BLUE    */
     /*color: #dd32cc;       /* MAGENTA */
     /*color: #ff7800;       /* ORANGE  */
     /*color: #aaa;          /* GREY    */
-    color: white;         /* WHITE   */
+    
+    color: white;
+    /* WHITE   */
+    
     border-color: #777777;
 }
+/* Allow replies in feeds and fields to have darker transparent backgrounds */
 
-
-#fdTicketFeed {
-
-	background-color: rgba(17, 17, 17, 0.6) !important;
+.feed-reply,
+.TabButtonCell,
+.gutter-bottom-none,
+.form-control,
+.TDTextArea,
+.border-bottom,
+.alert,
+.btn-default,
+#s2id_lstNotification,
+.comment,
+.ms-choice,
+.ms-drop ul,
+#divHeader {
+    background-color: rgba(17, 17, 17, 0.75) !important;
 }
-
-
-/* Allow replies in feeds to have darker transparent backgrounds */
-.feed-reply, .TabButtonCell, .gutter-bottom-none, .form-control, .TDTextArea, 
-.border-bottom, .alert, .maininput, .btn-default, .bit-box, .input-group, 
-.select2-input.select2-default, .comment, .ms-choice, .ms-drop ul, #divHeader {
-
-     background-color: rgba(17, 17, 17, 0.75) !important;
+#fdTicketFeed,
+.bit-box {
+    background-color: rgba(17, 17, 17, 0.6) !important;
 }
-
-
-
+.maininput,
+#s2id_lstNotification * {
+    background-color: rgba(17, 17, 17, 0) !important;
+}
 /* Increasing the text size of the Service Request ID: 1234567 */
-.gutter-left-sm {
 
+.gutter-left-sm {
     font-size: 150%;
 }
-
-
 /* Change the viewing number colors */
-.label-success {
 
+.label-success {
     background-color: #444444;
     color: white;
 }
-
-
 /* Just in case, clickable links are now blue and underlined everywhere */
+
 a {
-    
     color: #0078ff;
     text-decoration: underline;
 }
-
-
 /* ALTERING OF TASKS AND REQUESTOR CARDS */
 
-.TDAlternatingRow, .rss-container, #divTabHeader.navbar.navbar-fixed-top.tab-row,
-#divTabHeader.navbar.tab-row.gutter-bottom-none, .panel-body, .gutter-top .padding, .block-actions {
-    
-    
+.TDAlternatingRow,
+.rss-container,
+#divTabHeader.navbar.navbar-fixed-top.tab-row,
+#divTabHeader.navbar.tab-row.gutter-bottom-none,
+.gutter-top .padding,
+.block-actions {
     background-color: rgba(17, 17, 17, 0.85) !important;
     border-color: #777777;
     color: #777777;
 }
-
-.gutter-top .panel-heading, .btn-primary, .apps-tab {
-    
+#pcRequestor_divPersonInfo,
+.panel.panel-default {
+    background-color: rgba(48, 0, 48, 0.4) !important;
+}
+.gutter-top .panel-heading,
+.btn-primary,
+.apps-tab {
     background-color: #ff7800;
     color: white;
 }
+/* END OF TASKS AND REQUESTOR CARDS ALTERING */
 
-/* END OF TASKS AND REQUESTOR CARDS ALTERING */ 
-
-
-.TDAlternatingRow  a, .TDAlternatingRow td {
-    
+.TDAlternatingRow a,
+.TDAlternatingRow td {
     color: white;
     border-color: #777777;
 }
-
 #thTicket_lblStatus {
-    
     color: #ff7800 !important;
 }
-
 td a {
-    
     color: black;
+}
+}
+
+@-moz-document url-prefix("https://oregonstate.teamdynamix.com/TDClient/KB") {
+/* For knowledge base articles*/
+
+body,
+h1,
+h2,
+h3,
+h4,
+h5,
+h6,
+small.gray,
+.gutter-top-sm.gray.fa.fa-4x.fa-fw {
+    color: white !important;
+}
+#ctl00_ctl00_cpContent_cpContent_divCategoryDescription,
+.media.media-doubled.border.ellipsis,
+#divTabHeader {
+    background-color: rgba(17, 17, 17, 0.35) !important;
+}
+.breadcrumb {
+    background-color: transparent;
+}
+/*Fix anchor points(push down)*/
+
+#ctl00_ctl00_cpContent_cpContent_divBody p a {
+    display: inline-block;
+    padding-top: 150px;
+    margin-top: -150px;
 }
 }
 
 @-moz-document url-prefix("https://oregonstate.teamdynamix.com/TDNext/Apps/425/Tickets/TicketNew"), url-prefix("https://oregonstate.teamdynamix.com/TDNext/Apps/425/Tickets/TicketEdit") {
 /* Additions for moving fields around - credit: Gina Phipps*/
-
-
 /* Outer container of the fields {} */
+
 #fieldsContainer {
-	
     display: flex;
     flex-wrap: wrap;
 }
-
 /* Template {} */
+
 #divTemplate {
-	
     width: 100px;
     margin: 0px 5px 10px 5px;
 }
-
 /* Requestor {} */
+
 #divRequestor {
-	
     width: 300px;
     margin: 0px 5px 10px 5px;
 }
-
 /* Acct/Dept {} */
-#fieldsContainer > div:nth-child(3) {
-	
+
+#fieldsContainer>div:nth-child(3) {
     width: 400px;
     margin: 0px 5px 10px 5px;
 }
-
 /* Title {} */
-#fieldsContainer > div:nth-child(4) {
-	
+
+#fieldsContainer>div:nth-child(4) {
     width: 100%;
     margin: 0px 5px 10px 5px;
 }
-
 /* Description {} */
-#fieldsContainer > div:nth-child(5) {
-	
+
+#fieldsContainer>div:nth-child(5) {
     display: block;
     width: 100%;
     margin: 10px 5px 15px 5px;
 }
-
 /* Ticket Type {} */
-#fieldsContainer > div:nth-child(6) {
-	
+
+#fieldsContainer>div:nth-child(6) {
     width: 500px;
     margin: 0px 5px 0px 5px;
 }
-
 /* Priority {} */
-#fieldsContainer > div:nth-child(7) {
-	
+
+#fieldsContainer>div:nth-child(7) {
     margin: 0px 5px 0px 5px;
 }
-
 /* Responsible {} */
+
 #divResponsible {
-	
     width: 300px;
     margin: 0px 5px 0px 5px;
 }
-
 /* Source {} */
-#fieldsContainer > div:nth-child(9) {
-	
+
+#fieldsContainer>div:nth-child(9) {
     margin: 0px 5px 10px 5px;
 }
-
 /* Attachment {} */
-#fieldsContainer > div:nth-child(10) {
-	
+
+#fieldsContainer>div:nth-child(10) {
     width: 500px;
     margin: 0px 5px 20px 5px;
 }
-
 /* Start Date {} */
+
 #divStartDate {
-	
     margin: 0px 5px 10px 5px;
 }
-
 /* Due Date {} */
+
 #divDueDate {
-	
     margin: 0px 5px 10px 5px;
 }
-
 /* Status {} */
+
 #divStatus {
-	
     margin: 0px 5px 10px 5px;
     order: -2;
 }
-
 /* Goes Off Hold {} */
+
 #divGoesOffHold {
-	
     margin: 0px 5px 10px 5px;
     order: -1;
 }
-
 /* Service Level Agreement {} */
+
 #divSLA {
-	
     margin: 0px 5px 10px 5px;
 }
-
 /* Task Template {} */
-#fieldsContainer > div:nth-child(16) {
-	
+
+#fieldsContainer>div:nth-child(16) {
     margin: 0px 5px 10px 5px;
 }
-
 /* All the things that are past Task Template: */
-
 /* Container for most of the things past Task Template {} */
+
 #upnlAttributes {
-	
     width: 100%;
     display: flex;
     flex-wrap: wrap;
 }
-
 /* Application Name(s) {} */
+
 #divAttribute25371 {
-	
     width: 250px;
     margin: 0px 5px 10px 5px;
 }
-
 /* Something to do with COHO ticket transferring {} */
+
 #divAttribute25936 {
-	
     width: 250px;
     margin: 0px 5px 10px 5px;
 }
-
 /* ComputerDevice Name {} */
+
 #divAttribute25382 {
-	
     width: 250px;
     margin: 0px 5px 10px 5px;
 }
+/* Customer Location {} */
 
-/* Customer Location {} */ 
 #divAttribute25386 {
-	
     width: 250px;
     margin: 0px 5px 10px 5px;
 }
-
 /* Device manufacturer model {} */
+
 #divAttribute25737 {
-	
     width: 250px;
     margin: 0px 5px 10px 5px;
 }
-
 /* Device Notes {} */
+
 #divAttribute25376 {
-	
     width: 350px;
     margin: 0px 5px 10px 5px;
 }
-
 /* Device operating system {} */
+
 #divAttribute25738 {
-	
     width: 200px;
     margin: 0px 5px 10px 5px;
 }
-
 /*  Device Type {} */
+
 #divAttribute25385 {
-	
     width: 150px;
     margin: 0px 5px 10px 5px;
 }
-
 /* E-mail Provider {} */
+
 #divAttribute25398 {
-	
     width: 200px;
     margin: 0px 5px 10px 5px;
 }
-
 /* Extension Customer {} */
+
 #divAttribute25373 {
     width: 160px;
     margin: 0px 5px 10px 5px;
 }
-
 /* Related Tickets {} */
+
 #divAttribute26857 {
-	
     width: 250px;
     margin: 0px 5px 10px 5px;
 }
-
 /* Walkup Customer {} */
+
 #divAttribute25384 {
-	
     width: 250px;
     margin: 0px 5px 10px 5px;
 }
@@ -387,118 +388,99 @@ td a {
 
 @-moz-document url-prefix("https://oregonstate.teamdynamix.com/TDNext/Apps/425/Tickets/TicketUpdate") {
 /* Outer container of the fields {} */
-#Form1 > div:nth-child(21) > div > div.col-sm-8 > div {
-	
+
+#Form1>div:nth-child(21)>div>div.col-sm-8>div {
     display: flex;
     flex-wrap: wrap;
 }
-
 /* Status {} */
+
 #divNewStatus {
-	
     margin: 0px 10px 10px 10px;
     order: -1;
 }
-
 /* Status time warning thing {} */
+
 #divNoTimeTypes {
-	
     width: 650px;
     margin: 0px 5px 10px 15px;
 }
-
 /* Comments {} */
+
 #divComments {
-	
     width: 100%;
     margin: 0px 10px 10px 10px;
 }
-
 /* Notify {} */
+
 #divNotification {
-	
     width: 400px;
     margin: 0px 10px 10px 10px;
 }
-
 /* Notify Others {} */
+
 #divOtherPeople {
-	
     width: 450px;
     margin: 0px 10px 10px 10px;
 }
-
 /* Other Email Addresses {} */
+
 #divOtherEmailAddresses {
-	
     width: 300px;
     margin: 0px 10px 10px 10px;
 }
-
 /* Attachments {} */
+
 #divAttach {
-	
     width: 600px;
     margin: 0px 10px 10px 10px;
 }
-
 /* Knowledge Base Article {} */
+
 #divKBArticle {
-	
     width: 425px;
     margin: 0px 10px 10px 10px;
 }
-
 /* KB Existing and Create {} */
+
 #divExistingArticle {
-
     width: 425px;
     margin: 0px 10px 10px 10px;
 }
-
 /* See above ^ */
+
 #divNewArticle {
-	
     width: 425px;
     margin: 0px 10px 10px 10px;
 }
-
 /* Account Type {} */
+
 #divAttribute25368 {
-	
     margin: 0px 10px 10px 10px;
 }
-
 /* COHO Ticket num link {} */
+
 #divAttribute25936 {
-	
     margin: 0px 10px 10px 10px;
     width: 300px;
     height: 120px;
 }
-
 /* Customer Location {} */
+
 #divAttribute25386 {
-	
     margin: 0px 10px 10px 10px;
 }
-
 /* Related ticket {} */
+
 #divAttribute26857 {
-	
     margin: 0px 10px 10px 10px;
 }
-
 /* Walkup Customer {} */
+
 #divAttribute25384 {
-	
     margin: 0px 10px 10px 10px;
 }
-
-
-
 /* uncomment the following to hide things: */
-
 /* Requestor Card Removal {} */
 /*
 
@@ -507,7 +489,6 @@ td a {
 }
 
 */
-
 /* Resize Column (only tested/works if requestor card removed) {} */
 /*
 @media (min-width: 768px) {
@@ -519,7 +500,6 @@ td a {
 }
 
 */
-
 /* Knowledge Base Article note that this will be used and relevant someday so hide at your own risk {} */
 /*
 #divKBArticle {
@@ -528,7 +508,6 @@ td a {
 }
 
 */
-
 /* COHO Ticket Num {} */
 /*
 #divAttribute25936 {

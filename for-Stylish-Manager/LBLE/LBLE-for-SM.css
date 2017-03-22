@@ -7,9 +7,9 @@
 
 
 ### revisions -    vX.Y.Z 
-				     - X: For Sytlish extension.  If a newer existed, this would be updated to v2
+		     - X: For Sytlish extension.  If a newer existed, this would be updated to v2
                      - Y: Updated every major block style change(large div, applies to lots of elements, etc)
-					 - Z: Single line changes, only effects one style, etc
+		     - Z: Single line changes, only effects one style, etc
 
 ********************************************************************************************************************************************/
 
@@ -34,7 +34,7 @@ body {
 #header, body, input, button, select {
 
 	background-color: transparent;
-    color: #888888;
+    color: white;
 }
 
 h1, h2, h3, h4, h5, h6 {

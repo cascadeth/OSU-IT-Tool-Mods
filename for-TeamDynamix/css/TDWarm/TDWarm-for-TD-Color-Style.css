@@ -1,7 +1,7 @@
 /********************************************************************************************************************************************
-### Title     -    Lit By Lines for TeamDynamix
-### author    -    Maximillian Schmidt, Gina Phipps
-### version   -    v1.5.2
+### Title     -    TDWarm for TeamDynamix
+### author    -    Maximillian Schmidt - Colors/Styles, Gina Phipps - Field Positionings
+### version   -    v1.6.1
 #@# section1
     ### apply -    URLs starting with: https://oregonstate.teamdynamix.com/
 
@@ -13,160 +13,161 @@
     ### apply -    URLs starting with: https://oregonstate.teamdynamix.com/TDNext/Apps/425/Tickets/TicketUpdate
 
 ### revisions -    vX.Y.Z 
-	      - X: For TeamDynamix.
-    	  - Y: Updated every major block style change(large div, applies to lots of elements, etc)
-	      - Z: Single line changes, only effects one style, etc
+	          - X: For TeamDynamix.
+    	      - Y: Updated every major block style change(large div, applies to lots of elements, etc)
+	          - Z: Single line changes, only effects one style, etc
 ********************************************************************************************************************************************/
-
 /* Set the main background and size */
+
 body {
-    
     background-color: #181818 !important;
     background-image: url("https://www.123freevectors.com/wp-content/original/28561-dark-orange-background-pattern.jpg");
-    
     /*For the less graphically inclined, use a static photo*/
-    
     /*
-    Wallpaper Options: 
-    
+    Wallpaper Options:
+
     https://realtimevfx.com/uploads/default/original/2X/f/ffa4335fa10903ca2f9c36852cb8184bd9fa9fb5.gif
-    http://www.twitrcovers.com/wp-content/uploads/2012/09/Abstract-Orange-l.jpg
-	http://nexus-wallpaper.com/wp-content/uploads/2014/04/orange-grunge-stripes.png
-    https://0.s3.envato.com/files/131819262/video_preview_0000.jpg
-    http://il2.picdn.net/shutterstock/videos/15971149/thumb/12.jpg
-    http://wallpapercave.com/wp/NDvehzR.jpg
 
     */
     
     background-size: 100% 100%;
     border-color: #777777;
 }
-
 /* ALTERING OF THE MAIN DESKTOP */
 
 .organization-link a {
-    
     color: #ff7800;
 }
-
 i.fa .fa-user {
-    
     color: white !important;
 }
-
-#ApplicationsMenu, 
-.panel-heading.clearfix.draggable.module-header.ui-sortable-handle  {
-    
+#ApplicationsMenu,
+.panel-heading.clearfix.draggable.module-header.ui-sortable-handle {
     color: #777777;
     background-color: #252525;
     border-color: #777777;
 }
-
-.desktop-module, th {
-    
+.desktop-module,
+th {
     background-color: #bbb;
     border-color: #777777;
 }
-
 .organization-link {
-    
     margin: 2px;
 }
-
 /* END OF MAIN DESKTOP ALTERING */
-
-
-
 /* Change the main color text in tickets to X
-   Remove first ' /* ' to use that color
-*/ 
-#upDetails, .control-label, h1,  h2, label, #ttDescription, 
-.gutter-top-xs, .gray, .absoluteDate, .gutter-left-sm, #divToDos, 
-.btn.btn-link.dropdown-toggle.black, .feed-reply, .label-success, 
-.form-control, #txtStatusComments, .border-bottom, .alert, .maininput, 
-#txtComments_fdTicketFeed, span.bit-box, .gutter .checkbox, .gutter .gutter-top, 
+Remove first ' /* ' to use that color
+*/
+
+#upDetails,
+.control-label,
+h1,
+h2,
+label,
+#ttDescription,
+.gutter-top-xs,
+.gray,
+.absoluteDate,
+.gutter-left-sm,
+#divToDos,
+.btn.btn-link.dropdown-toggle.black,
+.feed-reply,
+.label-success,
+.form-control,
+#txtStatusComments,
+.border-bottom,
+.alert,
+.maininput,
+#txtComments_fdTicketFeed,
+span.bit-box,
+.gutter .checkbox,
+.gutter .gutter-top,
 .gutter span {
-    
     /*color: #0078ff;       /* BLUE    */
     /*color: #dd32cc;       /* MAGENTA */
     /*color: #ff7800;       /* ORANGE  */
     /*color: #aaa;          /* GREY    */
-    color: white;         /* WHITE   */
+    
+    color: white;
+    /* WHITE   */
+    
     border-color: #777777;
 }
+/* Allow replies in feeds and fields to have darker transparent backgrounds */
 
-
-#fdTicketFeed {
-
-	background-color: rgba(17, 17, 17, 0.6) !important;
+.feed-reply,
+.TabButtonCell,
+.gutter-bottom-none,
+.form-control,
+.TDTextArea,
+.border-bottom,
+.alert,
+.btn-default,
+#s2id_lstNotification,
+.comment,
+.ms-choice,
+.ms-drop ul,
+#divHeader {
+    background-color: rgba(17, 17, 17, 0.75) !important;
 }
-
-
-/* Allow replies in feeds to have darker transparent backgrounds */
-.feed-reply, .TabButtonCell, .gutter-bottom-none, .form-control, .TDTextArea, 
-.border-bottom, .alert, .maininput, .btn-default, .bit-box, .input-group, 
-.select2-input.select2-default, .comment, .ms-choice, .ms-drop ul, #divHeader {
-
-     background-color: rgba(17, 17, 17, 0.75) !important;
+#fdTicketFeed,
+.bit-box {
+    background-color: rgba(17, 17, 17, 0.6) !important;
 }
-
-
-
+.maininput,
+#s2id_lstNotification * {
+    background-color: rgba(17, 17, 17, 0) !important;
+}
 /* Increasing the text size of the Service Request ID: 1234567 */
-.gutter-left-sm {
 
+.gutter-left-sm {
     font-size: 150%;
 }
-
-
 /* Change the viewing number colors */
-.label-success {
 
+.label-success {
     background-color: #444444;
     color: white;
 }
-
-
 /* Just in case, clickable links are now blue and underlined everywhere */
+
 a {
-    
     color: #0078ff;
     text-decoration: underline;
 }
-
-
 /* ALTERING OF TASKS AND REQUESTOR CARDS */
 
-.TDAlternatingRow, .rss-container, #divTabHeader.navbar.navbar-fixed-top.tab-row,
-#divTabHeader.navbar.tab-row.gutter-bottom-none, .panel-body, .gutter-top .padding, .block-actions {
-    
-    
+.TDAlternatingRow,
+.rss-container,
+#divTabHeader.navbar.navbar-fixed-top.tab-row,
+#divTabHeader.navbar.tab-row.gutter-bottom-none,
+.gutter-top .padding,
+.block-actions {
     background-color: rgba(17, 17, 17, 0.85) !important;
     border-color: #777777;
     color: #777777;
 }
-
-.gutter-top .panel-heading, .btn-primary, .apps-tab {
-    
+#pcRequestor_divPersonInfo,
+.panel.panel-default {
+    background-color: rgba(48, 0, 48, 0.4) !important;
+}
+.gutter-top .panel-heading,
+.btn-primary,
+.apps-tab {
     background-color: #ff7800;
     color: white;
 }
+/* END OF TASKS AND REQUESTOR CARDS ALTERING */
 
-/* END OF TASKS AND REQUESTOR CARDS ALTERING */ 
-
-
-.TDAlternatingRow  a, .TDAlternatingRow td {
-    
+.TDAlternatingRow a,
+.TDAlternatingRow td {
     color: white;
     border-color: #777777;
 }
-
 #thTicket_lblStatus {
-    
     color: #ff7800 !important;
 }
-
 td a {
-    
     color: black;
 }
