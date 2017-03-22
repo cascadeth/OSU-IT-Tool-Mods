@@ -51,7 +51,7 @@ Great!  Read the steps below (more detailed explanation with possible pictures a
 3. Clone your fork onto your machine
 4. Push your code
 5. Make sure your modification follows our formatting guide (see below)
-..* Not following formatting guide can result in very cranky messages followed by pull rejections, or mods just fixing it for you
+  * Not following formatting guide can result in very cranky messages followed by pull rejections, or mods just fixing it for you
 6. Submit a pull request
 
 #### Formatting Guide:
