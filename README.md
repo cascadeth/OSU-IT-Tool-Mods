@@ -21,9 +21,9 @@ a better looking and more functional environment to the sites.
 
 ### Main Contact/Dev: 
 
-cascadeth (Max Schmidt)  cascadeth(at)gmail.com
+cascadeth (Max Schmidt) - cascadeth(at)gmail.com
 
-If you work here at the OSU IT (you should know who you are), can reach Max on Slack at @thel_vadam
+If you work here at the OSU IT (you should know who you are), you can reach Max on Slack at @thel_vadam
 
 Please email me for questions, comments, suggestions, etc.
 
