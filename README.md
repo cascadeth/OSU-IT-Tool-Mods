@@ -51,12 +51,19 @@ Please email me for questions, comments, suggestions, etc.
 Great!  Read the steps below (more detailed explanation with possible pictures at a later time)
 
 #### Steps:
+
 1. Create a Github account 
+
 2. Hit that fork button up at the top 
+
 3. Clone your fork onto your machine 
+
 4. Push your code 
+
 5. Make sure your modification follows our formatting guide (see below) 
-  i. Not following formatting guide can result in very cranky messages followed by pull rejections, or mods just fixing it for you 
+
+    * Not following formatting guide can result in very cranky messages followed by pull rejections, or mods just fixing it for you 
+   
 6. Submit a pull request 
 
 #### Formatting Guide:
