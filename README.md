@@ -2,15 +2,6 @@
 
 ***
 
-### Main Contact/Dev: 
-
-cascadeth (Max Schmidt)  cascadeth(at)gmail.com
-
-For OSU IT Contacts, can reach on Slack at @thel_vadam
-
-Please email me for questions, comments, suggestions, etc.
-
-***
 
 ### What:
 This repo provides a set of user styles (note: only supported use with Stylish add-on) for multiple sites
@@ -24,7 +15,21 @@ required a decent amount of scrolling in some cases.  These
 styles and scripts, developed by OSU IT employees, provide 
 a better looking and more functional environment to the sites.
 
+
 ***
+
+
+### Main Contact/Dev: 
+
+cascadeth (Max Schmidt)  cascadeth(at)gmail.com
+
+If you work here at the OSU IT (you should know who you are), can reach Max on Slack at @thel_vadam
+
+Please email me for questions, comments, suggestions, etc.
+
+
+***
+
 
 ### Okay, so how do I use these scripts?
 #### Basic (without learning Git):
@@ -51,7 +56,7 @@ Great!  Read the steps below (more detailed explanation with possible pictures a
 3. Clone your fork onto your machine 
 4. Push your code 
 5. Make sure your modification follows our formatting guide (see below) 
-  * Not following formatting guide can result in very cranky messages followed by pull rejections, or mods just fixing it for you 
+  1. Not following formatting guide can result in very cranky messages followed by pull rejections, or mods just fixing it for you 
 6. Submit a pull request 
 
 #### Formatting Guide:
