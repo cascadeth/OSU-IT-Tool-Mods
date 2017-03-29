@@ -261,6 +261,7 @@ span.gutter-top-sm.gray.fa.fa-4x.fa-fw {
     color: white !important;
 }
 
+
 /*End Knowledgebase*/
 
 #divServiceLevelAgreement {
@@ -315,4 +316,22 @@ li.active, li.active a {
 /*Groups page*/
 #divRight {
     background-color: #5f636b !important;
+}
+
+/*Tasks*/
+#divTasks a {
+    color: #5394fc !important;
+}
+
+#divTasks .gutter-top-xs {
+    color: white;
+}
+
+/*Tasks*/
+#divTasks a {
+    color: #5394fc !important;
+}
+
+#divTasks .gutter-top-xs {
+    color: white;
 }
