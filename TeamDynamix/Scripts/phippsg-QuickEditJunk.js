@@ -3,7 +3,7 @@
 // @namespace    http://tampermonkey.net/
 // @version      0.1
 // @description  TD is a potato and should feel bad.
-// @author       You
+// @author       Gina Phipps
 // @match        https://oregonstate.teamdynamix.com/TDNext/Apps/425/Tickets/TicketEdit*
 // @grant        none
 // ==/UserScript==
