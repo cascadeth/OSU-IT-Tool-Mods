@@ -2,7 +2,7 @@
 
 ### Title     -    Lit By Linear Embers for Reftool 2
 ### author    -    Maximillian Schmidt
-### version   -    v1.3.1
+### version   -    v1.3.2
 ### apply     -    URLs starting with: https://tools.is.oregonstate.edu/reftool2/
 
 
@@ -91,6 +91,10 @@ pre {
     border-radius: 10px;
 }
 
+.list-group-item.clickable * {
+    color: white !important;
+}
+
 
 /* MAKE PEOPLE FLAGS MORE PROMINENT */
 
@@ -98,24 +102,19 @@ pre {
 .list-group-item.clickable.lrp {
     background-color: #ff9900 !important;
     border: 3px solid #ffbb00 !important;
-    color: #111 !important;
 }
 
 .panel-heading.clearfix.panel-heading-button.vip,
 .list-group-item.clickable.vip {
     background-color: #ff4444 !important;
     border: 3px solid #dd0000 !important;
-    color: #111 !important;
 }
 
 .list-group-item.clickable.extension {
     background-color: #00cc33;
     border: 3px solid #00ff55 !important;
-    color: #111 !important;
 }
 
-.disabled[_ngcontent-kwa-7],
-.disabled[_ngcontent-olx-8] {
+.list-group-item.clickable.disabled {
     border: 3px solid #bbb !important;
-    color: #ccc !important;
 }
