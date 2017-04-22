@@ -112,4 +112,8 @@ td a, .external-reports a, .col-md-8 a {
 textarea {
     color: black;
 }
+
+.panel-footer {
+    background-color: rgba(0,0,0,0);
+}
 }
