@@ -1,36 +1,42 @@
 @-moz-document url-prefix("https://oregonstate.teamdynamix.com/TDNext/Apps/425/Tickets/TicketNew") {
 /*Outer container of the fields*/
-#fieldsContainer {
+#divContent > form {
     display: flex;
     flex-wrap: wrap;
 }
 
+/*Form*/
+#divContent > form > div.form-group.gutter-top {
+    width: 300px;
+    margin-top: 0;
+}
+
 /*Template*/
-#divTemplate {
-    width: 100px;
+#divContent > form > div:nth-child(5) {
+    width: 400px;
     margin: 0px 5px 10px 5px;
 }
 
 /*Requestor*/
-#divRequestor {
+#attribute4486-grp {
     width: 300px;
     margin: 0px 5px 10px 5px;
 }
 
 /*Acct/Dept*/
-#fieldsContainer > div:nth-child(3) {
+#attribute1304-grp {
     width: 400px;
     margin: 0px 5px 10px 5px;
 }
 
 /*Title*/
-#fieldsContainer > div:nth-child(4) {
+#attribute1303-grp {
     width: 100%;
     margin: 0px 5px 10px 5px;
 }
 
 /*Description*/
-#fieldsContainer > div:nth-child(5) {
+#attribute2937-grp {
     display: block;
     width: 100%;
     margin: 10px 5px 15px 5px;
@@ -74,8 +80,8 @@
     margin: 0px 5px 10px 5px;
 }
 
-//Status {}
-#divStatus {
+/*Status*/
+#attribute1306-grp {
     margin: 0px 5px 10px 5px;
     order: -2;
 }
@@ -230,54 +236,75 @@
 
 
 
+/*Other Fields*/
+
+/*Service*/
+
+
+/*Requestor card*/
+
+
+/*KB Search - does not work*/
+body > div.container-fluid.padding-top > div > div.col-sm-4.hidden-xs.gutter-top > div.js-kb-search {
+    display: block;
+}
+
+
+
 
 
 
 /* Uncomment each of these (remove the "/" and "*" around the item) to hide things that you probably don't use: */
 
-/*//Template {}
+//Template {}
 #divTemplate {
     display: none;
-}*/
+}
 
-/*//Start Date {}
+
+//Start Date {}
 #divStartDate {
-	display: none;
+    display: none;
 }
 //Due Date {}
 #divDueDate {
-	display: none;
-}*/
+    display: none;
+}
 
-/*//Service Level Agreement {}
+
+//Service Level Agreement {}
 #divSLA {
-	display: none;
-}*/
+    display: none;
+}
 
-/*//Requestor Card Removal {}
+
+//Requestor Card Removal {}
 #form1 > div.container-fluid > div.row > div.col-sm-4.hidden-xs.gutter-top {
-	display: none;
+    display: none;
 }
 //Resize Column (only tested/works if requestor card removed) {}
 @media (min-width: 768px) {
-	#divContent {
-    	width: 100%;
+    #divContent {
+        width: 100%;
         padding: 5px 40px 0px 40px;
-	}
-}*/
+    }
+}
 
-/*//Source {}
+
+//Source {}
 #fieldsContainer > div:nth-child(9) {
-	display: none;
-}*/
+    display: none;
+}
+
 
 /*//Task Template {}
 #fieldsContainer > div:nth-child(16) {
     display: none;
 }*/
 
-/*//COHO Ticket Info {}
+
+//COHO Ticket Info {}
 #divAttribute25936 {
-	display: none;
-}*/
+    display: none;
+}
 }

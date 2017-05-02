@@ -1,20 +1,40 @@
-@-moz-document url-prefix("https://oregonstate.teamdynamix.com/TDNext/Apps/425/Tickets/TicketUpdate") {
-//Outer container of the fields {}
-#Form1 > div:nth-child(21) > div > div.col-sm-8 > div {
+@-moz-document url-prefix("https://oregonstate.teamdynamix.com/TDNext/Apps/425/Tickets/Update") {
+/* Outer container of the fields */
+body > div:nth-child(4) > div > div.col-sm-8 > div > form {
     display: flex;
     flex-wrap: wrap;
+    align-items: stretch;
+    align-content: space-between;
+    flex-direction: row;
 }
 
-//Status {}
-#divNewStatus {
+/* Status */
+body > div:nth-child(4) > div > div.col-sm-8 > div > form > div:nth-child(3) {
     margin: 0px 10px 10px 10px;
-    order: -1;
+    order: 0;
+    width: 300px;
 }
 
-//Status time warning thing {}
-#divNoTimeTypes {
-    width: 650px;
-    margin: 0px 5px 10px 15px;
+
+/* Goes off hold container */
+body > div:nth-child(4) > div > div.col-sm-8 > div > form > div.form-group.js-off-hold-date.required {
+    margin: 0px 10px 10px 10px;
+    display: flex;
+    flex-direction: column;
+}
+/* Goes off hold label */
+body > div:nth-child(4) > div > div.col-sm-8 > div > form > div.form-group.js-off-hold-date.required > label {
+    display: block;
+    width: 100%;
+    
+}
+
+
+/* Status time warning thing */
+body > div:nth-child(4) > div > div.col-sm-8 > div > form > div:nth-child(5) {
+    width: 100%;
+    margin: 0px 10px 20px 10px;
+    order: -1;
 }
 
 //Comments {}
@@ -135,7 +155,7 @@
 
 /* uncomment the following to hide things: */
 
-/*//Requestor Card Removal {}
+//Requestor Card Removal {}
 #Form1 > div:nth-child(21) > div > div.col-sm-4.gutter-top {
     display: none;
 }
@@ -145,15 +165,15 @@
     	width: 100%;
         padding: 5px 40px 0px 40px;
 	}
-}*/
+}
 
 /*//Knowledge Base Article note that this will be used and relevant someday so hide at your own risk {}
 #divKBArticle {
     display: none;
 }*/
 
-/*//COHO Ticket Num {}
+//COHO Ticket Num {}
 #divAttribute25936 {
 	display: none;
-}*/
+}
 }
