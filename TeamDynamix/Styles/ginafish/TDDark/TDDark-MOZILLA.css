@@ -83,4 +83,10 @@ td a, td p, td {
 .panel-default {
     border-color: #7C7C7C;
 }
+
+/*Update Comments*/
+.feed-reply {
+    color: white;
+    background-color: grey;
+}
 }
