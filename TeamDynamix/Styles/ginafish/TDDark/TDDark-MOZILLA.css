@@ -1,0 +1,92 @@
+@-moz-document domain("oregonstate.teamdynamix.com") {
+/*Main Background Color*/
+body, #divHeader {
+    background-color: #252525 !important;
+}
+/*OSU Header at Top Left of page*/
+.organization-link a {
+    color: #D16600;
+}
+/*Panel Heading Background & Font*/
+.panel-heading {
+    color: #ffffff !important;
+    background-color: #323232 !important;
+}
+/*Table Header Background*/
+.TDGridHeader {
+    background-color: #A3A3A3 !important;
+}
+/*Applications Menu Background*/
+#ApplicationsMenu {
+    background-color: #2B2B2B;
+}
+/*All Rows Background*/
+tr {
+    background-color: #000000 !important;
+}
+/*User Header Background*/
+.gutter.clearfix {
+    background-color: #252525 !important;
+}
+.fixed.white-bg {
+    background-color: #252525 !important;
+}
+/*Background for Contact Information Body*/
+.panel-body {
+    background-color: #252525 !important;
+}
+/*User Information Font*/
+.gutter-bottom {
+    color: #AFAFAF;
+}
+.control-label {
+    color: white !important;
+}
+/*Odd Rows Background*/
+.desktop-module {
+    background-color: #000000;
+}
+/*Even Rows Background*/
+.TDAlternatingRow {
+    background-color: #323232 !important;
+}
+/*Top Navigation Bar Background*/
+.navbar {
+    background-color: #323232 !important;
+}
+/*Location of OSU Header*/
+.organization-link {   
+    margin: 1px;
+}
+/*Ticket Details Font Color*/
+#upDetails, .control-label, h1,  h2, label, #ttDescription, .gutter-top-xs, .gray, .absoluteDate, .gutter-left-sm {
+    color: white;
+}
+/*Hyperlink Font Color*/
+a {
+    color: #0053EE;
+    text-decoration: underline;
+}
+/*Font color for Even Rows*/
+.TDAlternatingRow  a, .TDAlternatingRow td {
+    color: white;
+}
+/*Ticket Status in upper right*/
+#thTicket_lblStatus {
+     color: red !important;
+}
+/*Title & Requestor Columns on Odd Rows*/
+td a, td p, td {
+    color: white
+}
+/*Border Color*/
+.panel-default {
+    border-color: #7C7C7C;
+}
+
+/*Update Comments*/
+.feed-reply {
+    color: white;
+    background-color: grey;
+}
+}

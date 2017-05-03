@@ -1,0 +1,115 @@
+@-moz-document url-prefix("https://tools.is.oregonstate.edu/reftool2/") {
+/*Background in the very back*/
+
+/*http://i.imgur.com/ACsvPey.jpg */
+body, body > app > div.content-wrapper > div:nth-child(2)  {
+    font-family: Agency FB;
+    background-image: url("http://vignette4.wikia.nocookie.net/monsterhunter/images/2/26/MH4-Gore_Magala_3DS_Box_Art.jpg/revision/latest?cb=20140217083457");
+    background-size: 100% auto;
+    color: #999999;
+}
+
+
+#content > div:nth-child(2) > div > results > div > div.panel-body > div > a > h4
+{
+    color: #e6f2ff
+}
+
+#content > div:nth-child(2) > div > results > div > div.panel-heading > span
+{
+    color: white
+}
+
+#customer-details > div > div > div.col-md-4 > p > strong
+{
+    color: blue
+}
+
+
+#content > div:nth-child(2) > div
+{
+    opacity: 1;
+}
+
+.panel-default,
+.container-fluid > .navbar-collapse,
+.panel-default,
+.input-group-addon:first-child,
+.container-fluid, 
+.well,
+.list-group-item,
+div.input-group,
+#content > div:nth-child(1)
+{
+    background: #060201;
+    color: #999999;
+	border: #000000;
+}
+
+#content > div:nth-child(1), #content > div:nth-child(1) > div > div > div,
+#content > div:nth-child(2) > div, #content
+{
+ 	background: linear-gradient(to left, #060201, #030035);
+    background-size: auto 100%;
+    color: white;
+}
+
+#search > div > div > span > button
+{
+    color: white;
+}
+
+#search > div > div > input
+{
+    color: #bfbfbf;
+}
+
+#sidemenu > div.list-group > h5:hover
+{
+    background: linear-gradient(to left, #252322, #050052);
+}
+
+.btn-default, 
+.navbar-inverse .navbar-nav > .open > a,
+.navbar-inverse .navbar-nav > .open > a:hover,
+.navbar-inverse .navbar-nav > .open > a:focus,
+.navbar-inverse .navbar-nav > li > a, 
+.navbar-inverse .dropdown-menu > li > a, .navbar-inverse .dropdown-menu > li > a:focus,
+.navbar-nav > li > .dropdown-menu,
+.input-group .form-control
+{
+
+	background: #222222;
+    color: #999999;
+    border-color: #666666;
+}
+
+.panel-default > .panel-heading {
+	background: transparent;
+}
+
+pre {
+
+	background: #222222;
+    color: #999999;
+    border-color: #999999;
+}
+
+.table-bordered > thead > tr > th, .table-bordered > tbody > tr > th, .table-bordered > tfoot > tr > th, .table-bordered > thead > tr > td, .table-bordered > tbody > tr > td, .table-bordered > tfoot > tr > td, .table-bordered > thead > tr > th, .table-bordered > tbody > tr > th, .table-bordered > tfoot > tr > th, .table-bordered > thead > tr > td, .table-bordered > tbody > tr > td, .table-bordered > tfoot > tr > td {
+
+	background: #222222;
+    color: #999999;
+    border-color: #999999;
+}
+
+/*Border around search results*/
+#content > div:nth-child(2) > div > r2-results > div {
+    background: white;
+}
+
+/*Search result blocks*/
+#content > div:nth-child(2) > div > r2-results > div > div.panel-body > div > a {
+    background: grey;
+    border: 1px black solid;
+}
+}
