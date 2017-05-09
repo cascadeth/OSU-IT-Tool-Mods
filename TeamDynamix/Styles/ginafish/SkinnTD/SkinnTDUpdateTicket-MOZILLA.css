@@ -89,8 +89,8 @@ body > div:nth-child(4) > div > div.col-sm-8 > div > form > div:nth-child(7) {
     margin: 0px 10px 10px 10px;
 }
 
-//COHO Ticket num link {}
-#divAttribute25936 {
+/* COHO Ticket num link */
+#attribute25936-grp {
     margin: 0px 10px 10px 10px;
     width: 300px;
     height: 120px;
@@ -152,6 +152,52 @@ body > div:nth-child(4) > div > div.col-sm-8 > div > form > div:nth-child(7) {
 }
 
 
+/* Realigning the right panel. */
+body > div:nth-child(4) > div {			/* The container for the columns. */
+    display: flex;
+    flex-direction: column;
+}
+body > div:nth-child(4) > div > div.col-sm-4 {		/* The right hand column w/ requestor etc */
+    display: flex;
+    flex-direction: row;
+    order: 1;
+    width: 100%;
+}
+body > div:nth-child(4) > div > div.col-sm-4 > div:nth-child(1) {		/* Requestor card */
+    width: 400px;
+    height: auto;
+}
+body > div:nth-child(4) > div > div.col-sm-4 > div:nth-child(2) {		/*  Details */
+    width:500px;
+    padding: 0px;
+    margin: 0px;
+}
+body > div:nth-child(4) > div > div.col-sm-4 > div:nth-child(2) > div.panel-body {		/* Details in details */
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    height: auto;
+}
+body > div:nth-child(4) > div > div.col-sm-4 > div:nth-child(2) > div.panel-body > div {		/* Text in details */
+    padding: 0px 5px 0px 5px;
+    margin: 0px;
+}
+body > div:nth-child(4) > div > div.col-sm-4 > div:nth-child(2) > div.panel-body::after {		/* No idea */
+    display: none;
+}
+
+body > div:nth-child(4) > div > div.col-sm-8 {		/* The left hand column with all of the ticket fields */
+    order: 2;
+    width: 100%;
+}
+/* Hiding panel headings to save space */
+body > div:nth-child(4) > div > div.col-sm-4 > div > div.panel-heading {
+    display: none;
+    
+}
+
+
+
 
 /* uncomment the following to hide things: */
 
@@ -168,12 +214,12 @@ body > div:nth-child(4) > div > div.col-sm-8 > div > form > div:nth-child(7) {
 }
 
 /*//Knowledge Base Article note that this will be used and relevant someday so hide at your own risk {}
-#divKBArticle {
+body > div:nth-child(4) > div > div.col-sm-8 > div > form > div:nth-child(13) {
     display: none;
 }*/
 
-//COHO Ticket Num {}
-#divAttribute25936 {
+/* COHO Ticket Num */
+#attribute25936-grp {
 	display: none;
 }
 }
