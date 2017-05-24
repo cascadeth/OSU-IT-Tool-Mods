@@ -22,6 +22,8 @@ that explains what it does.
 I can add a "suggested" preset for the field hiding if requested, but otherwise 
 assuming that it's not something worth adding.
 
+NOTE: Desktop is not functional yet.
+
 ##########################################################################
 
 Installation:

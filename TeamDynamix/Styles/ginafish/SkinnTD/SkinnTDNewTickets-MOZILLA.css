@@ -7,32 +7,55 @@
 
 /*Form*/
 #divContent > form > div.form-group.gutter-top {
-    width: 300px;
-    margin-top: 0;
+    max-width: 500px;
+    margin: 0px 5px 10px 5px;
+    order: 1;
 }
 
 /*Template*/
 #divContent > form > div:nth-child(5) {
     width: 400px;
     margin: 0px 5px 10px 5px;
+    order: 2;
+}
+
+/* Priority */
+#attribute1307-grp {
+    margin: 0px 5px 0px 5px;
+    order: 3;
+}
+
+/*Status*/
+#attribute1306-grp {
+    margin: 0px 5px 10px 5px;
+    order: 4;
+}
+
+/* Goes Off Hold */
+#divContent > form > div.form-group.js-off-hold-date.required {
+    margin: 0px 5px 10px 5px;
+    order: 5;
 }
 
 /*Requestor*/
 #attribute4486-grp {
     width: 300px;
     margin: 0px 5px 10px 5px;
+    order: 6;
 }
 
 /*Acct/Dept*/
 #attribute1304-grp {
     width: 400px;
     margin: 0px 5px 10px 5px;
+    order: 7;
 }
 
 /*Title*/
 #attribute1303-grp {
     width: 100%;
     margin: 0px 5px 10px 5px;
+    order: 8;
 }
 
 /*Description*/
@@ -40,69 +63,80 @@
     display: block;
     width: 100%;
     margin: 10px 5px 15px 5px;
+    order: 8;
 }
 
-//Ticket Type {}
-#fieldsContainer > div:nth-child(6) {
+/* Ticket Type */
+#attribute1305-grp {
     width: 500px;
     margin: 0px 5px 0px 5px;
+    order: 9;
 }
 
-//Priority {}
-#fieldsContainer > div:nth-child(7) {
-    margin: 0px 5px 0px 5px;
-}
-
-//Responsible {}
-#divResponsible {
+/* Responsible */
+#attribute30890-grp {
     width: 300px;
     margin: 0px 5px 0px 5px;
+    order: 10;
 }
 
-//Source {}
-#fieldsContainer > div:nth-child(9) {
+/* Source */
+#attribute3955-grp {
     margin: 0px 5px 10px 5px;
+    order: 11;
 }
 
-//Attachment {}
-#fieldsContainer > div:nth-child(10) {
+/* Attachment */
+#attribute3960-grp {
     width: 500px;
     margin: 0px 5px 20px 5px;
+	order: 12;
 }
 
-//Start Date {}
-#divStartDate {
+/* Start Date */
+#attribute4443-grp {
     margin: 0px 5px 10px 5px;
+    order: 13;
 }
 
-//Due Date {}
-#divDueDate {
+/* Due Date */
+#attribute1310-grp {
     margin: 0px 5px 10px 5px;
+    order: 14;
 }
 
-/*Status*/
-#attribute1306-grp {
+/* Task Template */
+#attribute30994-grp {
     margin: 0px 5px 10px 5px;
-    order: -2;
+    order: 15;
 }
 
-//Goes Off Hold {}
-#divGoesOffHold {
+/* Account Type */
+#attribute25368-grp {
     margin: 0px 5px 10px 5px;
-    order: -1;
+    order: 16;
 }
 
-//Service Level Agreement {}
-#divSLA {
+/* COHO Ticket Link */
+#attribute25936-grp {
     margin: 0px 5px 10px 5px;
+    order: 17;
 }
+/*#attribute25936-grp > div.js-ca {
+    max-height: 34px;
+}*/
 
-//Task Template {}
-#fieldsContainer > div:nth-child(16) {
+/* Customer Location */
+#attribute25386-grp {
     margin: 0px 5px 10px 5px;
+    order: 18;
 }
 
-
+/* Related Ticket(s) */
+#attribute26857-grp {
+    margin: 0px 5px 10px 5px;
+    order: 19;
+}
 
 
 
@@ -303,8 +337,8 @@ body > div.container-fluid.padding-top > div > div.col-sm-4.hidden-xs.gutter-top
 }*/
 
 
-//COHO Ticket Info {}
-#divAttribute25936 {
-    display: none;
+/* COHO Ticket Info */
+#attribute25936-grp {
+    /*display: none;*/
 }
 }
