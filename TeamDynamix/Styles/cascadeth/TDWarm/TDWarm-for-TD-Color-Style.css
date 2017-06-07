@@ -1,7 +1,7 @@
 /********************************************************************************************************************************************
 ### Title     -    TDWarm for TeamDynamix
 ### author    -    Maximillian Schmidt - Colors/Styles, Gina Phipps - Field Positionings
-### version   -    v1.6.2
+### version   -    v1.6.3
 #@# section1
     ### apply -    URLs starting with: https://oregonstate.teamdynamix.com/
 
@@ -125,9 +125,7 @@ span.bit-box,
 .TabButtonCell,
 .gutter-bottom-none,
 .TDTextArea,
-.border-bottom,
 .btn-default,
-#s2id_lstNotification,
 .comment,
 .ms-choice,
 .ms-drop ul,
@@ -197,7 +195,13 @@ a {
 #attribute25398,
 #attribute25373,
 #attribute25384,
-#attribute3960 {
+#attribute3960,
+.js-ca textarea,
+#divNoTimeTypes,
+#divNewPercentComplete *,
+.border-bottom,
+#txtStatusComments,
+#s2id_lstNotification ul li {
     background-color: rgba(48, 0, 48, 0.4) !important;
     color: white;
 }
