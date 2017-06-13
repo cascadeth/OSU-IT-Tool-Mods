@@ -1,7 +1,6 @@
 Dev: ginafish
 
-Refer to wiki for dev contact information (because updating every single 
-readme would be silly).
+Refer to wiki for dev contact information.
 
 ##########################################################################
 
