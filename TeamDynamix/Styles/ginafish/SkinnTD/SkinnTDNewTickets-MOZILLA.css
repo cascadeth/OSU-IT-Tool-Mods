@@ -5,9 +5,59 @@
     flex-wrap: wrap;
 }
 
+/* Container for form + requestor columns */
+body > div.container-fluid.padding-top > div {
+    display: flex;
+    flex-direction: column;
+}
+/* Requestor card container */
+body > div.container-fluid.padding-top > div > div.col-sm-4.hidden-xs.gutter-top {
+    display: flex;
+    flex-direction: row;
+    order: 1;
+    width: 100%;
+}
+/* Left hand column with the fields */
+#divContent {
+    order: 2;
+    width: 100%;
+}
+/* Requestor card itself */
+body > div.container-fluid.padding-top > div > div.col-sm-4.hidden-xs.gutter-top > div.js-requestor-card > div {
+    width: 400px;
+    height: auto;
+    margin: 10px;
+}
+/* Requestor card title */
+body > div.container-fluid.padding-top > div > div.col-sm-4.hidden-xs.gutter-top > div.js-requestor-card > div > div.panel-heading {
+    display: none;
+}
+/* Requestor card body */
+body > div.container-fluid.padding-top > div > div.col-sm-4.hidden-xs.gutter-top > div.js-requestor-card > div > div.panel-body {
+    padding: 0px 15px 0px 15px;
+    margin: 0px;
+}
+/* Requestor card icon */
+body > div.container-fluid.padding-top > div > div.col-sm-4.hidden-xs.gutter-top > div.js-requestor-card > div > div.panel-body > div > div.media-left {
+    display: none;
+}
+
+
+/* PAGE TITLE */
+#divContent > h1 {
+    /*position: fixed;*/
+}
+#divContent > div.gutter-left-sm.gutter-bottom-sm.gray {
+    /*position: fixed;*/
+}
+
+
+
+/* FORM FIELDS */
+
 /*Form*/
 #divContent > form > div.form-group.gutter-top {
-    max-width: 500px;
+    max-width: 450px;
     margin: 0px 5px 10px 5px;
     order: 1;
 }
@@ -111,17 +161,35 @@
     order: 15;
 }
 
+/* Other Fields Header */
+#divContent > form > h2 {
+    order: 16;
+    flex-basis: 100%;
+}
+
 /* Account Type */
 #attribute25368-grp {
     margin: 0px 5px 10px 5px;
-    order: 16;
+    order: 17;
+}
+
+/*  */
+#attribute3953-grp {
+    margin: 0px 5px 10px 5px;
+    order: 18;
 }
 
 /* COHO Ticket Link */
 #attribute25936-grp {
     margin: 0px 5px 10px 5px;
-    order: 17;
+    order: 18;
 }
+
+/* COHO Ticket Link Box */
+#attribute25936-grp > div.js-ca > textarea {
+    height: 30px !important;
+}
+
 /*#attribute25936-grp > div.js-ca {
     max-height: 34px;
 }*/
@@ -129,14 +197,18 @@
 /* Customer Location */
 #attribute25386-grp {
     margin: 0px 5px 10px 5px;
-    order: 18;
+    order: 19;
 }
 
 /* Related Ticket(s) */
 #attribute26857-grp {
     margin: 0px 5px 10px 5px;
-    order: 19;
+    order: 20;
 }
+
+
+
+
 
 
 
@@ -273,7 +345,11 @@
 /*Other Fields*/
 
 /*Service*/
-
+#attribute6505-grp {
+    margin: 0px 5px 10px 5px;
+    width: 400px;
+    order: 1;
+}
 
 /*Requestor card*/
 

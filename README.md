@@ -27,44 +27,17 @@ If you work here at the OSU IT (you should know who you are), you can reach Max 
 
 Please email me for questions, comments, suggestions, etc.
 
+If you're looking for a specific dev, our dev contact list is [here](https://github.com/cascadeth/OSU-IT-Tool-Mods/wiki/4-Dev-Contact-List)
+
 
 ***
 
 
 ### Okay, so how do I use these scripts?
-#### Basic (without learning Git):
-1. Click "Clone or download" 
-2. Click "Download ZIP" and choose where to save 
-3. Extract the .zip 
-4. Choose the tool(s) that you would like to download themes for 
-5. Follow the readme(s) for each tool on how to use the scripts 
-
-#### Advanced (GIT required):
-1. Clone the repository using your favorite Git tool 
-2. Choose the tool(s) that you would like to download themes for 
-3. Follow the readme(s) for each tool on how to use the scripts 
+[Check out our Wiki](https://github.com/cascadeth/OSU-IT-Tool-Mods/wiki/2-How-To-Install-Scripts-and-Styles)
 
 
 ***
 
 ### I have my own styles that I would like to contribute!
-Great!  Read the steps below (more detailed explanation with possible pictures at a later time)
-
-#### Steps:
-
-1. Create a Github account 
-
-2. Hit that fork button up at the top 
-
-3. Clone your fork onto your machine 
-
-4. Push your code 
-
-5. Make sure your modification follows our formatting guide (see below) 
-
-    * Not following formatting guide can result in very cranky messages followed by pull rejections, or mods just fixing it for you 
-   
-6. Submit a pull request 
-
-#### Formatting Guide:
-WIP
+Great!  [Click this link for instructions](https://github.com/cascadeth/OSU-IT-Tool-Mods/wiki/3-How-To-Add-Your-Own-Styles-and-Scripts-to-the-Repo)
