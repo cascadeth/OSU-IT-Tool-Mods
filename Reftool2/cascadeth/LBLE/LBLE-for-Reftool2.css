@@ -110,9 +110,16 @@ pre {
     border: 3px solid #dd0000 !important;
 }
 
+.panel-heading.clearfix.panel-heading-button.extension,
 .list-group-item.clickable.extension {
     background-color: #00cc33;
     border: 3px solid #00ff55 !important;
+}
+
+.list-group-item.clickable.cascades,
+.panel-heading.clearfix.panel-heading-button.cascades {
+    background-color: #7138e3 !important;
+    border: 3px solid #bba4fc !important;
 }
 
 .list-group-item.clickable.disabled {
