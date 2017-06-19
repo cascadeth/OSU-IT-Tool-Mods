@@ -1,0 +1,11 @@
+@-moz-document url-prefix("https://oregonstate.teamdynamix.com/TDNext/Home/Desktop/Default.aspx?ToUrl=%2fTDNext") {
+/* Header for Modified Date/Time */
+#ctl00 > thead > tr > th:nth-child(7) {
+    display: none;
+}
+
+/* Modified Date/Time Cell */
+#ctl00 > tbody  tr > td:nth-child(7) {
+    display: none;
+}
+}
