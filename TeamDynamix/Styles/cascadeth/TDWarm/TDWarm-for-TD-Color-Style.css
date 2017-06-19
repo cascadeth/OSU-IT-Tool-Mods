@@ -1,7 +1,7 @@
 /********************************************************************************************************************************************
 ### Title     -    TDWarm for TeamDynamix
 ### author    -    Maximillian Schmidt - Colors/Styles, Gina Phipps - Field Positionings
-### version   -    v1.6.3
+### version   -    v1.6.4
 #@# section1
     ### apply -    URLs starting with: https://oregonstate.teamdynamix.com/
 
@@ -108,7 +108,8 @@ label,
 span.bit-box,
 .gutter .checkbox,
 .gutter .gutter-top,
-.gutter span {
+.gutter span,
+.gutter-top-sm.gutter-bottom-sm .text {
     /*color: #0078ff;       /* BLUE    */
     /*color: #dd32cc;       /* MAGENTA */
     /*color: #ff7800;       /* ORANGE  */
@@ -196,12 +197,27 @@ a {
 #attribute25373,
 #attribute25384,
 #attribute3960,
+#attribute27440,
+#attribute25352,
+#attribute26564,
 .js-ca textarea,
 #divNoTimeTypes,
 #divNewPercentComplete *,
 .border-bottom,
 #txtStatusComments,
-#s2id_lstNotification ul li {
+#s2id_lstNotification ul li,
+#ddlDesktops,
+#txtTicketID,
+select[name="grdTickets$ctl19"],
+#divLeft,
+#txtSearchPhrase,
+#divProfilePic .form-control,
+#divProfilePic .alert,
+.row select,
+.row input,
+.row textarea,
+#divOrgIDAltID,
+#divAccount .form-control {
     background-color: rgba(48, 0, 48, 0.4) !important;
     color: white;
 }
