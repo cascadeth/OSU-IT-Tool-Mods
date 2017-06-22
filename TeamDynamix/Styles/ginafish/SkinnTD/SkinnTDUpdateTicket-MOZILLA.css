@@ -45,43 +45,69 @@ body > div:nth-child(4) > div > div.col-sm-8 > div > form > div:nth-child(5) {
 
 /* Notify */
 body > div:nth-child(4) > div > div.col-sm-8 > div > form > div:nth-child(7) {
-    width: 400px;
+    min-width: 400px;
+    max-width: 450px;
     margin: 0px 10px 10px 10px;
 }
 
-//Notify Others {}
+/* The notify warning thing */
+body > div:nth-child(4) > div > div.col-sm-8 > div > form > div.js-notify-monitor.alert.alert-warning {
+    max-width: 200px;
+    margin: 0px 10px 10px 10px;
+}
+
+/* Notify Others */
 #divOtherPeople {
     width: 450px;
     margin: 0px 10px 10px 10px;
 }
 
-//Other Email Addresses {}
+/* Other Email Addresses */
 #divOtherEmailAddresses {
     width: 300px;
     margin: 0px 10px 10px 10px;
+    /*flex: 0 1 100%;*/
+}
+#divOtherEmailAddresses > div:nth-child(3) {
+    width: 300px;
 }
 
-//Attachments {}
-#divAttach {
+/* Attachments */
+body > div:nth-child(4) > div > div.col-sm-8 > div > form > div:nth-child(12) {
     width: 600px;
     margin: 0px 10px 10px 10px;
 }
 
-//Knowledge Base Article {}
-#divKBArticle {
+/* Knowledge Base Article */
+body > div:nth-child(4) > div > div.col-sm-8 > div > form > div:nth-child(13) {
     width: 425px;
+    margin: 0px 10px 10px 10px;
+    flex: 0 1 100%;
+    
+}
+
+/* KB ExistingandCreate derp */
+body > div:nth-child(4) > div > div.col-sm-8 > div > form > div.js-existing-article {
+    width: 425px;
+    margin: 0px 10px 10px 10px;
+    flex: 0 1 100%;
+}
+body > div:nth-child(4) > div > div.col-sm-8 > div > form > div.js-new-article {
+    width: 425px;
+    margin: 0px 10px 10px 10px;
+    flex: 0 1 100%;
+}
+
+/* Application */
+
+/* Build - equipment location */
+#attribute26617-grp {
     margin: 0px 10px 10px 10px;
 }
 
-//KB ExistingandCreate derp {}
-#divExistingArticle {
-
-    width: 425px;
-    margin: 0px 10px 10px 10px;
-}
-#divNewArticle {
-    width: 425px;
-    margin: 0px 10px 10px 10px;
+/* Build - machine status */
+#attribute25674-grp {
+    margin: 0px 10px 10px;
 }
 
 //Account Type {}
@@ -89,20 +115,20 @@ body > div:nth-child(4) > div > div.col-sm-8 > div > form > div:nth-child(7) {
     margin: 0px 10px 10px 10px;
 }
 
-//COHO Ticket num link {}
-#divAttribute25936 {
+/* COHO Ticket num link */
+#attribute25936-grp {
     margin: 0px 10px 10px 10px;
     width: 300px;
     height: 120px;
 }
 
-//Customer Location {}
-#divAttribute25386 {
+/* Customer Location */
+#attribute25386-grp {
     margin: 0px 10px 10px 10px;
 }
 
-//Related ticket {}
-#divAttribute26857 {
+/* Related ticket */
+#attribute26857-grp {
     margin: 0px 10px 10px 10px;
 }
 
@@ -152,6 +178,58 @@ body > div:nth-child(4) > div > div.col-sm-8 > div > form > div:nth-child(7) {
 }
 
 
+/* Realigning the right panels. */
+body > div:nth-child(4) > div {			/* The container for the columns. */
+    display: flex;
+    flex-direction: column;
+}
+body > div:nth-child(4) > div > div.col-sm-4 {		/* The right hand column w/ requestor etc */
+    display: flex;
+    flex-direction: row;
+    order: 1;
+    width: 100%;
+    /*justify-content: space-between;*/
+}
+body > div:nth-child(4) > div > div.col-sm-4 > div:nth-child(1) {		/* Requestor card */
+    width: 400px;
+    height: auto;
+}
+body > div:nth-child(4) > div > div.col-sm-4 > div:nth-child(2) {		/*  Details */
+    min-width:500px;
+    padding: 0px;
+    margin: 0px;
+    height: 75px;
+}
+body > div:nth-child(4) > div > div.col-sm-4 > div:nth-child(1), body > div:nth-child(4) > div > div.col-sm-4 > div:nth-child(2) {					/* Both */
+    margin: 5px;
+    margin-bottom: 15px;
+}
+body > div:nth-child(4) > div > div.col-sm-4 > div:nth-child(2) > div.panel-body {		/* Details in details */
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    height: auto;
+}
+body > div:nth-child(4) > div > div.col-sm-4 > div:nth-child(2) > div.panel-body > div {		/* Text in details */
+    padding: 0px 5px 0px 5px;
+    margin: 0px;
+}
+body > div:nth-child(4) > div > div.col-sm-4 > div:nth-child(2) > div.panel-body::after {		/* No idea */
+    display: none;
+}
+
+body > div:nth-child(4) > div > div.col-sm-8 {		/* The left hand column with all of the ticket fields */
+    order: 2;
+    width: 100%;
+}
+/* Hiding panel headings to save space */
+body > div:nth-child(4) > div > div.col-sm-4 > div > div.panel-heading {
+    display: none;
+    
+}
+
+
+
 
 /* uncomment the following to hide things: */
 
@@ -168,12 +246,17 @@ body > div:nth-child(4) > div > div.col-sm-8 > div > form > div:nth-child(7) {
 }
 
 /*//Knowledge Base Article note that this will be used and relevant someday so hide at your own risk {}
-#divKBArticle {
+body > div:nth-child(4) > div > div.col-sm-8 > div > form > div:nth-child(13) {
     display: none;
 }*/
 
-//COHO Ticket Num {}
-#divAttribute25936 {
+/* COHO Ticket Num */
+#attribute25936-grp {
 	display: none;
+}
+
+/* No Time Warning */
+body > div:nth-child(4) > div > div.col-sm-8 > div > form > div:nth-child(5) {
+    display: none;
 }
 }
