@@ -2,7 +2,7 @@
     /********************************************************************************************************************************************
 ### Title     -    TDWarm for TeamDynamix
 ### author    -    Maximillian Schmidt - Colors/Styles, Gina Phipps - Field Positionings
-### version   -    v1.6.4
+### version   -    v1.6.5
 #@# section1
     ### apply -    URLs starting with: https://oregonstate.teamdynamix.com/
 
@@ -93,7 +93,8 @@
     .gutter .checkbox,
     .gutter .gutter-top,
     .gutter span,
-    .gutter-top-sm.gutter-bottom-sm .text {
+    .gutter-top-sm.gutter-bottom-sm .text,
+    #lblOperationalHours {
         /*color: #0078ff;       /* BLUE    */
         /*color: #dd32cc;       /* MAGENTA */
         /*color: #ff7800;       /* ORANGE  */
@@ -184,7 +185,17 @@
     .row input,
     .row textarea,
     #divOrgIDAltID,
-    #divAccount .form-control {
+    #divAccount .form-control,
+    #txtTitle,
+    select[name="ddlPredecessor"],
+    #txtStartDate,
+    #txtEndDate,
+    #txtEstimatedHours,
+    #txtCompleteWithin,
+    #basic-addon2,
+    #divResponsible .input-group .form-control,
+    #txtDescription,
+    #divWarnNotificationSelection {
         background-color: rgba(48, 0, 48, 0.4) !important;
         color: white;
     }
