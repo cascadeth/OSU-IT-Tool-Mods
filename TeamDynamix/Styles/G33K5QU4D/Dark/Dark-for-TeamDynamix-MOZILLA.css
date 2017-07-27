@@ -1,4 +1,4 @@
-@-moz-document url-prefix("https://oregonstate.teamdynamix.com") {
+@-moz-document url-prefix("https://oregonstate.teamdynamix.com/") {
 /*Main background color*/
 
 body, #divHeader, .comment, .ms-drop, .modal-content, #divStandardFields, .white-bg, #TodosMenu, #divFeedback2, .breadcrumb {
@@ -39,7 +39,7 @@ i.fa .fa-user {
 }
 
 /*More text that needs to be white*/
-#upDetails, .control-label, h1,  h2, label, #ttDescription, .gutter-top-xs, .gray, .absoluteDate, .gutter-left-sm, .lead, .text-muted {
+#upDetails, .control-label, h1,  h2, label, #ttDescription, .gutter-top-xs, .gray, .absoluteDate, .gutter-left-sm, .lead, .text-muted, .col-sm-6 {
     color: white;
 }
 
@@ -76,7 +76,7 @@ td a, td, .pull-right, .gutter-top-xs, .ModuleContent, .popover {
 }
 
 /*More white text*/
-#divToDos, #dropdownMenu1, .block-info, .col-md-12, .frmFldLbl, #ctl00_lblStatus {
+#divToDos, #dropdownMenu1, .block-info, .col-md-12, .frmFldLbl, #ctl00_lblStatus, .status {
     color: white !important;
 }
 
@@ -121,6 +121,11 @@ tr.TDGridHeader td a, tr.TDGridHeader td, .TDGridHeader, .TDPagerRow span {
 /*Details label*/
 .panel label {
     color: black;
+}
+
+/*Requestor Black Text*/
+#pcRequestor_divPersonInfo .gutter-top-xs {
+    color: black !important;
 }
 
 /*People table*/
@@ -247,6 +252,10 @@ li.ui-state-active {
     background-color: #cfd1d3;
 }
 
+li.themed.tdbar-button-anchored a {
+    color: white !important;
+}
+
 li.themed.tdbar-button-anchored.active a{
     color: white !important;
 }
@@ -260,8 +269,18 @@ span.gutter-top-sm.gray.fa.fa-4x.fa-fw {
 
 #collapseMe .active a {
     color: white !important;
+    background-color: black !important;
 }
 
+/*Navbar*/
+#td-navbar-collapse li a{
+    color: white !important;
+}
+
+/*Feed Text*/
+.gutter-top-xs {
+    color: white !important;
+}
 
 /*End Knowledgebase*/
 
@@ -335,11 +354,5 @@ li.active, li.active a {
 
 #divTasks .gutter-top-xs {
     color: white;
-}
-
-/*Ticket View*/
-#grdTickets_ctl14 {
-    background-color: #555 !important;
-    border-radius: 5px;
 }
 }

@@ -1,0 +1,20 @@
+.dashboard-body, .dashboard-panel {
+    background-color: black !important;
+}
+
+h2, h3, label {
+    color: white !important;
+}
+
+.view---pages-enterprise---6-5-1---1zrJY, .view---pages-enterprise---6-5-1---N_G2D {
+    background-color: #444 !important;
+}
+
+tr {
+    background-color: #555;
+    color: white !important;
+}
+
+.raw-event, .alert-info, .field, .field-value a, .nav---pages-enterprise---6-5-1---4cal7 a, .copyright---pages-enterprise---6-5-1---1Yh2N {
+    color: white !important;
+}
