@@ -9,6 +9,16 @@ body, body > app > div.content-wrapper > div:nth-child(2)  {
     color: #999999;
 }
 
+/* Background color of top bar */
+#navbar, 
+body > r2-app > div:nth-child(1) > r2-navbar, 
+#navbar > div, 
+#navbar > div > div.navbar-header,
+#bs-example-navbar-collapse-2, 
+#navbar > div > div.navbar-header > a, #navbar > div > div.navbar-header > button {
+    background-color: #111111 !important;
+}
+
 
 #content > div:nth-child(2) > div > results > div > div.panel-body > div > a > h4
 {
@@ -31,6 +41,7 @@ body, body > app > div.content-wrapper > div:nth-child(2)  {
     opacity: 1;
 }
 
+/* Results body */
 .panel-default,
 .container-fluid > .navbar-collapse,
 .panel-default,
@@ -69,6 +80,8 @@ div.input-group,
     background: linear-gradient(to left, #252322, #050052);
 }
 
+
+/* Nav buttons and text inputs */
 .btn-default, 
 .navbar-inverse .navbar-nav > .open > a,
 .navbar-inverse .navbar-nav > .open > a:hover,
@@ -111,5 +124,12 @@ pre {
 #content > div:nth-child(2) > div > r2-results > div > div.panel-body > div > a {
     background: grey;
     border: 1px black solid;
+}
+
+/* Notes */
+#content > div:nth-child(1) > div > div > div > r2-notes > div > div > textarea {
+    margin-top: 15px;
+    padding: 0px 7px;
+    background-color: #111111;
 }
 }
