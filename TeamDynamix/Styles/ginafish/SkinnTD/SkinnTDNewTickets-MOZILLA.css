@@ -417,4 +417,39 @@ body > div.container-fluid.padding-top > div > div.col-sm-4.hidden-xs.gutter-top
 #attribute25936-grp {
     /*display: none;*/
 }
+
+
+
+/*  The help text */
+#Help0 {
+    display: none;
+}
+
+#attribute6505-help {
+    display: none;
+}
+
+#attribute1307-help {
+    display: none;
+}
+
+#attribute1306-help {
+    display: none;
+}
+
+#attribute4486-help {
+    display: none;
+}
+
+#attribute1304-help {
+    display: none;
+}
+
+#attribute1303-help {
+    display: none;
+}
+
+#attribute2937-help {
+    display: none;
+}
 }
