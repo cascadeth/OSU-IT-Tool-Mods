@@ -38,7 +38,7 @@ i.fa .fa-user {
 }
 
 /*More text that needs to be white*/
-#upDetails, .control-label, h1,  h2, label, #ttDescription, .gutter-top-xs, .gray, .absoluteDate, .gutter-left-sm, .lead, .text-muted, .col-sm-6 {
+#upDetails, .control-label, h1,  h2, label, #ttDescription, .gutter-top-xs, .gray, .absoluteDate, .gutter-left-sm, .lead, .text-muted, .col-sm-6, .disp-group {
     color: white;
 }
 
@@ -64,7 +64,7 @@ a {
 }
 
 /*Text to be black*/
-td a, td, .pull-right, .gutter-top-xs, .ModuleContent, .popover {
+td a, td, .pull-right, .gutter-top-xs, .ModuleContent, .popover, .panel-body div {
     color: black;                                       
 }
 
@@ -262,7 +262,7 @@ span.gutter-top-sm.gray.fa.fa-4x.fa-fw {
     color: black !important;
 }
 
-.media-body .gutter-bottom-xs a {
+.media-body .gutter-bottom-xs a, .feed-entry-actions button, .feed-pager button {
     color: #5394fc  !important;
 }
 
@@ -346,11 +346,12 @@ li.active, li.active a {
     color: white;
 }
 
-/*Tasks*/
-#divTasks a {
-    color: #5394fc !important;
+/*Black text for highlights*/
+p span {
+    color: black !important;
 }
 
-#divTasks .gutter-top-xs {
-    color: white;
+/*General table alt colors*/
+.table tr:nth-child(odd) {
+    background-color: #696f7a !important;
 }
