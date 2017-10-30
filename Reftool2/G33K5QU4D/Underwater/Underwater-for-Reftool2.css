@@ -52,7 +52,7 @@ body {
 	color: white;    
 }
 
-/*???*/
+/*More white text*/
 .list-group-item {
 	color: white !important;
     background-color: #0564a8 !important;
@@ -70,7 +70,7 @@ body {
    background-color: #0564a8;
 }
 
-/*Dropdown links*/
+
 .dropdown-menu, .dropdown-menu li a {
     background-color: #0564a8 !important;
     color: white !important;
