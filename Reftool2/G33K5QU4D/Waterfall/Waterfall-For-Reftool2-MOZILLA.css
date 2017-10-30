@@ -1,5 +1,6 @@
 @-moz-document url-prefix("https://tools.is.oregonstate.edu/reftool2/") {
 body {
+   body {
     background-image:    url("https://i.imgur.com/BNXLkqm.gif");
 	background-repeat: no-repeat;
     background-attachment: fixed;
@@ -7,48 +8,56 @@ body {
 	background-size: cover;
 }
 
+/*Main background settings*/
 .panel {
     background-color: rgba(100,100,100,0.6);
     border-radius: 10px;
     color: #fff;
 }
 
+/*Color change on hover*/
+.panel:hover {
+    background-color: rgba(100,100,100,0.8);
+}
+
+/*Searchbox*/
 .form-control {
     background-color: rgba(255,255,255,0.4);
     border-radius: 10px;
 }
 
+/*Searchbox on hover*/
 .form-control:hover {
     background-color: rgba(255,255,255,0.8);
 }
 
-.panel:hover {
-    background-color: rgba(100,100,100,0.8);
-}
-
+/*Button Settings*/
 .btn {
     border-radius: 10px;
 }
 
+
+/*Search results heading*/
 .panel-heading {
     border-radius: 10px;
     color: #fff !important;
 	background-color: #555 !important;    
 }
 
+/*Search result boxes*/
 .details-panel {
 	background-color: #555;   
     border-radius: 5px;
 }
 
-.navbar {
-   background-color: #555;
-}
 
+/*History link above notes*/
 .history-button {
 	color: white;    
 }
 
+
+/*More white text*/
 .list-group-item {
 	color: white !important;
     background-color: #777 !important;
@@ -58,15 +67,34 @@ body {
     color: white !important;
 }
 
-.dropdown-toggle:hover, .dropdown-menu li a:hover {
-     background-color: #777 !important;
+/*Dropdown menu and Navbar settings*/
+
+/*Navbar*/
+.navbar {
+   background-color: #555;
 }
 
+
+/*Dropdown links*/
 .dropdown-menu, .dropdown-menu li a {
     background-color: #555 !important;
     color: white !important;
 }
 
+/*Dropdown links on hover*/
+li .dropdown-toggle:hover, .dropdown-menu li a:hover, li.open .dropdown-toggle {
+     background-color: #777 !important;
+}
+
+tr.clickable {
+    background-color: #666;
+}
+
+.clickable:hover td {
+    background-color: #999;
+}
+
+/*Search Results color change*/
 .vip {
     background-color: #bf1313 !important;
 }
@@ -88,6 +116,7 @@ body {
     background-color: #5694f7 !important;
 }
 
+/*Inside box text colors*/
 .well {
     background-color: #666 !important;
     border-radius: 5px;
@@ -97,14 +126,7 @@ body {
         color: white !important;
 }
 
-tr.clickable {
-    background-color: #666;
-}
-
-.clickable:hover td {
-    background-color: #999;
-}
-
+/*Notes box text color*/
 td a, .external-reports a, .col-md-8 a {
     color: #77abff;
 }
@@ -115,5 +137,9 @@ textarea {
 
 .panel-footer {
     background-color: rgba(0,0,0,0);
+}
+
+.btn-disclaimer {
+    display: none !important;
 }
 }

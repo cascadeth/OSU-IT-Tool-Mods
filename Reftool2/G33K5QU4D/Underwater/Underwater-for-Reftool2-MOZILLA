@@ -1,5 +1,6 @@
+@-moz-document url-prefix("https://tools.is.oregonstate.edu/reftool2/") {
 body {
-    background-image:    url("https://i.imgur.com/BNXLkqm.gif");
+    background-image:    url("https://i.imgur.com/8dfzF2h.gif");
 	background-repeat: no-repeat;
     background-attachment: fixed;
     background-position: center;
@@ -8,14 +9,14 @@ body {
 
 /*Main background settings*/
 .panel {
-    background-color: rgba(100,100,100,0.6);
+    background-color: rgba(12, 154, 255,0.6);
     border-radius: 10px;
     color: #fff;
 }
 
 /*Color change on hover*/
 .panel:hover {
-    background-color: rgba(100,100,100,0.8);
+    background-color: rgba(12, 154, 255,0.8);
 }
 
 /*Searchbox*/
@@ -34,32 +35,30 @@ body {
     border-radius: 10px;
 }
 
-
 /*Search results heading*/
 .panel-heading {
     border-radius: 10px;
     color: #fff !important;
-	background-color: #555 !important;    
+	background-color: #0564a8 !important;    
 }
 
 /*Search result boxes*/
 .details-panel {
-	background-color: #555;   
+	background-color: #0564a8;   
     border-radius: 5px;
 }
-
 
 /*History link above notes*/
 .history-button {
 	color: white;    
 }
 
-
-/*More white text*/
+/*???*/
 .list-group-item {
 	color: white !important;
-    background-color: #777 !important;
+    background-color: #0564a8 !important;
 }
+
 
 .list-group-item-heading, .list-group-item-text {
     color: white !important;
@@ -67,32 +66,31 @@ body {
 
 /*Dropdown menu and Navbar settings*/
 
-/*Navbar*/
+/*Navbar background color*/
 .navbar {
-   background-color: #555;
+   background-color: #0564a8;
 }
-
 
 /*Dropdown links*/
 .dropdown-menu, .dropdown-menu li a {
-    background-color: #555 !important;
+    background-color: #0564a8 !important;
     color: white !important;
 }
 
 /*Dropdown links on hover*/
 li .dropdown-toggle:hover, .dropdown-menu li a:hover, li.open .dropdown-toggle {
-     background-color: #777 !important;
+     background-color: #02497c !important;
 }
 
 tr.clickable {
-    background-color: #666;
+    background-color: #02497c;
 }
 
 .clickable:hover td {
-    background-color: #999;
+    background-color: #02497c;
 }
 
-/*Search Results color change*/
+/*Search result color changes*/
 .vip {
     background-color: #bf1313 !important;
 }
@@ -114,29 +112,33 @@ tr.clickable {
     background-color: #5694f7 !important;
 }
 
-/*Inside box text colors*/
+/*Inside box background color*/
 .well {
-    background-color: #666 !important;
+    background-color: #0564a8 !important;
     border-radius: 5px;
 }
 
+/*Inside box text colors*/
 .well td, .well th {
         color: white !important;
 }
 
-/*Notes box text color*/
 td a, .external-reports a, .col-md-8 a {
     color: #77abff;
 }
 
+/*Notes box text color*/
 textarea {
     color: black;
 }
+
 
 .panel-footer {
     background-color: rgba(0,0,0,0);
 }
 
+/*Hides disclaimer button*/
 .btn-disclaimer {
     display: none !important;
+}
 }
