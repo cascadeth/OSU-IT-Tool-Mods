@@ -38,8 +38,8 @@ i.fa .fa-user {
     background-color: #bbb;
 }
 
-/*More text that needs to be white*/
-#upDetails, .control-label, h1,  h2, label, #ttDescription, .gutter-top-xs, .gray, .absoluteDate, .gutter-left-sm, .lead, .text-muted, .col-sm-6, .disp-group {
+/*More text at needs to be white*/
+#upDetails, .control-label, h1,  h2, label, #ttDescription, .gutter-top-xs, .gray, .absoluteDate, .gutter-left-sm, .lead, .text-muted, .col-sm-6, .disp-group, .help-block, .form-group, #divDescription {
     color: white;
 }
 
@@ -49,14 +49,32 @@ a {
     text-decoration: underline;
 }
 
-/*Alternating table color*/
+
+/*Tables*/
+
+.table tr:nth-child(odd), .table tr:nth-child(odd) td, .table tr:nth-child(odd) a {
+    background-color: #696f7a !important;
+    color: white !important;
+}
+
+.table tr:nth-child(even), .table tr:nth-child(even) td, .table tr:nth-child(even) span a {
+    background-color: #c9c9c9 !important;
+    color: black !important;
+}
+
+/*Alternating ticket table color*/
 .TDAlternatingRow {
     background-color: #696f7a !important;
 }
 
-/*Alternating table text color*/
+/*Alternating ticket table text color*/
 .TDAlternatingRow  a, .TDAlternatingRow td {
     color: white;
+}
+
+/*Page number color*/
+tr.TDPagerRow span {
+    color: black !important;
 }
 
 /*More text to be white*/
@@ -85,38 +103,12 @@ td a, td, .pull-right, .gutter-top-xs, .ModuleContent, .popover, .panel-body div
     color: black !important;
 }
 
-#upSearch td, #upSearch td a, .gutter-bottom, #grdTickets-tblGrp-1 td, #grdTickets-tblGrp-1 a, .feed-item .gutter-top-xs, .help-block {
-    color: white;
-}
-
-/*ticket grid background color*/
-#grdTickets-tblGrp-1 tr {
-    background-color: #7b7e84 !important;
-}
 
 /*Responsible Dropdown text color*/
 .lu_tdac-auto {
     color: black;
 }
 
-/*Children List colors*/
-#grdChildren td, #grdChildren td a {
-    color: white;
-}
-
-#upChildren td {
-    background-color: #5f636b;
-}
-
-/*Child list Header Table Color*/
-.TDGridHeader td {
-    background-color: #eee !important;
-}
-
-/*Children list table header*/
-tr.TDGridHeader td a, tr.TDGridHeader td, .TDGridHeader, .TDPagerRow span {
-    color: black !important;
-}
 
 /*Details label*/
 .panel label {
@@ -125,15 +117,6 @@ tr.TDGridHeader td a, tr.TDGridHeader td, .TDGridHeader, .TDPagerRow span {
 
 /*Requestor Black Text*/
 #pcRequestor_divPersonInfo .gutter-top-xs {
-    color: black !important;
-}
-
-/*People table*/
-#grdPeople td {
-    background-color: #c8cace;
-}
-
-#grdPeople-tblGrp-1 td,  #grdPeople-tblGrp-1 td a{
     color: black !important;
 }
 
@@ -188,36 +171,6 @@ li.ui-state-active {
     border-radius: 2px;
 }
 
-/*Read by table, person lookup table*/
-#UpdatePanel1, #ctl00_cphGrid_grdUsers {
-    background-color: #ccc !important;
-}
-
-/*Ticket tabs*/
-
-
-/*More table*/
-.table-striped, #ctl00_cphMain_grdTickets tr, #upUsers tr, #grdReadBy tr, #ctl00_upItems tr, #grdAssignments tr, #grdDesktops tr, #grdTickets tr, #ctl00_ctl00_cpContent_cpContent_grdTickets tr, .table-responsive tr, #UpdatePanel2 tr {
-    background-color: #777 !important;
-}
-
-#ctl00_cphMain_grdTickets th, #upUsers th, #grdReadBy th, #ctl00_upItems th, #grdAssignments th, #grdDesktops th, #grdTickets th, #ctl00_ctl00_cpContent_cpContent_grdTickets th, #UpdatePanel2 th {
-    background-color: #ddd;
-}
-
-.table-striped td, .table-striped td a {
-    color: white !important;
-}
-
-/*Group Members table*/
-#grdMembers tr {
-    background-color: #777 !important;
-}
-
-#grdMembers tr span {
-    color: white !important;
-}
-/*End Group Members Table*/
 
 /*Knowledgebase*/
 .master-header {
@@ -352,8 +305,16 @@ p span {
     color: black !important;
 }
 
-/*General table alt colors*/
-.table tr:nth-child(odd) {
-    background-color: #696f7a !important;
+/*IT Reports*/
+
+/*Top Banner*/
+.ButtonCellTop {
+    background-color: #555 !important;
+}
+
+
+/*Date and time*/
+.pull-right.gutter-top-sm {
+    color: white;
 }
 }
