@@ -39,7 +39,7 @@ i.fa .fa-user {
 }
 
 /*More text at needs to be white*/
-#upDetails, .control-label, h1,  h2, label, #ttDescription, .gutter-top-xs, .gray, .absoluteDate, .gutter-left-sm, .lead, .text-muted, .col-sm-6, .disp-group {
+#upDetails, .control-label, h1,  h2, label, #ttDescription, .gutter-top-xs, .gray, .absoluteDate, .gutter-left-sm, .lead, .text-muted, .col-sm-6, .disp-group, .help-block {
     color: white;
 }
 
