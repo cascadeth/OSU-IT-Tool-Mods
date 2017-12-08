@@ -21,7 +21,7 @@ body, #divHeader {
     background-color: #323232 !important;
 }
 
-.checkbox-inline {
+.checkbox-inline, #lstNotification_ms_drop * {
 	color: gray;
 }
 
