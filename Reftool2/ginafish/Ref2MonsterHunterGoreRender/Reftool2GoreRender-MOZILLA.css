@@ -9,6 +9,13 @@ body, body > app > div.content-wrapper > div:nth-child(2)  {
     color: #999999;
 }
 
+/* Notes */
+#content > div:nth-child(1) > div > div > div > r2-notes > div > div > textarea {
+	background-color: #222222;
+	border-color: #999999;
+    color: #999999;
+}
+
 #navbar > div > div.navbar-header {
     background-color: #222222 !important;
 }
