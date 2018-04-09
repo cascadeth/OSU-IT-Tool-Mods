@@ -9,20 +9,34 @@ body, body > app > div.content-wrapper > div:nth-child(2)  {
     color: #999999;
 }
 
+/* Notes */
+#content > div:nth-child(1) > div > div > div > r2-notes > div > div > textarea {
+	background-color: #222222;
+	border-color: #999999;
+    color: #999999;
+}
+
+#navbar > div > div.navbar-header {
+    background-color: #222222 !important;
+}
+
+.panel-default, .container-fluid > .navbar-collapse, .panel-default, .input-group-addon:first-child, .container-fluid, .well, .list-group-item, div.input-group, #content > div:nth-child(1) {
+ 	background-color: #222222 !important;   
+}
 
 #content > div:nth-child(2) > div > results > div > div.panel-body > div > a > h4
 {
-    color: #e6f2ff
+    color: #e6f2ff;
 }
 
 #content > div:nth-child(2) > div > results > div > div.panel-heading > span
 {
-    color: white
+    color: white;
 }
 
 #customer-details > div > div > div.col-md-4 > p > strong
 {
-    color: blue
+    color: blue;
 }
 
 

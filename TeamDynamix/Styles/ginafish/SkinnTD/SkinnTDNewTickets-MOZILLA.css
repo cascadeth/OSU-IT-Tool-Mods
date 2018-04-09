@@ -1,4 +1,4 @@
-@-moz-document url-prefix("https://oregonstate.teamdynamix.com/TDNext/Apps/425/Tickets/TicketNew") {
+@-moz-document url-prefix("https://oregonstate.teamdynamix.com/TDNext/Apps/425/Tickets/New") {
 /*Outer container of the fields*/
 #divContent > form {
     display: flex;
@@ -55,30 +55,34 @@ body > div.container-fluid.padding-top > div > div.col-sm-4.hidden-xs.gutter-top
 
 /* FORM FIELDS */
 
+.form-group {
+	order: 20 !important;
+}
+
 /*Form*/
 #divContent > form > div.form-group.gutter-top {
     max-width: 450px;
     margin: 0px 5px 10px 5px;
-    order: 1;
+    order: 1 !important;
 }
 
 /*Template*/
 #divContent > form > div:nth-child(5) {
     width: 400px;
     margin: 0px 5px 10px 5px;
-    order: 2;
+    order: 2 !important;
 }
 
 /* Priority */
 #attribute1307-grp {
     margin: 0px 5px 0px 5px;
-    order: 3;
+    order: 3 !important;
 }
 
 /*Status*/
 #attribute1306-grp {
     margin: 0px 5px 10px 5px;
-    order: 4;
+    order: 4 !important;
 }
 
 /* Goes Off Hold */
@@ -416,5 +420,40 @@ body > div.container-fluid.padding-top > div > div.col-sm-4.hidden-xs.gutter-top
 /* COHO Ticket Info */
 #attribute25936-grp {
     /*display: none;*/
+}
+
+
+
+/*  The help text */
+#Help0 {
+    display: none;
+}
+
+#attribute6505-help {
+    display: none;
+}
+
+#attribute1307-help {
+    display: none;
+}
+
+#attribute1306-help {
+    display: none;
+}
+
+#attribute4486-help {
+    display: none;
+}
+
+#attribute1304-help {
+    display: none;
+}
+
+#attribute1303-help {
+    display: none;
+}
+
+#attribute2937-help {
+    display: none;
 }
 }
