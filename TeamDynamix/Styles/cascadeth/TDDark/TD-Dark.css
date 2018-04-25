@@ -116,3 +116,8 @@ body > div:nth-child(4) > div > div.col-sm-4 > div > div.panel-body > div > div 
 body > div:nth-child(4) > div > div.col-sm-4 > div {
     background-color: #252525;
 }
+
+
+#thTicket_copyControl_btnCopyTypeAndID, #thTicket_copyControl_btnCopyID {
+	background-color: transparent;
+}
