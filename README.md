@@ -3,7 +3,9 @@
 ***
 ### UPDATE: 
 Both Chrome and Firefox have removed Stylish from their extensions due to browser history tracking and privacy breaches. 
-These CSS sets will remain, but Stylish will not.  Source: https://www.bleepingcomputer.com/news/software/chrome-and-firefox-pull-stylish-add-on-after-report-it-logged-browser-history/
+These CSS sets will remain, but Stylish will not.  Source: https://www.bleepingcomputer.com/news/software/chrome-and-firefox-pull-stylish-add-on-after-report-it-logged-browser-history/  
+
+As an alternative, you may use the fork of Stylish called Stylus: https://chrome.google.com/webstore/detail/stylus/clngdbkpkpeebahjckkjfobafhncgmne
 
 ### What:
 This repo provides a set of user styles (note: only supported use with Stylish add-on) for multiple sites
