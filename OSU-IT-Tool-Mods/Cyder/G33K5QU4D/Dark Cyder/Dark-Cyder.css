@@ -1,0 +1,59 @@
+body {
+    background-color: black;
+    color: white;
+}
+
+h1  {
+    color: white;
+}
+
+.front-page-link {
+    color: white;
+    background-color: black;
+}
+
+.table, .pagination {
+    background-color: black !important;
+    border-style: solid;
+    border-radius: 10px;
+}
+
+tr:nth-child(even) {
+	background-color: #3a3a3a !important;
+}
+
+tr:hover {
+	background-color: #444 !important;   
+}
+
+.container_column a {
+    color: white;
+}
+
+.pagination li a {
+    color: white;
+}
+
+.form {
+    background-color: black;
+}
+
+.form label {
+    color: white !important;
+}
+
+.hidden, .content, .footer {
+    background-color: black;
+}
+
+td a {
+    color: white;
+}
+
+.info, .actions_column .js-get-form {
+    filter:brightness(500%);
+}
+
+#search-meta a {
+    color: white;
+}

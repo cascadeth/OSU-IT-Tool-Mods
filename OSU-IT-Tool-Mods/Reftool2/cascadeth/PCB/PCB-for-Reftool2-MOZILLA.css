@@ -1,0 +1,124 @@
+@-moz-document url-prefix("https://tools.is.oregonstate.edu/reftool2/") {
+/********************************************************************************************************************************************
+
+### Title     -    Printed Circuit Board for Reftool 2
+### author    -    Maximillian Schmidt
+### version   -    v1.0
+### apply     -    URLs starting with: https://tools.is.oregonstate.edu/reftool2/
+
+
+### revisions - vX.Y.Z 
+		- X: For Reftool2.  If Reftool3 existed, this would be updated to v2
+		- Y: Updated every major block style change(large div, applies to lots of elements, etc)
+		- Z: Single line changes, only effects one style, etc
+
+********************************************************************************************************************************************/
+body {
+    background-image: url("https://wallup.net/wp-content/uploads/2015/12/15760-blue-digital_art-dark_blue-abstract.jpg");
+
+    /* Alternative Images / GIFs:
+
+    http://wantedwallpapers.com/wp-content/uploads/2014/02/orange-thing-thunderbolt-abstract-desktop-1280x1024-wanted-wallpaper-.jpg
+    http://nexus-wallpaper.com/wp-content/uploads/2014/04/orange-grunge-stripes.png
+    https://68.media.tumblr.com/3a880ef6b2315404bcdfa74a6e24f706/tumblr_nj5nlbcyhY1s4fz4bo1_500.gif
+    https://d13yacurqjgara.cloudfront.net/users/400493/screenshots/2087456/squarepeg.gif
+    https://realtimevfx.com/uploads/default/original/2X/f/ffa4335fa10903ca2f9c36852cb8184bd9fa9fb5.gif
+    https://i.imgur.com/wr0luR6.png
+    https://realtimevfx.com/uploads/default/original/2X/f/ffa4335fa10903ca2f9c36852cb8184bd9fa9fb5.gif
+    https://wallup.net/wp-content/uploads/2015/12/15760-blue-digital_art-dark_blue-abstract.jpg
+    */
+
+    background-size: 100% 100%;
+    color: lightgray;
+}
+
+div.panel-footer {
+    
+    visibility: hidden;
+}
+
+.btn-default,
+.navbar-inverse .navbar-nav>.open>a,
+.navbar-inverse .navbar-nav>.open>a:hover,
+.navbar-inverse .navbar-nav>.open>a:focus,
+.navbar-inverse .navbar-nav>li>a,
+.navbar-inverse .dropdown-menu>li>a,
+.navbar-inverse .dropdown-menu>li>a:focus,
+.navbar-nav>li>.dropdown-menu,
+.input-group .form-control {
+    background: #222222;
+    color: teal;
+    border-color: #666666;
+    border-radius: 4px;
+}
+.container-fluid>.navbar-collapse,
+.panel-default,
+.input-group-addon:first-child,
+.container-fluid,
+.well,
+.list-group-item,
+div.input-group,
+#sidemenu,
+#navbar {
+    background: #020202;
+    /* Change main text colors */
+    /*color: #ee5800;    /* Orange */
+    color: lightgray;
+    /* Magenta */
+    border: #000000;
+    border-radius: 10px;
+}
+.panel,
+.list-group-item,
+.container-fluid,
+#customer-details,
+.well {
+    background-color: rgba(02, 02, 02, 0.2);
+    border-radius: 10px;
+}
+.warning {
+    background-color: rgba(77, 02, 02, 0.85);
+    color: white;
+    padding-top: 10px;
+}
+.panel-default>.panel-heading {
+    background: transparent;
+}
+#ldap {
+    color: white;
+}
+pre {
+    background-color: rgba(02, 02, 02, 0.8);
+    color: white;
+    border-color: #ee5800;
+    border-radius: 10px;
+}
+.list-group-item.clickable * {
+	color: white !important;
+}
+
+/* MAKE PEOPLE FLAGS MORE PROMINENT */
+.panel-heading.clearfix.panel-heading-button.lrp, 
+.list-group-item.clickable.lrp {
+    background-color: #ff9900 !important;
+    border: 3px solid #ffbb00 !important;
+}
+.panel-heading.clearfix.panel-heading-button.vip,
+.list-group-item.clickable.vip {
+    background-color: #ff4444 !important;
+    border: 3px solid #dd0000 !important;
+}
+.panel-heading.clearfix.panel-heading-button.extension,
+.list-group-item.clickable.extension {
+    background-color: #00cc33;
+    border: 3px solid #00ff55 !important;
+}
+.list-group-item.clickable.cascades,
+.panel-heading.clearfix.panel-heading-button.cascades {
+    background-color: #7138e3 !important;
+    border: 3px solid #bba4fc !important;
+}
+.list-group-item.clickable.disabled {
+    border: 3px solid #bbb !important;
+}
+}

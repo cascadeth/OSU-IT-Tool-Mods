@@ -1,0 +1,320 @@
+@-moz-document url-prefix("https://oregonstate.teamdynamix.com/") {
+/*Main background color*/
+
+body, #divHeader, .comment, .ms-drop, .modal-content, #divStandardFields, .white-bg, #TodosMenu, #divFeedback2, .breadcrumb {
+	background-color: #5f636b !important;
+}
+
+/*Hide default link*/
+.organization-link a {
+    visibility: hidden;
+}
+
+/*COHO stlye header*/
+.organization-link {
+    background-image: url("https://secure.oregonstate.edu/u_central/images/blackWordmark.gif");
+    background-repeat: no-repeat;
+    background-color: black;
+    margin-bottom: 2em;
+    box-shadow: 0px 10px #e55302;
+}
+/*Fixed header margin*/
+.organization-link {
+    margin: 0px;
+}
+
+/*white user text*/
+i.fa .fa-user {
+    color: white !important;
+}
+
+/*Applications menu background*/
+#ApplicationsMenu {
+    background-color: #797e84;
+}
+
+/*Desktop module background*/
+.desktop-module {
+    background-color: #bbb;
+}
+
+/*More text at needs to be white*/
+#upDetails, .control-label, h1,  h2, label, #ttDescription, .gutter-top-xs, .gray, .absoluteDate, .gutter-left-sm, .lead, .text-muted, .col-sm-6, .disp-group, .help-block, .form-group, #divDescription {
+    color: white;
+}
+
+/*Default color of hyperlinks*/
+a {
+    color: #5394fc;
+    text-decoration: underline;
+}
+
+
+/*Tables*/
+
+.table tr:nth-child(odd), .table tr:nth-child(odd) td, .table tr:nth-child(odd) a {
+    background-color: #696f7a !important;
+    color: white !important;
+}
+
+.table tr:nth-child(even), .table tr:nth-child(even) td, .table tr:nth-child(even) span a {
+    background-color: #c9c9c9 !important;
+    color: black !important;
+}
+
+/*Alternating ticket table color*/
+.TDAlternatingRow {
+    background-color: #696f7a !important;
+}
+
+/*Alternating ticket table text color*/
+.TDAlternatingRow  a, .TDAlternatingRow td {
+    color: white;
+}
+
+/*Page number color*/
+tr.TDPagerRow span {
+    color: black !important;
+}
+
+/*More text to be white*/
+#thTicket_lblStatus, .gray, .fieldsContainer, .user-link span {
+     color: white !important;
+}
+
+/*Text to be black*/
+td a, td, .pull-right, .gutter-top-xs, .ModuleContent, .popover, .panel-body div {
+    color: black;                                       
+}
+
+/*Navbar background color*/
+.navbar, .TabButtonCell, .panel-body {
+    background-color: #cfd1d3 !important;
+    color: black;
+}
+
+/*More white text*/
+#divToDos, #dropdownMenu1, .block-info, .col-md-12, .frmFldLbl, #ctl00_lblStatus, .status {
+    color: white !important;
+}
+
+/*More black text*/
+.pull-right label, .feed-reply .absoluteDate, .feed-reply  {
+    color: black !important;
+}
+
+
+/*Responsible Dropdown text color*/
+.lu_tdac-auto {
+    color: black;
+}
+
+
+/*Details label*/
+.panel label {
+    color: black;
+}
+
+/*Requestor Black Text*/
+#pcRequestor_divPersonInfo .gutter-top-xs {
+    color: black !important;
+}
+
+/*MyWork sidebar*/
+#navPrimary span {
+    color: white;
+}
+
+.sidebar-wrapper {
+    background-color: #535860 !important;
+}
+
+.sidebar-wrapper a {
+    color: #89b6ff !important;
+}
+
+/*End MyWork Sidebar*/
+
+/*IT sidebar*/
+#divLeft {
+    background-color: #535860 !important;
+}
+
+#divLeft .text {
+    color: white !important;
+}
+
+#divLeft .selected .text, #divLeft .text:hover {
+    color: black !important;
+}
+
+.sidebar-wrapper a {
+    color: #89b6ff !important;
+}
+
+/*End IT Sidebar*/
+
+/*UI Tabs*/
+li.ui-state-default  {
+    color: white !important;
+}
+
+li.ui-state-active {
+    color: black !important;
+    background-color: #cfd1d3 !important;
+}
+/*End UI Tabs*/
+
+/*People info*/
+.person-container {
+    background-color: #ccc;
+    border-radius: 2px;
+}
+
+
+/*Knowledgebase*/
+.master-header {
+    background-color: #5f636b !important;
+}
+
+.logo-header-full {
+    background-image: url("https://secure.oregonstate.edu/u_central/images/blackWordmark.gif");
+    background-repeat: no-repeat;
+    background-color: black;
+    margin-bottom: 1em;
+    box-shadow: 0px 10px #e55302;
+}
+
+#divLogo {
+    visibility: hidden;
+}
+
+#navContainer a{
+    color: black !important;
+}
+
+.settings-button {
+    color: white;
+}
+
+.media-body .gray {
+    color: black !important;
+}
+
+.media {
+    background-color: #cfd1d3;
+}
+
+li.themed.tdbar-button-anchored a {
+    color: white !important;
+}
+
+li.themed.tdbar-button-anchored.active a{
+    color: white !important;
+}
+span.gutter-top-sm.gray.fa.fa-4x.fa-fw {
+    color: black !important;
+}
+
+.media-body .gutter-bottom-xs a, .feed-entry-actions button, .feed-pager button {
+    color: #5394fc  !important;
+}
+
+#collapseMe .active a {
+    color: white !important;
+    background-color: black !important;
+}
+
+/*Navbar*/
+#td-navbar-collapse li a{
+    color: white !important;
+}
+
+/*Feed Text*/
+.gutter-top-xs {
+    color: white !important;
+}
+
+/*End Knowledgebase*/
+
+#divServiceLevelAgreement {
+    display: none !important;
+}
+
+#divCats, textarea {
+    color: black;
+}
+
+.cke_editable {
+    background-color: white !important;
+}
+
+#ctl00_ctl00_cpContent_cpContent_divBody p, #ctl00_ctl00_cpContent_cpContent_divBody a, #ctl00_ctl00_cpContent_cpContent_divBody ol, #ctl00_ctl00_cpContent_cpContent_divBody strong, #ctl00_ctl00_cpContent_cpContent_divBody li, #ctl00_ctl00_cpContent_cpContent_divBody td, #ctl00_ctl00_cpContent_cpContent_divBody h1, #ctl00_ctl00_cpContent_cpContent_divBody h2, #ctl00_ctl00_cpContent_cpContent_divBody h3 {
+    color: white;
+}
+
+.js-icon, .icon-text, .js-selected-icon-display {
+    color: #e5e5e5;
+}
+
+li.active, li.active a {
+    background-color: #5f636b !important;
+    color: white !important;
+}
+
+/*Lighter link colors on dark background*/
+.user-link a, .gutter-bottom-xs a, .nav-tabs a, #divDetails a, .gutter-top-xs a {
+    color: #9bc1ff !important;
+}
+
+.media-body .gutter-top-xs a, .block-actions a, .media-heading a, #divTasks a {
+    color: #116af9 !important;
+}
+
+/*Chat menu*/
+#ChatMenu {
+    background-color: #5f636b !important;
+}
+
+#divChat, #lblChatUsersCount {
+    color: white;
+}
+
+.ChatRow {
+    background-color: #ccc !important;
+    border-radius: 5px;
+}
+/*End chat menu*/
+
+/*Groups page*/
+#divRight {
+    background-color: #5f636b !important;
+}
+
+/*Tasks*/
+#divTasks a {
+    color: #5394fc !important;
+}
+
+#divTasks .gutter-top-xs {
+    color: white;
+}
+
+/*Black text for highlights*/
+p span {
+    color: black !important;
+}
+
+/*IT Reports*/
+
+/*Top Banner*/
+.ButtonCellTop {
+    background-color: #555 !important;
+}
+
+
+/*Date and time*/
+.pull-right.gutter-top-sm {
+    color: white;
+}
+}

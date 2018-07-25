@@ -1,0 +1,459 @@
+@-moz-document url-prefix("https://oregonstate.teamdynamix.com/TDNext/Apps/425/Tickets/New") {
+/*Outer container of the fields*/
+#divContent > form {
+    display: flex;
+    flex-wrap: wrap;
+}
+
+/* Container for form + requestor columns */
+body > div.container-fluid.padding-top > div {
+    display: flex;
+    flex-direction: column;
+}
+/* Requestor card container */
+body > div.container-fluid.padding-top > div > div.col-sm-4.hidden-xs.gutter-top {
+    display: flex;
+    flex-direction: row;
+    order: 1;
+    width: 100%;
+}
+/* Left hand column with the fields */
+#divContent {
+    order: 2;
+    width: 100%;
+}
+/* Requestor card itself */
+body > div.container-fluid.padding-top > div > div.col-sm-4.hidden-xs.gutter-top > div.js-requestor-card > div {
+    width: 400px;
+    height: auto;
+    margin: 10px;
+}
+/* Requestor card title */
+body > div.container-fluid.padding-top > div > div.col-sm-4.hidden-xs.gutter-top > div.js-requestor-card > div > div.panel-heading {
+    display: none;
+}
+/* Requestor card body */
+body > div.container-fluid.padding-top > div > div.col-sm-4.hidden-xs.gutter-top > div.js-requestor-card > div > div.panel-body {
+    padding: 0px 15px 0px 15px;
+    margin: 0px;
+}
+/* Requestor card icon */
+body > div.container-fluid.padding-top > div > div.col-sm-4.hidden-xs.gutter-top > div.js-requestor-card > div > div.panel-body > div > div.media-left {
+    display: none;
+}
+
+
+/* PAGE TITLE */
+#divContent > h1 {
+    /*position: fixed;*/
+}
+#divContent > div.gutter-left-sm.gutter-bottom-sm.gray {
+    /*position: fixed;*/
+}
+
+
+
+/* FORM FIELDS */
+
+.form-group {
+	order: 20 !important;
+}
+
+/*Form*/
+#divContent > form > div.form-group.gutter-top {
+    max-width: 450px;
+    margin: 0px 5px 10px 5px;
+    order: 1 !important;
+}
+
+/*Template*/
+#divContent > form > div:nth-child(5) {
+    width: 400px;
+    margin: 0px 5px 10px 5px;
+    order: 2 !important;
+}
+
+/* Priority */
+#attribute1307-grp {
+    margin: 0px 5px 0px 5px;
+    order: 3 !important;
+}
+
+/*Status*/
+#attribute1306-grp {
+    margin: 0px 5px 10px 5px;
+    order: 4 !important;
+}
+
+/* Goes Off Hold */
+#divContent > form > div.form-group.js-off-hold-date.required {
+    margin: 0px 5px 10px 5px;
+    order: 5;
+}
+
+/*Requestor*/
+#attribute4486-grp {
+    width: 300px;
+    margin: 0px 5px 10px 5px;
+    order: 6;
+}
+
+/*Acct/Dept*/
+#attribute1304-grp {
+    width: 400px;
+    margin: 0px 5px 10px 5px;
+    order: 7;
+}
+
+/*Title*/
+#attribute1303-grp {
+    width: 100%;
+    margin: 0px 5px 10px 5px;
+    order: 8;
+}
+
+/*Description*/
+#attribute2937-grp {
+    display: block;
+    width: 100%;
+    margin: 10px 5px 15px 5px;
+    order: 8;
+}
+
+/* Ticket Type */
+#attribute1305-grp {
+    width: 500px;
+    margin: 0px 5px 0px 5px;
+    order: 9;
+}
+
+/* Responsible */
+#attribute30890-grp {
+    width: 300px;
+    margin: 0px 5px 0px 5px;
+    order: 10;
+}
+
+/* Source */
+#attribute3955-grp {
+    margin: 0px 5px 10px 5px;
+    order: 11;
+}
+
+/* Attachment */
+#attribute3960-grp {
+    width: 500px;
+    margin: 0px 5px 20px 5px;
+	order: 12;
+}
+
+/* Start Date */
+#attribute4443-grp {
+    margin: 0px 5px 10px 5px;
+    order: 13;
+}
+
+/* Due Date */
+#attribute1310-grp {
+    margin: 0px 5px 10px 5px;
+    order: 14;
+}
+
+/* Task Template */
+#attribute30994-grp {
+    margin: 0px 5px 10px 5px;
+    order: 15;
+}
+
+/* Other Fields Header */
+#divContent > form > h2 {
+    order: 16;
+    flex-basis: 100%;
+}
+
+/* Account Type */
+#attribute25368-grp {
+    margin: 0px 5px 10px 5px;
+    order: 17;
+}
+
+/*  */
+#attribute3953-grp {
+    margin: 0px 5px 10px 5px;
+    order: 18;
+}
+
+/* COHO Ticket Link */
+#attribute25936-grp {
+    margin: 0px 5px 10px 5px;
+    order: 18;
+}
+
+/* COHO Ticket Link Box */
+#attribute25936-grp > div.js-ca > textarea {
+    height: 30px !important;
+}
+
+/*#attribute25936-grp > div.js-ca {
+    max-height: 34px;
+}*/
+
+/* Customer Location */
+#attribute25386-grp {
+    margin: 0px 5px 10px 5px;
+    order: 19;
+}
+
+/* Related Ticket(s) */
+#attribute26857-grp {
+    margin: 0px 5px 10px 5px;
+    order: 20;
+}
+
+
+
+
+
+
+
+
+/* All the things that are past Task Template: */
+
+//Container for most of the things past Task Template {}
+#upnlAttributes {
+    width: 100%;
+    display: flex;
+    flex-wrap: wrap;
+}
+
+//Application Names {}
+#divAttribute25371 {
+    width: 250px;
+    margin: 0px 5px 10px 5px;
+}
+
+//Something to do with COHO ticket transferring {}
+#divAttribute25936 {
+    width: 250px;
+    margin: 0px 5px 10px 5px;
+}
+
+//ComputerDevice Name {}
+#divAttribute25382 {
+    width: 250px;
+    margin: 0px 5px 10px 5px;
+}
+
+//Customer Location {}
+#divAttribute25386 {
+    width: 250px;
+    margin: 0px 5px 10px 5px;
+}
+
+//Device manufacturer model {}
+#divAttribute25737 {
+    width: 250px;
+    margin: 0px 5px 10px 5px;
+}
+
+//Device Notes {}
+#divAttribute25376 {
+    width: 350px;
+    margin: 0px 5px 10px 5px;
+}
+
+//Device operating system {}
+#divAttribute25738 {
+    width: 200px;
+    margin: 0px 5px 10px 5px;
+}
+
+// Device Type {}
+#divAttribute25385 {
+    width: 150px;
+    margin: 0px 5px 10px 5px;
+}
+
+//E-mail Provider {}
+#divAttribute25398 {
+    width: 200px;
+    margin: 0px 5px 10px 5px;
+}
+
+//Extension Customer {}
+#divAttribute25373 {
+    width: 160px;
+    margin: 0px 5px 10px 5px;
+}
+
+//Related Tickets {}
+#divAttribute26857 {
+    width: 250px;
+    margin: 0px 5px 10px 5px;
+}
+
+//Walkup Customer {}
+#divAttribute25384 {
+    width: 250px;
+    margin: 0px 5px 10px 5px;
+}
+
+//Build Equip location {}
+#divAttribute26617 {
+    margin: 0px 5px 10px 5px;
+}
+
+//Build Machine Status {}
+#divAttribute25674 {
+    margin: 0px 5px 10px 5px;
+}
+
+//CN customer {}
+#divAttribute26632 {
+    margin: 0px 5px 10px 5px;
+}
+
+//CN Inventory ID {}
+#divAttribute25383 {
+    margin: 0px 5px 10px 5px;
+}
+
+//Device equip checklist {}
+#divAttribute25739 {
+    margin: 0px 5px 10px 5px;
+}
+
+//Device equip other {}
+#divAttribute26671 {
+    margin: 0px 5px 10px 5px;
+}
+
+//OS other {}
+#divAttribute26672 {
+    margin: 0px 5px 10px 5px;
+}
+
+//Dev SW media {}
+#divAttribute25740 {
+    margin: 0px 5px 10px 5px;
+}
+
+//Shipping address {}
+#divAttribute25374 {
+    margin: 0px 5px 10px 5px;
+}
+
+
+
+
+/*Other Fields*/
+
+/*Service*/
+#attribute6505-grp {
+    margin: 0px 5px 10px 5px;
+    width: 400px;
+    order: 1;
+}
+
+/*Requestor card*/
+
+
+/*KB Search - does not work*/
+body > div.container-fluid.padding-top > div > div.col-sm-4.hidden-xs.gutter-top > div.js-kb-search {
+    display: block;
+}
+
+
+
+
+
+
+/* Uncomment each of these (remove the "/" and "*" around the item) to hide things that you probably don't use: */
+
+//Template {}
+#divTemplate {
+    display: none;
+}
+
+
+//Start Date {}
+#divStartDate {
+    display: none;
+}
+//Due Date {}
+#divDueDate {
+    display: none;
+}
+
+
+//Service Level Agreement {}
+#divSLA {
+    display: none;
+}
+
+
+//Requestor Card Removal {}
+#form1 > div.container-fluid > div.row > div.col-sm-4.hidden-xs.gutter-top {
+    display: none;
+}
+//Resize Column (only tested/works if requestor card removed) {}
+@media (min-width: 768px) {
+    #divContent {
+        width: 100%;
+        padding: 5px 40px 0px 40px;
+    }
+}
+
+
+//Source {}
+#fieldsContainer > div:nth-child(9) {
+    display: none;
+}
+
+
+/*//Task Template {}
+#fieldsContainer > div:nth-child(16) {
+    display: none;
+}*/
+
+
+/* COHO Ticket Info */
+#attribute25936-grp {
+    /*display: none;*/
+}
+
+
+
+/*  The help text */
+#Help0 {
+    display: none;
+}
+
+#attribute6505-help {
+    display: none;
+}
+
+#attribute1307-help {
+    display: none;
+}
+
+#attribute1306-help {
+    display: none;
+}
+
+#attribute4486-help {
+    display: none;
+}
+
+#attribute1304-help {
+    display: none;
+}
+
+#attribute1303-help {
+    display: none;
+}
+
+#attribute2937-help {
+    display: none;
+}
+}

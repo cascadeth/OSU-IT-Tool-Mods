@@ -1,0 +1,262 @@
+@-moz-document url-prefix("https://oregonstate.teamdynamix.com/TDNext/Apps/425/Tickets/Update") {
+/* Outer container of the fields */
+body > div:nth-child(4) > div > div.col-sm-8 > div > form {
+    display: flex;
+    flex-wrap: wrap;
+    align-items: stretch;
+    align-content: space-between;
+    flex-direction: row;
+}
+
+/* Status */
+body > div:nth-child(4) > div > div.col-sm-8 > div > form > div:nth-child(3) {
+    margin: 0px 10px 10px 10px;
+    order: 0;
+    width: 300px;
+}
+
+
+/* Goes off hold container */
+body > div:nth-child(4) > div > div.col-sm-8 > div > form > div.form-group.js-off-hold-date.required {
+    margin: 0px 10px 10px 10px;
+    display: flex;
+    flex-direction: column;
+}
+/* Goes off hold label */
+body > div:nth-child(4) > div > div.col-sm-8 > div > form > div.form-group.js-off-hold-date.required > label {
+    display: block;
+    width: 100%;
+    
+}
+
+
+/* Status time warning thing */
+body > div:nth-child(4) > div > div.col-sm-8 > div > form > div:nth-child(5) {
+    width: 100%;
+    margin: 0px 10px 20px 10px;
+    order: -1;
+}
+
+//Comments {}
+#divComments {
+    width: 100%;
+    margin: 0px 10px 10px 10px;
+}
+
+/* Notify */
+body > div:nth-child(4) > div > div.col-sm-8 > div > form > div:nth-child(7) {
+    min-width: 400px;
+    max-width: 450px;
+    margin: 0px 10px 10px 10px;
+}
+
+/* The notify warning thing */
+body > div:nth-child(4) > div > div.col-sm-8 > div > form > div.js-notify-monitor.alert.alert-warning {
+    max-width: 200px;
+    margin: 0px 10px 10px 10px;
+}
+
+/* Notify Others */
+#divOtherPeople {
+    width: 450px;
+    margin: 0px 10px 10px 10px;
+}
+
+/* Other Email Addresses */
+#divOtherEmailAddresses {
+    width: 300px;
+    margin: 0px 10px 10px 10px;
+    /*flex: 0 1 100%;*/
+}
+#divOtherEmailAddresses > div:nth-child(3) {
+    width: 300px;
+}
+
+/* Attachments */
+body > div:nth-child(4) > div > div.col-sm-8 > div > form > div:nth-child(12) {
+    width: 600px;
+    margin: 0px 10px 10px 10px;
+}
+
+/* Knowledge Base Article */
+body > div:nth-child(4) > div > div.col-sm-8 > div > form > div:nth-child(13) {
+    width: 425px;
+    margin: 0px 10px 10px 10px;
+    flex: 0 1 100%;
+    
+}
+
+/* KB ExistingandCreate derp */
+body > div:nth-child(4) > div > div.col-sm-8 > div > form > div.js-existing-article {
+    width: 425px;
+    margin: 0px 10px 10px 10px;
+    flex: 0 1 100%;
+}
+body > div:nth-child(4) > div > div.col-sm-8 > div > form > div.js-new-article {
+    width: 425px;
+    margin: 0px 10px 10px 10px;
+    flex: 0 1 100%;
+}
+
+/* Application */
+
+/* Build - equipment location */
+#attribute26617-grp {
+    margin: 0px 10px 10px 10px;
+}
+
+/* Build - machine status */
+#attribute25674-grp {
+    margin: 0px 10px 10px;
+}
+
+//Account Type {}
+#divAttribute25368 {
+    margin: 0px 10px 10px 10px;
+}
+
+/* COHO Ticket num link */
+#attribute25936-grp {
+    margin: 0px 10px 10px 10px;
+    width: 300px;
+    height: 120px;
+}
+
+/* Customer Location */
+#attribute25386-grp {
+    margin: 0px 10px 10px 10px;
+}
+
+/* Related ticket */
+#attribute26857-grp {
+    margin: 0px 10px 10px 10px;
+}
+
+//Walkup Customer {}
+#divAttribute25384 {
+    margin: 0px 10px 10px 10px;
+}
+
+//Inventory ID {}
+#divAttribute25383 {
+    margin: 0px 10px 10px 10px;
+}
+
+//Computer Device Name {}
+#divAttribute25382 {
+    margin: 0px 10px 10px 10px;
+}
+
+//Manufacturer {}
+#divAttribute25737 {
+    margin: 0px 10px 10px 10px;
+}
+
+//Notes {}
+#divAttribute25376 {
+    margin: 0px 10px 10px 10px;
+}
+
+//OS {}
+#divAttribute25738 {
+    margin: 0px 10px 10px 10px;
+}
+
+//Type {}
+#divAttribute25385 {
+    margin: 0px 10px 10px 10px;
+}
+
+//Email Provider {}
+#divAttribute25398 {
+    margin: 0px 10px 10px 10px;
+}
+
+//Extension Customer {}
+#divAttribute25373 {
+    margin: 0px 10px 10px 10px;
+}
+
+
+/* Realigning the right panels. */
+body > div:nth-child(4) > div {			/* The container for the columns. */
+    display: flex;
+    flex-direction: column;
+}
+body > div:nth-child(4) > div > div.col-sm-4 {		/* The right hand column w/ requestor etc */
+    display: flex;
+    flex-direction: row;
+    order: 1;
+    width: 100%;
+    /*justify-content: space-between;*/
+}
+body > div:nth-child(4) > div > div.col-sm-4 > div:nth-child(1) {		/* Requestor card */
+    width: 400px;
+    height: auto;
+}
+body > div:nth-child(4) > div > div.col-sm-4 > div:nth-child(2) {		/*  Details */
+    min-width:500px;
+    padding: 0px;
+    margin: 0px;
+    height: 75px;
+}
+body > div:nth-child(4) > div > div.col-sm-4 > div:nth-child(1), body > div:nth-child(4) > div > div.col-sm-4 > div:nth-child(2) {					/* Both */
+    margin: 5px;
+    margin-bottom: 15px;
+}
+body > div:nth-child(4) > div > div.col-sm-4 > div:nth-child(2) > div.panel-body {		/* Details in details */
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    height: auto;
+}
+body > div:nth-child(4) > div > div.col-sm-4 > div:nth-child(2) > div.panel-body > div {		/* Text in details */
+    padding: 0px 5px 0px 5px;
+    margin: 0px;
+}
+body > div:nth-child(4) > div > div.col-sm-4 > div:nth-child(2) > div.panel-body::after {		/* No idea */
+    display: none;
+}
+
+body > div:nth-child(4) > div > div.col-sm-8 {		/* The left hand column with all of the ticket fields */
+    order: 2;
+    width: 100%;
+}
+/* Hiding panel headings to save space */
+body > div:nth-child(4) > div > div.col-sm-4 > div > div.panel-heading {
+    display: none;
+    
+}
+
+
+
+
+/* uncomment the following to hide things: */
+
+//Requestor Card Removal {}
+#Form1 > div:nth-child(21) > div > div.col-sm-4.gutter-top {
+    display: none;
+}
+//Resize Column (only tested/works if requestor card removed) {}
+@media (min-width: 768px) {
+	#Form1 > div:nth-child(21) > div > div.col-sm-8 {
+    	width: 100%;
+        padding: 5px 40px 0px 40px;
+	}
+}
+
+/*//Knowledge Base Article note that this will be used and relevant someday so hide at your own risk {}
+body > div:nth-child(4) > div > div.col-sm-8 > div > form > div:nth-child(13) {
+    display: none;
+}*/
+
+/* COHO Ticket Num */
+#attribute25936-grp {
+	display: none;
+}
+
+/* No Time Warning */
+body > div:nth-child(4) > div > div.col-sm-8 > div > form > div:nth-child(5) {
+    display: none;
+}
+}
