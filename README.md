@@ -8,7 +8,7 @@ These CSS sets will remain, but Stylish will not.  Source: https://www.bleepingc
 As an alternative, you may use the fork of Stylish called Stylus: https://chrome.google.com/webstore/detail/stylus/clngdbkpkpeebahjckkjfobafhncgmne
 
 ### What:
-This repo provides a set of user styles (note: only supported use with Stylish add-on) for multiple sites
+This repo provides a set of user styles (note: only supported use with Stylus add-on) for multiple sites
 that OSU IT services use, as well as a few user scripts (note: only supported use with Tampermonkey add-on).
 Basically, our in-house written "themes" for the tools we use at
 the OSU Service Desk under Information Services.
@@ -27,7 +27,7 @@ a better looking and more functional environment to the sites.
 
 cascadeth (Max Schmidt) - cascadeth(at)gmail.com
 
-If you work here at the OSU IT (you should know who you are), you can reach Max on Slack at @schmidt
+If you work here at the OSU IT community (you know who you are), you can reach Max on Slack at @schmidt
 
 Please email me for questions, comments, suggestions, etc.
 
