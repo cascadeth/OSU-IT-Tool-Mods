@@ -1,8 +1,11 @@
 // ==UserScript==
 // @name         Build Tracker TD Integration
 // @namespace    http://tampermonkey.net/
-// @version      0.7
-// @description  Testing Build tracker TD integration
+// @version      1.0
+// @description  Adds a button on each ticket that opens a build tracker page for the ticket. 
+// @             If the ticket has a build associated with it then it opens the build page.
+// @             If it does not have a build associated with it, but has a non-finalized interview associated with it then it will open the non-finaliazed interview.
+// @             If there is no build or interview associated with the ticket then the button will open the "Create Interview" page of build tracker.
 // @author       Tyler Farnham
 // @match        https://oregonstate.teamdynamix.com/TDNext/Apps/425/Tickets/TicketDet?TicketID=*
 // @match        https://oregonstate.teamdynamix.com/TDNext/Apps/425/Tickets/TicketDet.aspx?TicketID=*
