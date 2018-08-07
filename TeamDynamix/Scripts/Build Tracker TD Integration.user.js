@@ -1,7 +1,7 @@
 // ==UserScript==
 // @name         Build Tracker TD Integration
 // @namespace    http://tampermonkey.net/
-// @version      1.0
+// @version      1.1
 // @description  Adds a button on each ticket that opens a build tracker page for the ticket. 
 // @             If the ticket has a build associated with it then it opens the build page.
 // @             If it does not have a build associated with it, but has a non-finalized interview associated with it then it will open the non-finaliazed interview.
@@ -71,6 +71,7 @@ function insertButton(buttonMode){
     }
     button1.setAttribute("class", "btn btn-primary btn-sm js-progress-button");
     button1.setAttribute("id", "BTButton");
+    button1.setAttribute("style", "background-color: rgb(96,125,139);");
 
     // 2. Append on the end end of the list of buttons that goes accross the top of the ticket page.
     ((box.childNodes)[1]).appendChild(button1);
