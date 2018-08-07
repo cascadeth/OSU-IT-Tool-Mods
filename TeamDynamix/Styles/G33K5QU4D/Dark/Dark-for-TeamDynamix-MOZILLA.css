@@ -12,7 +12,7 @@ body, #divHeader, .comment, .ms-drop, .modal-content, #divStandardFields, .white
 
 /*COHO stlye header*/
 .organization-link {
-    background-image: url("https://secure.oregonstate.edu/u_central/images/blackWordmark.gif");
+    background-image: url("https://i.imgur.com/pXFcK47.gif");
     background-repeat: no-repeat;
     background-color: black;
     margin-bottom: 2em;
@@ -38,9 +38,14 @@ i.fa .fa-user {
     background-color: #bbb;
 }
 
-/*More text at needs to be white*/
-#upDetails, .control-label, h1,  h2, label, #ttDescription, .gutter-top-xs, .gray, .absoluteDate, .gutter-left-sm, .lead, .text-muted, .col-sm-6, .disp-group, .help-block, .form-group, #divDescription {
-    color: white;
+/*More text that needs to be white*/
+#upDetails, span.control-label, h1,  h2, label, #ttDescription, .gutter-top-xs, .gray, .absoluteDate, .gutter-left-sm, .lead, .text-muted, .col-sm-6, .disp-group, .help-block, .form-group, #divDescription, .layout-panel, .module-column h3, .gutter-top, .ckeShim, .result-desc, .dark-gray, #divTitle .control-label, td.control-label, #divEstimatedHours .control-label, div.gutter-top-sm, .input-group-addon {
+    color: white !important;
+}
+
+/*Text that needs to be black*/
+.copyButton, div.feed-reply-body, .ModuleHeader, .ModuleDescription, .col-sm-5 .control-label, .alert-dismissible, .alert-warning, div.alert-warning {
+    color: black !important;
 }
 
 /*Default color of hyperlinks*/
@@ -69,7 +74,7 @@ a {
 
 /*Alternating ticket table text color*/
 .TDAlternatingRow  a, .TDAlternatingRow td {
-    color: white;
+    color: white !important;
 }
 
 /*Page number color*/
@@ -78,13 +83,13 @@ tr.TDPagerRow span {
 }
 
 /*More text to be white*/
-#thTicket_lblStatus, .gray, .fieldsContainer, .user-link span {
+#thTicket_lblStatus, .gray, .fieldsContainer, .user-link span, #divToDos, #dropdownMenu1, .block-info, .col-md-12, .frmFldLbl, #ctl00_lblStatus, .status {
      color: white !important;
 }
 
 /*Text to be black*/
-td a, td, .pull-right, .gutter-top-xs, .ModuleContent, .popover, .panel-body div {
-    color: black;                                       
+td a, td, .pull-right, .gutter-top-xs, .ModuleContent, .popover, .panel-body div, h3.panel-title, #divTasks .pull-left, #divTasks .gutter-top-xs.gray, .panel-body .control-label, .RightSideNav, .RightSideNav h2 {
+    color: black !important;                                       
 }
 
 /*Navbar background color*/
@@ -93,10 +98,6 @@ td a, td, .pull-right, .gutter-top-xs, .ModuleContent, .popover, .panel-body div
     color: black;
 }
 
-/*More white text*/
-#divToDos, #dropdownMenu1, .block-info, .col-md-12, .frmFldLbl, #ctl00_lblStatus, .status {
-    color: white !important;
-}
 
 /*More black text*/
 .pull-right label, .feed-reply .absoluteDate, .feed-reply  {
