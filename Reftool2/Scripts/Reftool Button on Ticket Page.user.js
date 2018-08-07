@@ -1,36 +1,101 @@
 // ==UserScript==
-// @name         Reftool Button on Ticket Page
+// @name         Phone@log Button on Reftool
 // @namespace    http://tampermonkey.net/
 // @version      1.0
-// @description  Adds a Reftool button next to a person's name in TD
+// @description  Adds a button to create a new phone@log ticket with the appropriate fields filled out
 // @author       Luke Miletta
-// @match        https://oregonstate.teamdynamix.com/TDNext/Apps/425/Tickets/TicketDet.aspx?TicketID=*
-// @match        https://oregonstate.teamdynamix.com/TDNext/Apps/425/Tickets/TicketDet?TicketID=*
+// @match        https://tools.is.oregonstate.edu/reftool2/*
+// @match        https://oregonstate.teamdynamix.com/TDNext/Apps/425/Tickets/New?formId=17631&RequestorUID=de751dc3-eeb7-e611-80cd-000d3a13db68&/phonelog
+// @match        https://oregonstate.teamdynamix.com/TDNext/Apps/425/Tickets/New?formId=17631&RequestorUID=de751dc3-eeb7-e611-80cd-000d3a13db68&/transcripts
 // @grant        none
 // ==/UserScript==
 
-var box = document.getElementById("pcRequestor_divPersonInfo");
-var name = (((((((box.childNodes)[1]).childNodes)[1]).childNodes)[3]).childNodes)[1];
-name = name.textContent;
-name = name.trim();
-var firstName = name.split(' ').slice(0, -1).join(' ');
-var lastName = name.split(' ').slice(-1).join(' ');
+var URL = window.location.href;
+if(URL.indexOf("tools.is.oregonstate.edu/reftool2/") >=0){
+    window.setTimeout(put_button, 750);
+}
+else if(URL.indexOf("&/phonelog") >=0){
+    window.setTimeout(fill_form_generic, 500);
+}
+else if(URL.indexOf("&/transcripts") >=0){
+    window.setTimeout(fill_form_transcripts, 500);
+}
 
-// 1. Create the button
-var button1 = document.createElement("form-button");
-button1.setAttribute("type", "button");
-button1.innerHTML = "User in Reftool";
-button1.setAttribute("class", "btn btn-primary btn-sm js-progress-button");
-button1.setAttribute("id", "form-button");
+function fill_form_transcripts(){
+    var status = document.getElementById("attribute1306");
+    status = status.children;
+    for(var i=0; i<status.length;i++){
+        if(status[i].innerText = "Open" && status[i].getAttribute("value") == "17739"){
+            status[i].innerText = "Referred";
+            status[i].setAttribute("value", "18214");
+            break;
+        }
+    }
+    var by = document.getElementById("attribute3955");
+    by = by.children;
+    by[0].setAttribute("value", "793");
+    by[0].innerText = "Phone";
+    var title = document.getElementById("attribute1303");
+    title.value = "Transcripts Request";
+    var body = document.getElementById("attribute2937");
+    body.innerText = "Someone called asking about transcripts. They are a previous student and forgot their ID number. We referred them to the Office of the Registrar.";
+}
 
-// 2. Append somewhere
-((box.childNodes)[1]).appendChild(button1);
+function fill_form_generic(){
+    var status = document.getElementById("attribute1306");
+    status = status.children;
+    for(var i=0; i<status.length;i++){
+        if(status[i].innerText = "Open" && status[i].getAttribute("value") == "17739"){
+            status[i].innerText = "Closed";
+            status[i].setAttribute("value", "17742");
+            break;
+        }
+    }
+    var by = document.getElementById("attribute3955");
+    by = by.children;
+    by[0].setAttribute("value", "793");
+    by[0].innerText = "Phone";
+}
 
-// 3. Add event handler
-button1.addEventListener ("click", click_reftool_button);
+function put_button(){
+    var search = document.getElementById("search");
 
-// Function that handles click of form button
-function click_reftool_button(){
-    var url = "https://tools.is.oregonstate.edu/reftool2/search/" + firstName + "\%2520" + lastName + ";searchType=people;filterType=all";
-    window.open(url, '_blank');
+    // 1. Create the button
+    var button1 = document.createElement("form-button");
+    button1.setAttribute("type", "button");
+    button1.innerHTML = "Phone@Log Generic";
+    button1.setAttribute("class", "btn btn-default");
+    button1.setAttribute("id", "phonelog-button");
+
+    // 2. Append somewhere
+    search.appendChild(button1);
+
+    // 3. Add event handler
+    button1.addEventListener("click", click_phonelog_button);
+
+    // Function that handles click of form button
+    function click_phonelog_button(){
+        var url = "https://oregonstate.teamdynamix.com/TDNext/Apps/425/Tickets/New?formId=17631&RequestorUID=de751dc3-eeb7-e611-80cd-000d3a13db68&/phonelog";
+        window.open(url, '_blank');
+    }
+
+
+    // 1. Create the button
+    var button2 = document.createElement("form-button");
+    button2.setAttribute("type", "button");
+    button2.innerHTML = "Phone@Log Transcripts";
+    button2.setAttribute("class", "btn btn-default");
+    button2.setAttribute("id", "phonelog-button");
+
+    // 2. Append somewhere
+    search.appendChild(button2);
+
+    // 3. Add event handler
+    button2.addEventListener("click", click_transcripts_button);
+
+    // Function that handles click of form button
+    function click_transcripts_button(){
+        var url = "https://oregonstate.teamdynamix.com/TDNext/Apps/425/Tickets/New?formId=17631&RequestorUID=de751dc3-eeb7-e611-80cd-000d3a13db68&/transcripts";
+        window.open(url, '_blank');
+    }
 }
