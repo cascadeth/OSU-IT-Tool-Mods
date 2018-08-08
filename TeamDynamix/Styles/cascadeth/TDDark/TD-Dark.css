@@ -1,3 +1,18 @@
+/********************************************************************************************************************************************
+
+### Title     -    TD Dark
+### author    -    Maximillian Schmidt
+### version   -    v1.1.0
+### apply     -    URLs on the domain: "oregonstate.teamdynamix.com"
+
+
+### revisions -    vX.Y.Z 
+		      - X: For Sytlish extension.  If a newer existed, this would be updated to v2
+              - Y: Updated every major block style change(large div, applies to lots of elements, etc)
+		      - Z: Single line changes, only effects one style, etc
+
+********************************************************************************************************************************************/
+
 /*Main Background Color*/
 body, #divHeader {
     background-color: #252525 !important;
@@ -15,8 +30,13 @@ body, #divHeader {
 .organization-link a {
     color: #D16600;
 }
-/*Panel Heading Background & Font*/
-.panel-heading {
+/*Tabs color*/
+.ui-tabs-anchor {
+    color: white !important;
+}
+
+/*Panel Heading Background & Font + Tab*/
+.panel-heading, .ui-tabs-active {
     color: #ffffff !important;
     background-color: #323232 !important;
 }
@@ -35,7 +55,7 @@ body, #divHeader {
 }
 /*All Rows Background*/
 tr {
-    background-color: #000000 !important;
+    background-color: #000000;
 }
 /*User Header Background*/
 .gutter.clearfix {
@@ -61,7 +81,7 @@ tr {
 }
 /*Even Rows Background*/
 .TDAlternatingRow {
-    background-color: #323232 !important;
+    background-color: #323232;
 }
 /*Top Navigation Bar Background*/
 .navbar {
