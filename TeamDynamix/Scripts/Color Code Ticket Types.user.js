@@ -1,16 +1,17 @@
 // ==UserScript==
 // @name         Color Code Ticket Types
 // @namespace    http://tampermonkey.net/
-// @version      1.3
+// @version      1.4
 // @description  Color code the tickets based on types in the queue
 // @author       Tyler Farnham / Luke Miletta
 // @match        https://oregonstate.teamdynamix.com/TDNext/Home/Desktop/*
 // @grant        none
 // ==/UserScript==
-window.setTimeout(items, 1500);
+window.setTimeout(items, 1000);
 var open_box;
 var button1;
 var next_page;
+//setTimeout(items, 250);
 function items(){
     /*var boxes = document.getElementsByClassName("report-module");
     for (var i = 0; i < boxes.length; i++) {
@@ -39,6 +40,7 @@ function items(){
             if(currentReportNumTickets > maxReportNumTickets){
                 maxReportNumTickets = currentReportNumTickets;
                 maxReport = currentReport;
+                maxReport.childNodes[0].childNodes[1].childNodes[1].addEventListener("click", click_refresh_button, false);
                 whichReport = i;
             }
         }
@@ -103,7 +105,7 @@ function items(){
     // Listens for click of refresh button NEEDS TO BE FIXED - DOESN'T WORK
     var n = document.getElementsByClassName('fa fa-refresh fa-lg refresh-module-icon gutter-left-xs');
     for(i = 0; i < n.length; i++){
-        if((((n[i].parentNode.parentNode).childNodes)[0]).innerHTML.trim() == "SD - open, unassigned (Incidents, Service Requests)"){
+        if(i = whichReport){
             var ref = n[i];
             break;
         }
@@ -111,11 +113,13 @@ function items(){
     ref.addEventListener("click", click_refresh_button, false);
 }
 function click_refresh_button(){
+
     var maxReport;
     var currentReport;
     var maxReportNumTickets = 0;
     var currentReportNumTickets = 0;
     var currentTicketTable;
+    var whichReport = 0;
     var reports = document.getElementsByClassName("report-module");
     for (var i = 0; i < reports.length; i++) {
         currentReportNumTickets = 0;
@@ -130,10 +134,12 @@ function click_refresh_button(){
             if(currentReportNumTickets > maxReportNumTickets){
                 maxReportNumTickets = currentReportNumTickets;
                 maxReport = currentReport;
+                whichReport = i;
             }
         }
     }
-    window.setTimeout(ree, 750);
+    window.setTimeout(ree, 500);
+
     function ree(){
         var next_page = document.getElementsByClassName("pager-link");
         for(i = 0; i < next_page.length; i++){
