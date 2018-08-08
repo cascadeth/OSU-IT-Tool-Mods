@@ -1,9 +1,9 @@
 // ==UserScript==
 // @name         Reftool Button on Ticket Page
 // @namespace    http://tampermonkey.net/
-// @version      1.0
+// @version      1.1
 // @description  Adds a Reftool button next to a person's name in TD
-// @author       Luke Miletta
+// @author       Luke Miletta / Tyler Farnham
 // @match        https://oregonstate.teamdynamix.com/TDNext/Apps/425/Tickets/TicketDet.aspx?TicketID=*
 // @match        https://oregonstate.teamdynamix.com/TDNext/Apps/425/Tickets/TicketDet?TicketID=*
 // @grant        none
@@ -22,6 +22,7 @@ button1.setAttribute("type", "button");
 button1.innerHTML = "User in Reftool";
 button1.setAttribute("class", "btn btn-primary btn-sm js-progress-button");
 button1.setAttribute("id", "form-button");
+button1.setAttribute("style", "background-color: rgb(96,125,139);");
 
 // 2. Append somewhere
 ((box.childNodes)[1]).appendChild(button1);
