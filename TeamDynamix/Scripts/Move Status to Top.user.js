@@ -15,7 +15,7 @@ var topElement;
 window.setTimeout(moveStatusFieldToTop, 1000);
 function moveStatusFieldToTop(){
     if(URL.indexOf("New") > 0){
-        
+
         topElement = document.getElementById("divContent").childNodes[7].childNodes[6];
 
     }
@@ -24,6 +24,6 @@ function moveStatusFieldToTop(){
         topElement = document.getElementById("divContent").childNodes[1].childNodes[2];
 
     }
-        topElement.parentNode.insertBefore(StatusInput, topElement);
-    
+    topElement.parentNode.insertBefore(StatusInput, topElement);
+
 }
