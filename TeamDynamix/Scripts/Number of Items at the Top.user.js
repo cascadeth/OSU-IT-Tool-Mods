@@ -11,7 +11,6 @@
 // ==/UserScript==
 
 
-
 window.setTimeout(items, 100);
 var textInsertCount = 0;
 
@@ -38,13 +37,14 @@ function items(){
 }
 
 
-
 ////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////
 ////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////
 
-/*ree() is named ree in rememberance of Luke Miletta who began writing this script, a true memer.
+/*
+ree() is named ree in rememberance of Luke Miletta who began writing this script, a true memer.
 This function inserts the text at the top of your TDx homepage. If there is no text element at the
-top already then it makes a new one.*/
+top already then it makes a new one.
+*/
 
 function ree(maxReport, maxReportNumTickets){
     var numTicketsText = "<br>" + maxReportNumTickets + " Tickets in the Queue";
@@ -71,7 +71,6 @@ function ree(maxReport, maxReportNumTickets){
 }
 
 
-
 ////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////
 ////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////
 
@@ -81,7 +80,6 @@ tickets that are in that report (this value is whatever the max number of ticket
 Returns 0 if the ticket elements have not been generated yet and returns -1 if it finds no TDx reports on the homepage (which tells items()
 when to stop running this function).
 */
-
 
 function getMaxReport(){
     var maxReport = {reportElement: 0, maxReportNumTickets: 0};
@@ -98,12 +96,12 @@ function getMaxReport(){
 
             if((currentReport).childNodes[1].childNodes[1].childNodes.length > 1){
                 currentTicketTable = (currentReport).childNodes[1].childNodes[1].childNodes[3].childNodes;
-                for(var j = 0; j < currentTicketTable.length; j++){ //Find the largest
+                for(var j = 0; j < currentTicketTable.length; j++){ //count the tickets for each report.
                     if(currentTicketTable[j].nodeName == "TR") {
-                        currentReportNumTickets++; //Count the tickets
+                        currentReportNumTickets++;
                     }
                 }
-                if(currentReportNumTickets > maxReport.maxReportNumTickets){
+                if(currentReportNumTickets > maxReport.maxReportNumTickets){ //compare each ticket count against the previous max # of tickets
                     maxReport.maxReportNumTickets = currentReportNumTickets;
                     maxReport.reportElement = currentReport;
                 }
@@ -121,7 +119,6 @@ function getMaxReport(){
 }
 
 
-
 ////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////
 ////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////
 
@@ -130,6 +127,7 @@ Adds the event listener for the refresh button on the report the maxReport. It w
 which counts the tickets again.
 All of the ladder steps of if statements in this function are just making sure that the report has loaded before trying to apply the event listener because otherwise it errors out.
 */
+
 function refreshOnReportRefresh (maxReport){
     if(maxReport.reportElement){
         if(maxReport.reportElement.childNodes[0]){
