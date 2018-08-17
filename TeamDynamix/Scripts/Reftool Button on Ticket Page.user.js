@@ -36,5 +36,5 @@ copyNameButton.addEventListener("click", navigator.clipboard.writeText(firstName
 // Function that handles click of form button
 function click_reftool_button(){
     var url = "https://tools.is.oregonstate.edu/reftool2/search/" + firstName + "\%2520" + lastName + ";searchType=people;filterType=all";
-    window.open(url, '_parent');
+    window.open(url, '_blank');
 }
