@@ -1,51 +1,37 @@
 // ==UserScript==
-// @name         Color Code Ticket Types
-// @namespace    http://tampermonkey.net/
-// @version      1.4
-// @description  Color code the tickets based on types in the queue
-// @author       Tyler Farnham / Luke Miletta
-// @match        https://oregonstate.teamdynamix.com/TDNext/Home/Desktop/*
-// @grant        none
+// @name     Color Code Ticket Types
+// @namespace  http://tampermonkey.net/
+// @version   2.0
+// @description Color code the tickets based on types in the queue
+// @author    Tyler Farnham / Luke Miletta
+// @match    https://oregonstate.teamdynamix.com/TDNext/Home/Desktop/*
+// @grant    GM_getValue
+// @grant    GM_setValue
 // ==/UserScript==
-window.setTimeout(items, 1000);
+
+window.setTimeout(items, 100);
 var open_box;
 var button1;
 var next_page;
-//setTimeout(items, 250);
-function items(){
-    /*var boxes = document.getElementsByClassName("report-module");
-    for (var i = 0; i < boxes.length; i++) {
-        if((((boxes[i].childNodes)[0]).childNodes)[0].textContent == 'SD - open, unassigned (Incidents, Service Requests)'){
-            open_box = boxes[i];
-        }
-    }
+
+//////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////
+    /*
+    items() is the main function for this script. It creates the button that toggles the color on the tickets and adds the event listeners for the various buttons that
+    this script applies to (i.e. the refresh button on the report, the page select buttons on the bottom of the ticket report, and the button that we create to toggle color.
+
+    If something were to break on this script in the future it would likely be the hard coded paths to elements relative to the maxReport that is selected. Some troubleshooting
+    that you can do to fix it is confirm that any element.childNodes.childNodes still points to the correct element upon execution.
     */
-    var maxReport;
-    var currentReport;
-    var maxReportNumTickets = 0;
-    var currentReportNumTickets = 0;
-    var currentTicketTable;
-    var reports = document.getElementsByClassName("report-module");
-    var whichReport = 0;
-    for (var i = 0; i < reports.length; i++) {
-        currentReportNumTickets = 0;
-        currentReport = reports[i];
-        if((currentReport).childNodes[1].childNodes[1].childNodes[3]){
-            currentTicketTable = (currentReport).childNodes[1].childNodes[1].childNodes[3].childNodes;
-            for(var j = 0; j < currentTicketTable.length; j++){ //Find the largest
-                if(currentTicketTable[j].nodeName == "TR") {
-                    currentReportNumTickets++; //Count the tickets
-                }
-            }
-            if(currentReportNumTickets > maxReportNumTickets){
-                maxReportNumTickets = currentReportNumTickets;
-                maxReport = currentReport;
-                maxReport.childNodes[0].childNodes[1].childNodes[1].addEventListener("click", click_refresh_button, false);
-                whichReport = i;
-            }
-        }
+//////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////
+
+function items(){
+    var maxReport = getMaxReport();
+    if(!maxReport){
+        window.setTimeout(items, 100);
+        return;
     }
-    var iii =(((maxReport.childNodes)[0]).childNodes)[1];
+    else if (maxReport === -1){return;}
+    var iii = (((maxReport.reportElement.childNodes)[0]).childNodes)[1];
     // 1. Create the button
     button1 = document.createElement("i");
     button1.innerHTML = "Toggle Color";
@@ -57,193 +43,194 @@ function items(){
     iii.appendChild(button1);
     iii.insertBefore(button1, iii.firstChild);
     // 3. Add event handler
-    button1.addEventListener ("click", click_form_button);
+    button1.addEventListener ("click", function(){click_form_button(maxReport)});
     // Function that handles click of form button
-    function click_form_button(){
-        var tickets = ((((((maxReport.childNodes)[1]).childNodes)[1]).childNodes)[3]);
-        tickets = tickets.children;
-        if(button1.getAttribute("style") == "border-style: solid; padding: 5px; border-width: 1px; border-radius: 5px;"){
-            button1.setAttribute("style", "border-style: solid; padding: 5px; border-width: 1px; border-radius: 5px; background-color: #2b2b2b; color: #f5f5f5;");
-            for(i = 0; i < tickets.length; i++){
-                if(((tickets[i].children)[4].innerHTML) == "Open"){
-                    tickets[i].setAttribute("style", "background-color: #d4fce6;");
-                }
-                else if(((tickets[i].children)[4].innerHTML) == "In Process"){
-                    tickets[i].setAttribute("style", "background-color: #76a8f7;");
-                }
-                else if(((tickets[i].children)[4].innerHTML) == "New"){
-                    tickets[i].setAttribute("style", "background-color: #f25757;");
-                }
-                else if(((tickets[i].children)[4].innerHTML) == "Escalated - Internal"){
-                    tickets[i].setAttribute("style", "background-color: #e17efc;");
-                }
-            }
+    // Listens for click of next page buttons
+    var next_page = document.getElementsByClassName("pager-link");
+    var i;
+    for(i = 0; i < next_page.length; i++){
+        next_page[i].addEventListener ("click", click_page_button);
+    }
+    //Listens for click of refresh button
+    maxReport.reportElement.childNodes[0].childNodes[1].childNodes[2].addEventListener("click", function(){window.setTimeout(waitUntilRefresh, 50)}, false); //Grabs the refresh button on the maxReport element and applies the click event listener to it
+
+
+//////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////
+    /*
+    waitUntilRefresh() loops on itself while checking the class name of the refresh button on the maxReport element. The refresh button has a class applied to it that
+    indicates that it is spinning while the report is refreshing, and it returns to the class that indicates that it is static when it is finished. waitUnitlRefresh()
+    calls click_refresh_button when the report is done refreshing.
+    */
+//////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////
+    function waitUntilRefresh(){
+        if(maxReport.reportElement.childNodes[0].childNodes[1].childNodes[2].className != "fa fa-refresh fa-lg refresh-module-icon gutter-left-xs"){
+            window.setTimeout(waitUntilRefresh, 100);
+            return -1;
         }
         else{
-            button1.setAttribute("style", "border-style: solid; padding: 5px; border-width: 1px; border-radius: 5px;");
-            for(i = 0; i < tickets.length; i++){
-                if(((tickets[i].children)[4].innerHTML) == "Open"){
-                    tickets[i].setAttribute("style", "");
-                }
-                else if(((tickets[i].children)[4].innerHTML) == "In Process"){
-                    tickets[i].setAttribute("style", "");
-                }
-                else if(((tickets[i].children)[4].innerHTML) == "New"){
-                    tickets[i].setAttribute("style", "");
-                }
-                else if(((tickets[i].children)[4].innerHTML) == "Escalated - Internal"){
-                    tickets[i].setAttribute("style", "");
-                }
-            }
+            window.setTimeout(click_refresh_button(maxReport), 100);
+            return 1;
         }
     }
-    // Listens for click of next page buttons
+}
+
+//////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////
+    /*
+    click_refresh_button() reapplies the coloring to all of the tickets after the refresh button is clicked.
+    */
+//////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////
+
+function click_refresh_button(maxReport){
+    var i;
     var next_page = document.getElementsByClassName("pager-link");
     for(i = 0; i < next_page.length; i++){
         next_page[i].addEventListener ("click", click_page_button);
     }
-    // Listens for click of refresh button NEEDS TO BE FIXED - DOESN'T WORK
-    var n = document.getElementsByClassName('fa fa-refresh fa-lg refresh-module-icon gutter-left-xs');
-    for(i = 0; i < n.length; i++){
-        if(i = whichReport){
-            var ref = n[i];
-            break;
-        }
+    var tickets = ((((((maxReport.reportElement.childNodes)[1]).childNodes)[1]).childNodes)[3]);
+    tickets = tickets.children;
+    if(button1.getAttribute("style") === "border-style: solid; padding: 5px; border-width: 1px; border-radius: 5px;"){
+        return;
     }
-    ref.addEventListener("click", click_refresh_button, false);
-}
-function click_refresh_button(){
-
-    var maxReport;
-    var currentReport;
-    var maxReportNumTickets = 0;
-    var currentReportNumTickets = 0;
-    var currentTicketTable;
-    var whichReport = 0;
-    var reports = document.getElementsByClassName("report-module");
-    for (var i = 0; i < reports.length; i++) {
-        currentReportNumTickets = 0;
-        currentReport = reports[i];
-        if((currentReport).childNodes[1].childNodes[1].childNodes[3]){
-            currentTicketTable = (currentReport).childNodes[1].childNodes[1].childNodes[3].childNodes;
-            for(var j = 0; j < currentTicketTable.length; j++){ //Find the largest
-                if(currentTicketTable[j].nodeName == "TR") {
-                    currentReportNumTickets++; //Count the tickets
-                }
-            }
-            if(currentReportNumTickets > maxReportNumTickets){
-                maxReportNumTickets = currentReportNumTickets;
-                maxReport = currentReport;
-                whichReport = i;
-            }
-        }
-    }
-    window.setTimeout(ree, 500);
-
-    function ree(){
-        var next_page = document.getElementsByClassName("pager-link");
-        for(i = 0; i < next_page.length; i++){
-            next_page[i].addEventListener ("click", click_page_button);
-        }
-        var tickets = ((((((maxReport.childNodes)[1]).childNodes)[1]).childNodes)[3]);
-        tickets = tickets.children;
-        if(button1.getAttribute("style") === "border-style: solid; padding: 5px; border-width: 1px; border-radius: 5px;"){
-            for(var i = 0; i < tickets.length; i++){
-                if(((tickets[i].children)[4].innerHTML) == "Open"){
-                    tickets[i].setAttribute("style", "");
-                }
-                else if(((tickets[i].children)[4].innerHTML) == "In Process"){
-                    tickets[i].setAttribute("style", "");
-                }
-                else if(((tickets[i].children)[4].innerHTML) == "New"){
-                    tickets[i].setAttribute("style", "");
-                }
-                else if(((tickets[i].children)[4].innerHTML) == "Escalated - Internal"){
-                    tickets[i].setAttribute("style", "");
-                }
-            }
-        }
-        else{
-            for(i = 0; i < tickets.length; i++){
-                if(((tickets[i].children)[4].innerHTML) == "Open"){
-                    tickets[i].setAttribute("style", "background-color: #d4fce6;");
-                }
-                else if(((tickets[i].children)[4].innerHTML) == "In Process"){
-                    tickets[i].setAttribute("style", "background-color: #76a8f7;");
-                }
-                else if(((tickets[i].children)[4].innerHTML) == "New"){
-                    tickets[i].setAttribute("style", "background-color: #f25757;");
-                }
-                else if(((tickets[i].children)[4].innerHTML) == "Escalated - Internal"){
-                    tickets[i].setAttribute("style", "background-color: #e17efc;");
-                }
-            }
-        }
+    else{
+        setColors(tickets);
     }
 }
+
+//////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////
+    /*
+    click_page_button() is executed when you click on the page buttons at the bottom of each report. It applies the coloring to the newly loaded tickets after
+    switching pages on the ticket report that the script is applied to. It loops on itself until the new tickets are done loading and then applies the coloring to them.
+    */
+//////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////
+
 function click_page_button(){
     // Listens for click of next page buttons
-    var maxReport;
+    var maxReport = getMaxReport();
+    var hasColor = 0;
+    if(!maxReport){
+        window.setTimeout(click_page_button, 100);
+        return;
+    }
+    else if (maxReport === -1){
+        console.log("No reports found after page switch!");
+        return -1;
+    }
+    var next_page = document.getElementsByClassName("pager-link");
+    for(var i = 0; i < next_page.length; i++){
+        next_page[i].addEventListener ("click", click_page_button);
+    }
+    var tickets = ((((((maxReport.reportElement.childNodes)[1]).childNodes)[1]).childNodes)[3]);
+    tickets = tickets.children;
+    if(button1.getAttribute("style") === "border-style: solid; padding: 5px; border-width: 1px; border-radius: 5px;"){ //If the tickets are colored already then remove the coloring on them.
+        removeColors(tickets);
+    }
+    else{
+        var ticketBackgroundColor = tickets[0].getAttribute("style");
+        if(ticketBackgroundColor != null){ //If the color is null then it runs the function again because the tickets on the new page have not loaded yet. Otherwise it sets the color on the newly loaded tickets.
+            window.setTimeout(click_page_button, 100);
+            return;
+        }
+        setColors(tickets);
+    }
+    tickets = ((((((maxReport.reportElement.childNodes)[1]).childNodes)[1]).childNodes)[3]);
+    tickets = tickets.children;
+    if(tickets[0].getAttribute("style") == null && hasColor == 1){
+        window.setTimeout(click_page_button, 100)
+    }
+}
+
+//////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////
+    /*
+    setColors loops through all of the tickets in the maxReport and sets the color on them according to their status.
+    */
+//////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////
+function setColors(tickets){
+    for(var i = 0; i < tickets.length; i++){
+        if(((tickets[i].children)[4].innerHTML) == "Open"){
+            tickets[i].setAttribute("style", "background-color: #d4fce6;");
+        }
+        else if(((tickets[i].children)[4].innerHTML) == "In Process"){
+            tickets[i].setAttribute("style", "background-color: #76a8f7;");
+        }
+        else if(((tickets[i].children)[4].innerHTML) == "New"){
+            tickets[i].setAttribute("style", "background-color: #f25757;");
+        }
+        else if(((tickets[i].children)[4].innerHTML) == "Escalated - Internal"){
+            tickets[i].setAttribute("style", "background-color: #e17efc;");
+        }
+    }
+}
+
+//////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////
+    /*
+    setColors loops through all of the tickets in the maxReport and removes the coloring from them.
+    */
+//////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////
+function removeColors(tickets){
+    for(var i = 0; i < tickets.length; i++){
+        tickets[i].setAttribute("style", "");
+    }
+}
+//////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////
+    /*
+    Returns an object that contains the html element of the largest ticket report on the TDx homepage as well as the number of
+    tickets that are in that report (this value is whatever the max number of tickets on the report page is if there is more than one report).
+    Returns 0 if the ticket elements have not been generated yet and returns -1 if it finds no TDx reports on the homepage (which tells items()
+    when to stop running this function).
+    */
+//////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////
+function getMaxReport(){
+    var maxReport = {reportElement: 0, maxReportNumTickets: 0};
     var currentReport;
-    var maxReportNumTickets = 0;
     var currentReportNumTickets = 0;
     var currentTicketTable;
     var reports = document.getElementsByClassName("report-module");
-    for (var i = 0; i < reports.length; i++) {
+    if(!reports.length){return -1;}
+    for (var i = 0; i < reports.length; i++) { //Wait for all of the elements to load into each report and then find the report with the most tickets in it.
         currentReportNumTickets = 0;
         currentReport = reports[i];
-        if((currentReport).childNodes[1].childNodes[1].childNodes[3]){
-            currentTicketTable = (currentReport).childNodes[1].childNodes[1].childNodes[3].childNodes;
-            for(var j = 0; j < currentTicketTable.length; j++){ //Find the largest
-                if(currentTicketTable[j].nodeName == "TR") {
-                    currentReportNumTickets++; //Count the tickets
+        if(currentReport.childNodes[1].childNodes[1]){
+            if((currentReport).childNodes[1].childNodes[1].childNodes.length > 1){
+                currentTicketTable = (currentReport).childNodes[1].childNodes[1].childNodes[3].childNodes;
+                for(var j = 0; j < currentTicketTable.length; j++){ //count the tickets for each report.
+                    if(currentTicketTable[j].nodeName == "TR") {
+                        currentReportNumTickets++;
+                    }
+                }
+                if(currentReportNumTickets > maxReport.maxReportNumTickets){ //compare each ticket count against the previous max # of tickets
+                    maxReport.maxReportNumTickets = currentReportNumTickets;
+                    maxReport.reportElement = currentReport;
                 }
             }
-            if(currentReportNumTickets > maxReportNumTickets){
-                maxReportNumTickets = currentReportNumTickets;
-                maxReport = currentReport;
+            else if(i == reports.length){
+                return 0;
             }
-        }
-    }
-    window.setTimeout(reee, 750);
-    function reee(){
-        var next_page = document.getElementsByClassName("pager-link");
-        for(i = 0; i < next_page.length; i++){
-            next_page[i].addEventListener ("click", click_page_button);
-        }
-        var tickets = ((((((maxReport.childNodes)[1]).childNodes)[1]).childNodes)[3]);
-        tickets = tickets.children;
-        if(button1.getAttribute("style") === "border-style: solid; padding: 5px; border-width: 1px; border-radius: 5px;"){
-            for(var i = 0; i < tickets.length; i++){
-                if(((tickets[i].children)[4].innerHTML) == "Open"){
-                    tickets[i].setAttribute("style", "");
-                }
-                else if(((tickets[i].children)[4].innerHTML) == "In Process"){
-                    tickets[i].setAttribute("style", "");
-                }
-                else if(((tickets[i].children)[4].innerHTML) == "New"){
-                    tickets[i].setAttribute("style", "");
-                }
-                else if(((tickets[i].children)[4].innerHTML) == "Escalated - Internal"){
-                    tickets[i].setAttribute("style", "");
-                }
-            }
+            else {continue;}
         }
         else{
-            for(i = 0; i < tickets.length; i++){
-                if(((tickets[i].children)[4].innerHTML) == "Open"){
-                    tickets[i].setAttribute("style", "background-color: #d4fce6;");
-                }
-                else if(((tickets[i].children)[4].innerHTML) == "In Process"){
-                    tickets[i].setAttribute("style", "background-color: #76a8f7;");
-                }
-                else if(((tickets[i].children)[4].innerHTML) == "New"){
-                    tickets[i].setAttribute("style", "background-color: #f25757;");
-                }
-                else if(((tickets[i].children)[4].innerHTML) == "Escalated - Internal"){
-                    tickets[i].setAttribute("style", "background-color: #e17efc;");
-                }
-            }
+            return 0;
         }
+    }
+    return maxReport;
+}
+
+//////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////
+    /*
+    click_form_button() is executed when you click on the button that we create for this script. It applies the coloring to all of the tickets in the maxReport
+    if there was no coloring already and removes the coloring on the tickets if the tickets were colored already.
+    */
+//////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////
+
+function click_form_button(maxReport){
+    var i;
+    var tickets = ((((((maxReport.reportElement.childNodes)[1]).childNodes)[1]).childNodes)[3]);
+    tickets = tickets.children;
+    if(button1.getAttribute("style") == "border-style: solid; padding: 5px; border-width: 1px; border-radius: 5px;"){
+        button1.setAttribute("style", "border-style: solid; padding: 5px; border-width: 1px; border-radius: 5px; background-color: #2b2b2b; color: #f5f5f5;");
+        setColors(tickets);
+    }
+    else{
+        button1.setAttribute("style", "border-style: solid; padding: 5px; border-width: 1px; border-radius: 5px;");
+        removeColors(tickets);
     }
 }
