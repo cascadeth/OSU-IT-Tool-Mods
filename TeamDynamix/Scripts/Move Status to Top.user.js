@@ -10,20 +10,46 @@
 // ==/UserScript==
 
 var URL = document.location.href;
-var StatusInput = document.getElementById("attribute1306-grp");
+var StatusInput;
 var topElement;
-window.setTimeout(moveStatusFieldToTop, 100);
+var goesOffHoldInput;
+var hasMoved = 0;
+
+
+var fieldList;
+var i;
+
+moveStatusFieldToTop();
 function moveStatusFieldToTop(){
     if(URL.indexOf("New") > 0){
 
+        StatusInput = document.getElementById("attribute1306-grp");
+        fieldList = document.getElementById("divContent").childNodes[1].childNodes;
+        for(i = 0; i < fieldList.length; i++){
+            if(fieldList[i] === StatusInput){
+                goesOffHoldInput = fieldList[i+2];
+                break;
+            }
+        }
         topElement = document.getElementById("divContent").childNodes[7].childNodes[6];
+
 
     }
 
     else{
+        StatusInput = document.getElementById("attribute1306-grp");
+        fieldList = document.getElementById("divContent").childNodes[1].childNodes;
+        for(i = 0; i < fieldList.length; i++){
+            if(fieldList[i] === StatusInput){
+                goesOffHoldInput = fieldList[i+2];
+                break;
+            }
+        }
         topElement = document.getElementById("divContent").childNodes[1].childNodes[2];
 
     }
-    topElement.parentNode.insertBefore(StatusInput, topElement);
+        topElement.parentNode.insertBefore(StatusInput, topElement);
+
+        topElement.parentNode.insertBefore(goesOffHoldInput, topElement);
 
 }
