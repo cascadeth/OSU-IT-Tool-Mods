@@ -2,7 +2,7 @@
 // @name         Move Status to Top
 // @namespace    http://tampermonkey.net/
 // @version      1.1
-// @description  Auto-uncheck Notify Responsible
+// @description  Moves the status field of the "new ticket" and "edit ticket" pages to the top of the page.
 // @author       Tyler Farnham
 // @match        https://oregonstate.teamdynamix.com/TDNext/Apps/425/Tickets/New*
 // @match        https://oregonstate.teamdynamix.com/TDNext/Apps/425/Tickets/Edit*
