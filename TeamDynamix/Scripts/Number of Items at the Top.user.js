@@ -54,7 +54,7 @@ function ree(maxReport, maxReportNumTickets){
     }
     if(numitems || maxReportNumTickets){
 
-        var htmlString = '<div style="Font-Size: 40px; text-align:center;">' + numTicketsText + '</div>';
+        var htmlString = '<div class="num-tickets" style="Font-Size: 40px; text-align:center;">' + numTicketsText + '</div>';
         var divv;
         if(textInsertCount == 0){
             divv = document.createElement('div');
