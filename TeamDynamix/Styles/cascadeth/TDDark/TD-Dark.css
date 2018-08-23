@@ -141,3 +141,12 @@ body > div:nth-child(4) > div > div.col-sm-4 > div {
 #thTicket_copyControl_btnCopyTypeAndID, #thTicket_copyControl_btnCopyID {
 	background-color: transparent;
 }
+
+
+.num-tickets {
+    color: grey;
+}
+
+#dropdownMenu1, #btnToDos {
+    color: grey !important;
+}
