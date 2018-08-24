@@ -2,7 +2,7 @@
     
     ### Title     -    TD Dark
     ### author    -    Maximillian Schmidt
-    ### version   -    v1.1.1
+    ### version   -    v1.1.2
     ### apply     -    URLs on the domain: "oregonstate.teamdynamix.com"
     
     
@@ -60,7 +60,7 @@
     }
 
     /*User Information Font*/
-    .gutter-bottom {
+    .gutter-bottom, .disp-group {
         color: #AFAFAF;
     }
     .control-label {
