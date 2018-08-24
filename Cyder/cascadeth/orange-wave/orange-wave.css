@@ -1,0 +1,68 @@
+/********************************************************************************************************************************************
+
+    ### Title     -    Orange Wave for Cyder
+    ### author    -    Maximillian Schmidt
+    ### version   -    v2.0.0
+    ### apply     -    URLs starting with: https://cyder.oregonstate.edu/
+
+
+    ### revisions -    vX.Y.Z 
+	     	      - X: For Cyder.  If Cyder 2 existed, this would be updated to v2
+                  - Y: Updated every major block style change(large div, applies to lots of elements, etc)
+		          - Z: Single line changes, only effects one style, etc
+
+    ********************************************************************************************************************************************/
+    body {
+        background-image: url("https://wallpaper-house.com/data/out/8/wallpaper2you_282393.png");
+        background-size: 100% 100%;
+        color: #D52D00;
+    }
+    .main .content,
+    td,
+    select,
+    input {
+        background: #222222;
+        color: #D52D00;
+        opacity: 0.9;
+    }
+    .content {
+        border-radius: 20px;
+    }
+    .content h2,
+    .content h3,
+    #search-meta a {
+        padding: 5px;
+    }
+    .page-header h1 {
+        color: #888;
+    }
+    a,
+    p,
+    h1,
+    h2,
+    h3,
+    h4 {
+        color: #D52D00;
+    }
+    #sidebar .nav-link.selected,
+    #sidebar .nav-link.child.selected {
+        background: #D52D00;
+        color: #000000;
+        opacity: 0.7;
+    }
+    a.btn {
+        background: #000000;
+        color: #D52D00;
+        opacity: 0.7;
+    }
+    #search input,
+    #header {
+        background: #111111;
+        color: #D52D00;
+        border-color: #D52D00;
+    }
+    .user-info,
+    .user-info .level,
+    #setDefaultCtnr #defaultCtnrBtn {
+        color: #D52D00;
+    }

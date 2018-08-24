@@ -1,9 +1,9 @@
 @-moz-document url-prefix("https://cyder.oregonstate.edu/") {
-    /********************************************************************************************************************************************
+/********************************************************************************************************************************************
 
-    ### Title     -    Grunge Orange for Cyder
+    ### Title     -    Orange Wave for Cyder
     ### author    -    Maximillian Schmidt
-    ### version   -    v1.2.4
+    ### version   -    v2.0.0
     ### apply     -    URLs starting with: https://cyder.oregonstate.edu/
 
 
@@ -14,16 +14,16 @@
 
     ********************************************************************************************************************************************/
     body {
-        background-image: url("http://nexus-wallpaper.com/wp-content/uploads/2014/04/orange-grunge-stripes.png");
-        background-size: 100% 200%;
-        color: #ee5800;
+        background-image: url("https://wallpaper-house.com/data/out/8/wallpaper2you_282393.png");
+        background-size: 100% 100%;
+        color: #D52D00;
     }
     .main .content,
     td,
     select,
     input {
         background: #222222;
-        color: #ee5800;
+        color: #D52D00;
         opacity: 0.9;
     }
     .content {
@@ -43,28 +43,28 @@
     h2,
     h3,
     h4 {
-        color: #ee5800;
+        color: #D52D00;
     }
     #sidebar .nav-link.selected,
     #sidebar .nav-link.child.selected {
-        background: #ee5800;
+        background: #D52D00;
         color: #000000;
         opacity: 0.7;
     }
     a.btn {
         background: #000000;
-        color: #ee5800;
+        color: #D52D00;
         opacity: 0.7;
     }
     #search input,
     #header {
         background: #111111;
-        color: #ee5800;
-        border-color: #ee5800;
+        color: #D52D00;
+        border-color: #D52D00;
     }
     .user-info,
     .user-info .level,
     #setDefaultCtnr #defaultCtnrBtn {
-        color: #ee5800;
+        color: #D52D00;
     }
 }
