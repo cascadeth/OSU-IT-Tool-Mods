@@ -1,0 +1,146 @@
+@-moz-document domain("oregonstate.teamdynamix.com") {
+    /********************************************************************************************************************************************
+        
+        ### Title     -    TD Dark
+        ### author    -    Maximillian Schmidt
+        ### version   -    v1.1.1
+        ### apply     -    URLs on the domain: "oregonstate.teamdynamix.com"
+        
+        
+        ### revisions -    vX.Y.Z 
+                      - X: For Sytlish extension.  If a newer existed, this would be updated to v2
+                      - Y: Updated every major block style change(large div, applies to lots of elements, etc)
+                      - Z: Single line changes, only effects one style, etc
+        
+        ********************************************************************************************************************************************/
+        
+        /*Main Background Color*/
+        body, #divHeader {
+            background-color: #252525 !important;
+            background-image: url("https://wallpapercave.com/wp/DM6hvet.jpg");
+            
+            /* Other Wallpapers
+            
+            https://d2v9y0dukr6mq2.cloudfront.net/video/thumbnail/dark-background-with-star-like-dots_bkpaotdgh__F0000.png
+            https://wallpapercave.com/wp/DM6hvet.jpg
+            https://d2v9y0dukr6mq2.cloudfront.net/video/thumbnail/xCCDBUa/technology-or-bio-molecular-structure-with-space-for-text-4k-looped-animation-presentation-background_voflj4vnl__F0000.png
+            
+            */
+        }
+        /*OSU Header at Top Left of page*/
+        .organization-link a {
+            color: #D16600;
+        }
+        /*Tabs color*/
+        .ui-tabs-anchor {
+            color: white !important;
+        }
+        
+        /*Panel Heading Background & Font + Tab*/
+        .panel-heading, .ui-tabs-active {
+            color: #ffffff !important;
+            background-color: #323232 !important;
+        }
+        
+        .checkbox-inline, #lstNotification_ms_drop * {
+            color: gray;
+        }
+        
+        /*Table Header Background*/
+        .TDGridHeader {
+            background-color: #A3A3A3 !important;
+        }
+        /*Applications Menu Background, All Rows Background, and header*/
+        #ApplicationsMenu, tr, .ButtonCellTop {
+            background-color: gray;
+        }
+    
+        /*User Header Background, Background for Contact Information Body*/
+        .gutter.clearfix, .fixed.white-bg, .panel-body, .table-striped>tbody>tr:nth-of-type(odd) {
+            background-color: #252525 !important;
+        }
+    
+        /*User Information Font*/
+        .gutter-bottom {
+            color: #AFAFAF;
+        }
+        .control-label {
+            color: white !important;
+        }
+        /*Odd Rows Background*/
+        .desktop-module {
+            background-color: #000000;
+        }
+        /*Even Rows Background*/
+        .TDAlternatingRow {
+            background-color: #323232;
+        }
+        /*Top Navigation Bar Background*/
+        .navbar {
+            background-color: #323232 !important;
+        }
+        /*Location of OSU Header*/
+        .organization-link {   
+            margin: 1px;
+        }
+        /*Ticket Details Font Color*/
+        #upDetails, .control-label, h1,  h2, label, #ttDescription, .gutter-top-xs, .gray, .absoluteDate, .gutter-left-sm {
+            color: white;
+        }
+        /*Hyperlink Font Color*/
+        a {
+            color: #0053EE;
+            text-decoration: underline;
+        }
+        /*Font color for Even Rows*/
+        .TDAlternatingRow  a, .TDAlternatingRow td, .ui-datepicker-calendar *{
+            color: white;
+        }
+        /*Ticket Status in upper right*/
+        #thTicket_lblStatus {
+            font-size: 32px;
+            color: red !important;
+        }
+        /*Title & Requestor Columns on Odd Rows*/
+        td a, td p, td {
+            color: white
+        }
+        /*Border Color*/
+        .panel-default {
+            border-color: #7C7C7C;
+        }
+        
+        /*Update Comments*/
+        .feed-reply {
+            color: white;
+            background-color: grey;
+        }
+        
+        
+        /*Requestor card name stuff*/
+        body > div:nth-child(4) > div > div.col-sm-4 > div:nth-child(1) > div.panel-body > div > div.media-body > div.font-md.ellipsis {
+            color: white;
+        }
+        body > div:nth-child(4) > div > div.col-sm-4 > div > div.panel-body > div > div {
+            color: white;
+        }
+        
+        /* Requestor/Details background */
+        body > div:nth-child(4) > div > div.col-sm-4 > div {
+            background-color: #252525;
+        }
+        
+        
+        #thTicket_copyControl_btnCopyTypeAndID, #thTicket_copyControl_btnCopyID {
+            background-color: transparent;
+        }
+        
+        
+        .num-tickets {
+            color: grey;
+        }
+        
+        #dropdownMenu1, #btnToDos {
+            color: grey !important;
+        }
+    }
