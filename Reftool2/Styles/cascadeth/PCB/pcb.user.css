@@ -1,32 +1,25 @@
+/* ==UserStyle==
+@name           pcb
+@namespace      tools.is.oregonstate.edu/reftool2
+@version        1.0.0
+@description    A dark teal theme for Reftool
+@author         cascadeth <cascadeth@gmail.com>
+@homepageURL    https://github.com/cascadeth/OSU-IT-Tool-Mods
+@license        GPL v3
+==/UserStyle== */
+
 @-moz-document url-prefix("https://tools.is.oregonstate.edu/reftool2/") {
-    /********************************************************************************************************************************************
-
-### Title     -    Lit By Linear Embers for Reftool 2
-### author    -    Maximillian Schmidt
-### version   -    v1.3.2
-### apply     -    URLs starting with: https://tools.is.oregonstate.edu/reftool2/
-
-
-### revisions -    vX.Y.Z 
-		      - X: For Reftool2.  If Reftool3 existed, this would be updated to v2
-              - Y: Updated every major block style change(large div, applies to lots of elements, etc)
-		      - Z: Single line changes, only effects one style, etc
-
-********************************************************************************************************************************************/
+    
     body {
-        background-image: url("https://realtimevfx.com/uploads/default/original/2X/f/ffa4335fa10903ca2f9c36852cb8184bd9fa9fb5.gif");
-        /* Alternative Images / GIFs:
-
-    http://wantedwallpapers.com/wp-content/uploads/2014/02/orange-thing-thunderbolt-abstract-desktop-1280x1024-wanted-wallpaper-.jpg
-    http://nexus-wallpaper.com/wp-content/uploads/2014/04/orange-grunge-stripes.png
-    https://68.media.tumblr.com/3a880ef6b2315404bcdfa74a6e24f706/tumblr_nj5nlbcyhY1s4fz4bo1_500.gif
-    https://d13yacurqjgara.cloudfront.net/users/400493/screenshots/2087456/squarepeg.gif
-    https://realtimevfx.com/uploads/default/original/2X/f/ffa4335fa10903ca2f9c36852cb8184bd9fa9fb5.gif
-
-    */
+        background-image: url("https://wallup.net/wp-content/uploads/2015/12/15760-blue-digital_art-dark_blue-abstract.jpg");
         background-size: 100% 100%;
-        color: #ee5800;
+        color: lightgray;
     }
+    
+    div.panel-footer {
+        visibility: hidden;
+    }
+    
     .btn-default,
     .navbar-inverse .navbar-nav>.open>a,
     .navbar-inverse .navbar-nav>.open>a:hover,
@@ -37,7 +30,7 @@
     .navbar-nav>li>.dropdown-menu,
     .input-group .form-control {
         background: #222222;
-        color: #df32cc;
+        color: teal;
         border-color: #666666;
         border-radius: 4px;
     }
@@ -51,10 +44,7 @@
     #sidemenu,
     #navbar {
         background: #020202;
-        /* Change main text colors */
-        /*color: #ee5800;    /* Orange */
-        color: #df32cc;
-        /* Magenta */
+        color: lightgray;
         border: #000000;
         border-radius: 10px;
     }
@@ -75,19 +65,20 @@
         background: transparent;
     }
     #ldap {
-        color: #ee5800;
+        color: white;
     }
     pre {
         background-color: rgba(02, 02, 02, 0.8);
-        color: #ee5800;
+        color: white;
         border-color: #ee5800;
         border-radius: 10px;
     }
     .list-group-item.clickable * {
         color: white !important;
     }
+    
     /* MAKE PEOPLE FLAGS MORE PROMINENT */
-    .panel-heading.clearfix.panel-heading-button.lrp,
+    .panel-heading.clearfix.panel-heading-button.lrp, 
     .list-group-item.clickable.lrp {
         background-color: #ff9900 !important;
         border: 3px solid #ffbb00 !important;

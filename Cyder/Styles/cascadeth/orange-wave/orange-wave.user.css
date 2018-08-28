@@ -1,18 +1,15 @@
+/* ==UserStyle==
+@name           Orange Wave
+@namespace      cyder.oregonstate.edu
+@version        2.0.0
+@description    A dark orange them for the Cyder network tool
+@author         cascadeth <cascadeth@gmail.com>
+@homepageURL    https://github.com/cascadeth/OSU-IT-Tool-Mods
+@license        GPL v3
+==/UserStyle== */
+
 @-moz-document url-prefix("https://cyder.oregonstate.edu/") {
-/********************************************************************************************************************************************
 
-    ### Title     -    Orange Wave for Cyder
-    ### author    -    Maximillian Schmidt
-    ### version   -    v2.0.0
-    ### apply     -    URLs starting with: https://cyder.oregonstate.edu/
-
-
-    ### revisions -    vX.Y.Z 
-	     	      - X: For Cyder.  If Cyder 2 existed, this would be updated to v2
-                  - Y: Updated every major block style change(large div, applies to lots of elements, etc)
-		          - Z: Single line changes, only effects one style, etc
-
-    ********************************************************************************************************************************************/
     body {
         background-image: url("https://wallpaper-house.com/data/out/8/wallpaper2you_282393.png");
         background-size: 100% 100%;
@@ -64,7 +61,7 @@
     }
     .user-info,
     .user-info .level,
-    #setDefaultCtnr #defaultCtnrBtn {
+    #defaultCtnrBtn {
         color: #D52D00;
     }
 }

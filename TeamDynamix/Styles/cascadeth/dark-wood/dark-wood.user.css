@@ -1,30 +1,19 @@
-/********************************************************************************************************************************************
-    
-    ### Title     -    TD Dark
-    ### author    -    Maximillian Schmidt
-    ### version   -    v1.1.3
-    ### apply     -    URLs on the domain: "oregonstate.teamdynamix.com"
-    
-    
-    ### revisions -    vX.Y.Z 
-                  - X: For Sytlish extension.  If a newer existed, this would be updated to v2
-                  - Y: Updated every major block style change(large div, applies to lots of elements, etc)
-                  - Z: Single line changes, only effects one style, etc
-    
-    ********************************************************************************************************************************************/
+/* ==UserStyle==
+@name           dark-wood
+@namespace      oregonstate.teamdynamix.com
+@version        1.1.3
+@description    A dark wood them for TeamDynamix
+@author         cascadeth <cascadeth@gmail.com>
+@homepageURL    https://github.com/cascadeth/OSU-IT-Tool-Mods
+@license        GPL v3
+==/UserStyle== */
+
+@-moz-document domain("oregonstate.teamdynamix.com") {
     
     /*Main Background Color*/
     body, #divHeader {
         background-color: #252525 !important;
         background-image: url("https://wallpapercave.com/wp/DM6hvet.jpg");
-        
-        /* Other Wallpapers
-        
-        https://d2v9y0dukr6mq2.cloudfront.net/video/thumbnail/dark-background-with-star-like-dots_bkpaotdgh__F0000.png
-        https://wallpapercave.com/wp/DM6hvet.jpg
-        https://d2v9y0dukr6mq2.cloudfront.net/video/thumbnail/xCCDBUa/technology-or-bio-molecular-structure-with-space-for-text-4k-looped-animation-presentation-background_voflj4vnl__F0000.png
-        
-        */
     }
     /*OSU Header at Top Left of page*/
     .organization-link a {
@@ -151,3 +140,4 @@
     #dropdownMenu1, #btnToDos {
         color: grey !important;
     }
+}
