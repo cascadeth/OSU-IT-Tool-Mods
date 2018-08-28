@@ -2,7 +2,7 @@
     
     ### Title     -    TD Dark
     ### author    -    Maximillian Schmidt
-    ### version   -    v1.1.2
+    ### version   -    v1.1.3
     ### apply     -    URLs on the domain: "oregonstate.teamdynamix.com"
     
     
@@ -129,16 +129,25 @@
         background-color: #252525;
     }
     
-    
+    /*Ticket Number Top Left*/
     #thTicket_copyControl_btnCopyTypeAndID, #thTicket_copyControl_btnCopyID {
         background-color: transparent;
     }
     
-    
-    .num-tickets {
+    /*Task Cards*/    
+    .padding {
+        background: #252525;   
+    }
+    .block-actions {
+        background: #252525;
+    }
+
+    /*From Added Scripts*/
+    .num-tickets, .grey {
         color: grey;
     }
     
+    /*Top Right Menues*/
     #dropdownMenu1, #btnToDos {
         color: grey !important;
     }
