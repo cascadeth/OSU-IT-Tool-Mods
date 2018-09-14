@@ -119,7 +119,7 @@
     }
     
     /*Ticket Number Top Left*/
-    #thTicket_copyControl_btnCopyTypeAndID, #thTicket_copyControl_btnCopyID {
+    #thTicket_copyControl_btnCopyTypeAndID, #thTicket_copyControl_btnCopyID, #btnCopyTypeAndID, #btnCopyID {
         background-color: transparent;
     }
     
