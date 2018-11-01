@@ -1,7 +1,7 @@
 /* ==UserStyle==
 @name           dark-wood
 @namespace      oregonstate.teamdynamix.com
-@version        1.1.3
+@version        1.1.4
 @description    A dark wood them for TeamDynamix
 @author         cascadeth <cascadeth@gmail.com>
 @homepageURL    https://github.com/cascadeth/OSU-IT-Tool-Mods
@@ -17,7 +17,7 @@
     }
     /*OSU Header at Top Left of page*/
     .organization-link a {
-        color: #D16600;
+        color: #607D8B;
     }
     /*Tabs color*/
     .ui-tabs-anchor {
@@ -87,7 +87,7 @@
     /*Ticket Status in upper right*/
     #thTicket_lblStatus {
         font-size: 32px;
-        color: red !important;
+        color: #FF4900 !important;
     }
     /*Title & Requestor Columns on Odd Rows*/
     td a, td p, td {
@@ -103,8 +103,7 @@
         color: white;
         background-color: grey;
     }
-    
-    
+        
     /*Requestor card name stuff*/
     body > div:nth-child(4) > div > div.col-sm-4 > div:nth-child(1) > div.panel-body > div > div.media-body > div.font-md.ellipsis {
         color: white;
@@ -118,8 +117,8 @@
         background-color: #252525;
     }
     
-    /*Ticket Number Top Left*/
-    #thTicket_copyControl_btnCopyTypeAndID, #thTicket_copyControl_btnCopyID, #btnCopyTypeAndID, #btnCopyID {
+    /*Ticket Number Top Left, button headers*/
+    .copyButton, .ButtonCellTop, .TabButtonCell {
         background-color: transparent;
     }
     
@@ -140,4 +139,9 @@
     #dropdownMenu1, #btnToDos {
         color: grey !important;
     }
+    
+    .checkbox *{
+        color: #555;
+    }
+    
 }
