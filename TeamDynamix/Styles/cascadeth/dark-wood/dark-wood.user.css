@@ -1,7 +1,7 @@
 /* ==UserStyle==
 @name           dark-wood
 @namespace      oregonstate.teamdynamix.com
-@version        1.1.5
+@version        1.1.6
 @description    A dark wood them for TeamDynamix
 @author         cascadeth <cascadeth@gmail.com>
 @homepageURL    https://github.com/cascadeth/OSU-IT-Tool-Mods
@@ -60,13 +60,18 @@
         background-color: #000000;
     }
     /*Even Rows Background*/
-    .TDAlternatingRow, .TDGridHeader * {
-        background-color: #323232 !important;
+    .TDAlternatingRow {
+        background-color: #333333;
+        color: white !important;
+    }
+    
+    .TDGridHeader * {
+        background-color: #333333 !important;
         color: white !important;
     }
     /*Top Navigation Bar Background*/
     .navbar {
-        background-color: #323232 !important;
+        background-color: #333333 !important;
     }
     /*Location of OSU Header*/
     .organization-link {   
