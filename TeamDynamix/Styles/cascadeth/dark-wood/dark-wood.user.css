@@ -1,7 +1,7 @@
 /* ==UserStyle==
 @name           dark-wood
 @namespace      oregonstate.teamdynamix.com
-@version        1.1.4
+@version        1.1.5
 @description    A dark wood them for TeamDynamix
 @author         cascadeth <cascadeth@gmail.com>
 @homepageURL    https://github.com/cascadeth/OSU-IT-Tool-Mods
@@ -26,7 +26,7 @@
     
     /*Panel Heading Background & Font + Tab*/
     .panel-heading, .ui-tabs-active {
-        color: #ffffff !important;
+        color: white !important;
         background-color: #323232 !important;
     }
     
@@ -60,8 +60,9 @@
         background-color: #000000;
     }
     /*Even Rows Background*/
-    .TDAlternatingRow {
-        background-color: #323232;
+    .TDAlternatingRow, .TDGridHeader * {
+        background-color: #323232 !important;
+        color: white !important;
     }
     /*Top Navigation Bar Background*/
     .navbar {
@@ -131,8 +132,13 @@
     }
 
     /*From Added Scripts*/
-    .num-tickets, .grey {
+    .grey {
         color: grey;
+    }
+    
+    .num-tickets {
+        color: #AFAFAF;
+        font-weight: bold;
     }
     
     /*Top Right Menues*/
