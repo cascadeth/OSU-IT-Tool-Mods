@@ -1,7 +1,7 @@
 /* ==UserStyle==
 @name           dark-wood
 @namespace      oregonstate.teamdynamix.com
-@version        1.1.6
+@version        1.1.7
 @description    A dark wood them for TeamDynamix
 @author         cascadeth <cascadeth@gmail.com>
 @homepageURL    https://github.com/cascadeth/OSU-IT-Tool-Mods
@@ -25,7 +25,7 @@
     }
     
     /*Panel Heading Background & Font + Tab*/
-    .panel-heading, .ui-tabs-active {
+    .panel-heading, .ui-tabs-active, .ui-tabs-nav, .TDGridHeader * {
         color: white !important;
         background-color: #323232 !important;
     }
@@ -65,10 +65,6 @@
         color: white !important;
     }
     
-    .TDGridHeader * {
-        background-color: #333333 !important;
-        color: white !important;
-    }
     /*Top Navigation Bar Background*/
     .navbar {
         background-color: #333333 !important;
