@@ -1,7 +1,7 @@
 // ==UserScript==
 // @name         Phone@log Button on Reftool
 // @namespace    http://tampermonkey.net/
-// @version      2.0
+// @version      2.1
 // @description  Adds a button to create a new phone@log ticket with the appropriate fields filled out
 // @author       Tyler Farnham / Luke Miletta
 // @match        https://tools.is.oregonstate.edu/reftool2/*
@@ -67,8 +67,9 @@ function fill_form_Duo(){
     var title = document.getElementById("attribute1303");
     title.value = "Transcripts Request";
     var body = document.getElementById("attribute2937");
-    body.innerText = customerUserName + " called in to get Duo reactivated on their phone. I had them confirm their phone number and then sent them a reactivation link. They were successfully reconnected. All is well.";
-
+    body.innerText = customerUserName + " called in to get Duo reactivated on their phone.";
+    var techNotes = document.getElementById("attribute53162");
+    techNotes.innerText = "I had them confirm their phone number and then sent them a reactivation link. Duo was reactivated on their device successfully.\n\nAll is well.";
 }
 
 function fill_form_generic(){
