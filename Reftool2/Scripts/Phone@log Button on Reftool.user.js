@@ -1,7 +1,7 @@
 // ==UserScript==
 // @name         Phone@log Button on Reftool
 // @namespace    http://tampermonkey.net/
-// @version      2.1
+// @version      2.0
 // @description  Adds a button to create a new phone@log ticket with the appropriate fields filled out
 // @author       Tyler Farnham / Luke Miletta
 // @match        https://tools.is.oregonstate.edu/reftool2/*
@@ -13,20 +13,26 @@
 
 var URL = window.location.href;
 if(URL.indexOf("tools.is.oregonstate.edu/reftool2/") >=0){
-    window.setTimeout(put_button, 750);
+    window.setTimeout(put_button, 100);
 }
 else if(URL.indexOf("&/phonelog") >=0){
-    window.setTimeout(fill_form_generic, 500);
+    window.setTimeout(fill_form_generic, 100);
 }
 else if(URL.indexOf("&/transcripts") >=0){
-    window.setTimeout(fill_form_transcripts, 500);
+    window.setTimeout(fill_form_transcripts, 100);
 }
 else if(URL.indexOf("&/Duo") >=0){
-    window.setTimeout(fill_form_Duo, 500);
+    window.setTimeout(fill_form_Duo, 100);
 }
 
 function fill_form_transcripts(){
-    var status = document.getElementById("attribute1306");
+    try{
+        var status = document.getElementById("attribute1306");
+    }
+    catch(err){
+        window.setTimeout(fill_form_transcripts, 50);
+        return;
+    }
     status = status.children;
     for(var i=0; i<status.length;i++){
         if(status[i].innerText = "Open" && status[i].getAttribute("value") == "17739"){
@@ -35,6 +41,7 @@ function fill_form_transcripts(){
             break;
         }
     }
+    uncheckNotify();
     var by = document.getElementById("attribute3955");
     console.log(URL.split("/")[8]);
     by = by.children;
@@ -48,7 +55,14 @@ function fill_form_transcripts(){
 
 function fill_form_Duo(){
     console.log("Executing the duo function!");
-    var status = document.getElementById("attribute1306");
+    try{
+        var status = document.getElementById("attribute1306");
+    }
+    catch(err){
+        window.setTimeout(fill_form_transcripts, 50);
+        return;
+    }
+    uncheckNotify();
     var customerUserName = URL.split("/")[9].split("@")[0];
     var customerUPN = URL.split("/")[9];
     status = status.children;
@@ -73,7 +87,13 @@ function fill_form_Duo(){
 }
 
 function fill_form_generic(){
-    var status = document.getElementById("attribute1306");
+    try{
+        var status = document.getElementById("attribute1306");
+    }
+    catch(err){
+        window.setTimeout(fill_form_transcripts, 50);
+        return;
+    }
     status = status.children;
     for(var i=0; i<status.length;i++){
         if(status[i].innerText = "Open" && status[i].getAttribute("value") == "17739"){
@@ -82,6 +102,7 @@ function fill_form_generic(){
             break;
         }
     }
+    uncheckNotify();
     var by = document.getElementById("attribute3955");
     by = by.children;
     by[0].setAttribute("value", "793");
@@ -89,8 +110,13 @@ function fill_form_generic(){
 }
 
 function put_button(){
-    var search = document.getElementById("search");
-
+    try{
+        var search = document.getElementById("search");
+    }
+    catch(err){
+        window.setTimeout(put_button, 50);
+        return;
+    }
     // 1. Create the button
     var button1 = document.createElement("form-button");
     button1.setAttribute("type", "button");
@@ -164,5 +190,14 @@ function put_button(){
         console.log(UID);
         var url = "https://oregonstate.teamdynamix.com/TDNext/Apps/425/Tickets/New?formId=17631&RequestorUID=" + UID + "&/Duo/" + firstName;
         window.open(url, '_blank');
+    }
+}
+
+function uncheckNotify(){
+    var checks = document.getElementsByClassName("checkbox");
+    for(var i = 0; i < checks.length; i++){
+        if((checks[i].children)[0].innerText == "Notify Requestor"){
+            (((checks[i].children)[0]).children)[0].click();
+        }
     }
 }
