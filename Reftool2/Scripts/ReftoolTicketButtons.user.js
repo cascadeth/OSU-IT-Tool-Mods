@@ -1,5 +1,5 @@
 // ==UserScript==
-// @name         Phone@log Button on Reftool
+// @name         ReftoolTicketButtons
 // @namespace    http://tampermonkey.net/
 // @version      2.0
 // @description  Adds a button to create a new phone@log ticket with the appropriate fields filled out
