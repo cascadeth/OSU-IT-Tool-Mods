@@ -153,17 +153,19 @@ function click_page_button(){
 //////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////
 function setColors(tickets){
     for(var i = 0; i < tickets.length; i++){
-        if(((tickets[i].children)[4].innerHTML) == "Open"){
-            tickets[i].setAttribute("style", "background-color: #1E453E;");
-        }
-        else if(((tickets[i].children)[4].innerHTML) == "In Process"){
-            tickets[i].setAttribute("style", "background-color: #010048;");
-        }
-        else if(((tickets[i].children)[4].innerHTML) == "New"){
-            tickets[i].setAttribute("style", "background-color: #800000;");
-        }
-        else if(((tickets[i].children)[4].innerHTML) == "Escalated - Internal"){
-            tickets[i].setAttribute("style", "background-color: #421F40;");
+        for(var j = 0; j < tickets[i].children.length; j++){ //Makes it select the status attribute of the ticket to check to prevent different report formats from making this fail.
+            if(((tickets[i].children)[j].innerHTML) == "Open"){
+                tickets[i].setAttribute("style", "background-color: #1E453E;");
+            }
+            else if(((tickets[i].children)[j].innerHTML) == "In Process"){
+                tickets[i].setAttribute("style", "background-color: #010048;");
+            }
+            else if(((tickets[i].children)[j].innerHTML) == "New"){
+                tickets[i].setAttribute("style", "background-color: #800000;");
+            }
+            else if(((tickets[i].children)[j].innerHTML) == "Escalated - Internal"){
+                tickets[i].setAttribute("style", "background-color: #421F40;");
+            }
         }
     }
 }
