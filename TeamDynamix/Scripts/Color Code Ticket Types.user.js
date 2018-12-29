@@ -1,7 +1,7 @@
 // ==UserScript==
 // @name     Color Code Ticket Types
 // @namespace  http://tampermonkey.net/
-// @version   2.0
+// @version   2.1
 // @description Color code the tickets based on types in the queue
 // @author    Tyler Farnham / Luke Miletta
 // @match    https://oregonstate.teamdynamix.com/TDNext/Home/Desktop/*
@@ -42,6 +42,8 @@ function items(){
     iii.appendChild(toggleColorButton);
     iii.insertBefore(toggleColorButton, iii.firstChild);
     // 3. Add event handler
+
+    console.log(maxReport.reportElement.childNodes[0].childNodes[1]);
     toggleColorButton.addEventListener ("click", function(){click_form_button(maxReport)});
     // Function that handles click of form button
     // Listens for click of next page buttons
@@ -91,6 +93,7 @@ function click_refresh_button(maxReport){
         return;
     }
     else{
+        sleep(500);
         setColors(tickets);
     }
 }
@@ -145,17 +148,20 @@ function click_page_button(){
 //////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////
 function setColors(tickets){
     for(var i = 0; i < tickets.length; i++){
-        if(((tickets[i].children)[4].innerHTML) == "Open"){
-            tickets[i].setAttribute("style", "background-color: #d4fce6;");
-        }
-        else if(((tickets[i].children)[4].innerHTML) == "In Process"){
-            tickets[i].setAttribute("style", "background-color: #76a8f7;");
-        }
-        else if(((tickets[i].children)[4].innerHTML) == "New"){
-            tickets[i].setAttribute("style", "background-color: #f25757;");
-        }
-        else if(((tickets[i].children)[4].innerHTML) == "Escalated - Internal"){
-            tickets[i].setAttribute("style", "background-color: #e17efc;");
+        console.log("Coloring");
+        for(var j = 0; j < tickets[i].children.length; j++){
+            if(((tickets[i].children)[j].innerHTML) == "Open"){
+                tickets[i].setAttribute("style", "background-color: #d4fce6;");
+            }
+            else if(((tickets[i].children)[j].innerHTML) == "In Process"){
+                tickets[i].setAttribute("style", "background-color: #76a8f7;");
+            }
+            else if(((tickets[i].children)[j].innerHTML) == "New"){
+                tickets[i].setAttribute("style", "background-color: #f25757;");
+            }
+            else if(((tickets[i].children)[j].innerHTML) == "Escalated - Internal"){
+                tickets[i].setAttribute("style", "background-color: #e17efc;");
+            }
         }
     }
 }
@@ -222,6 +228,7 @@ function getMaxReport(){
 
 function click_form_button(maxReport){
     var i;
+    console.log(maxReport.reportElement.childNodes[1].childNodes[1].childNodes[3]);
     var tickets = ((((((maxReport.reportElement.childNodes)[1]).childNodes)[1]).childNodes)[3]);//Gets the element that holds all of the tickets
     tickets = tickets.children; //The children of that element are the tickets themselves. This is now an array of tickets.
     if(toggleColorButton.getAttribute("style") == "border-style: solid; padding: 5px; border-width: 1px; border-radius: 5px;"){ //If the button is not pressed then press it and set the colors
@@ -232,4 +239,20 @@ function click_form_button(maxReport){
         toggleColorButton.setAttribute("style", "border-style: solid; padding: 5px; border-width: 1px; border-radius: 5px;"); //If the button is pressed then un-press it and remove the colors.
         removeColors(tickets);
     }
+}
+
+//////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////
+    /*
+    sleep() waits for "ms" milliseconds before returning to allow the program to continue execution.
+    */
+//////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////
+
+function sleep(ms) {
+  return new Promise(resolve => setTimeout(resolve, ms));
+}
+
+async function demo() {
+  console.log('Taking a break...');
+  await sleep(2000);
+  console.log('Two seconds later');
 }
