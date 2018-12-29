@@ -148,8 +148,7 @@ function click_page_button(){
 //////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////
 function setColors(tickets){
     for(var i = 0; i < tickets.length; i++){
-        console.log("Coloring");
-        for(var j = 0; j < tickets[i].children.length; j++){
+        for(var j = 0; j < tickets[i].children.length; j++){ //Makes it select the status attribute of the ticket to check to prevent different report formats from making this fail.
             if(((tickets[i].children)[j].innerHTML) == "Open"){
                 tickets[i].setAttribute("style", "background-color: #d4fce6;");
             }
