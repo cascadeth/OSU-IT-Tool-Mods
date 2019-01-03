@@ -83,7 +83,7 @@ function fill_form_Duo(){
     var body = document.getElementById("attribute2937");
     body.innerText = customerUserName + " called in to get Duo reactivated on their phone.";
     var techNotes = document.getElementById("attribute53162");
-    techNotes.innerText = "I had them confirm their phone number and then sent them a reactivation link. Duo was reactivated on their device successfully.\n\nAll is well.";
+    techNotes.innerText = "We had them navigate to the Duo self service page to reactivate their own phone. They were able to reactivate it.\n\nAll is well.";
 }
 
 function fill_form_generic(){
