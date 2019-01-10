@@ -1,7 +1,7 @@
 /* ==UserStyle==
 @name           dark-wood
 @namespace      oregonstate.teamdynamix.com
-@version        1.2.0
+@version        1.2.1
 @description    A dark wood them for TeamDynamix
 @author         cascadeth <cascadeth@gmail.com>
 @homepageURL    https://github.com/cascadeth/OSU-IT-Tool-Mods
@@ -50,7 +50,7 @@
 
     /*User Information Font*/
     .gutter-bottom, .disp-group {
-        color: #AFAFAF;
+        color: grey;
     }
     .control-label {
         color: white !important;
@@ -97,7 +97,7 @@
     }
     /*Border Color*/
     .panel-default {
-        border-color: #7C7C7C;
+        border-color: grey;
     }
     
     /*Update Comments*/
@@ -149,6 +149,21 @@
     
     .checkbox *{
         color: #555;
+    }
+    
+    /*Side panel in IT Tab*/
+    .modal-content {
+        background: #444;
+    }
+    
+    .filter-section {
+        background: #666 !important;
+        color: white;
+        border-color: #666 !important;
+    }
+    
+    #lbStatus_ms_drop *, #lbStatus_ms_drop * * {
+        color: #333;
     }
     
 }
