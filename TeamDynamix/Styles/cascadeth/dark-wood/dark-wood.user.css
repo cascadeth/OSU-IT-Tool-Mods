@@ -1,7 +1,7 @@
 /* ==UserStyle==
 @name           dark-wood
 @namespace      oregonstate.teamdynamix.com
-@version        1.2.1
+@version        1.2.2
 @description    A dark wood them for TeamDynamix
 @author         cascadeth <cascadeth@gmail.com>
 @homepageURL    https://github.com/cascadeth/OSU-IT-Tool-Mods
@@ -164,6 +164,11 @@
     
     #lbStatus_ms_drop *, #lbStatus_ms_drop * * {
         color: #333;
+    }
+    
+    .popover * {
+        background: #333;
+        border-color: #555;
     }
     
 }
