@@ -1,7 +1,7 @@
 /* ==UserStyle==
 @name           dark-wood
 @namespace      oregonstate.teamdynamix.com
-@version        1.2.2
+@version        1.3.0
 @description    A dark wood them for TeamDynamix
 @author         cascadeth <cascadeth@gmail.com>
 @homepageURL    https://github.com/cascadeth/OSU-IT-Tool-Mods
@@ -169,6 +169,15 @@
     .popover * {
         background: #333;
         border-color: #555;
+    }
+    
+}
+
+@-moz-document url-prefix("https://oregonstate.teamdynamix.com/TDNext/Apps/Shared/FileOpen.aspx") {
+    
+    body {
+        color: #DDD;
+        background: #333
     }
     
 }
