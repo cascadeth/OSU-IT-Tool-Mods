@@ -1,5 +1,5 @@
 // ==UserScript==
-// @name     Color Code Ticket Types
+// @name     Dark Theme Color Code Ticket Types
 // @namespace  http://tampermonkey.net/
 // @version   3.0
 // @description Color code the tickets based on types in the queue (Dark Theme)
