@@ -7,7 +7,6 @@
 // @match        https://oregonstate.teamdynamix.com/TDNext/Apps/425/Tickets/Update?TicketID=*
 // ==/UserScript==
 
-var executeAttempts = 0;
 window.setTimeout(main, 100);
 
 function main(){
@@ -16,14 +15,7 @@ function main(){
         var locationField = document.getElementById("attribute26617");
     }
     catch(e){
-        executeAttempts++;
-        //Stop trying if has not loaded after ~1 second.
-        if(executeAttempts < 5){
-            window.setTimeout(main, 200);
-        }
-        else{
-            return;
-        }
+        window.setTimeout(main, 500);
     }
     //If it is not the correct form type then exit
     //NOTE: The form type will change when we get a walkup device form type back.
