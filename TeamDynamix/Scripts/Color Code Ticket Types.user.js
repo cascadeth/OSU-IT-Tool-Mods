@@ -64,100 +64,8 @@ function items(){
     toggleModifiedInsertLocation.insertBefore(toggleModified, toggleModifiedInsertLocation.firstChild);
     toggleModified.onclick = function(){clickToggleModify();};
 
-    // Function that handles click of form button
-    // Listens for click of next page buttons
-    var next_page = document.getElementsByClassName("pager-link");
-    for(i = 0; i < next_page.length; i++){
-        next_page[i].addEventListener ("click", click_page_button);
-    }
-    //Listens for click of refresh button
-    //maxReport.reportElement.childNodes[0].childNodes[1].childNodes[2].addEventListener("click", function(){window.setTimeout(waitUntilRefresh, 50)}, false); //Grabs the refresh button on the maxReport element and applies the click event listener to it
-
-
-//////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////
-    /*
-    waitUntilRefresh() loops on itself while checking the class name of the refresh button on the maxReport element. The refresh button has a class applied to it that
-    indicates that it is spinning while the report is refreshing, and it returns to the class that indicates that it is static when it is finished. waitUnitlRefresh()
-    calls click_refresh_button when the report is done refreshing.
-    */
-//////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////
-    function waitUntilRefresh(){
-        if(maxReport.reportElement.childNodes[0].childNodes[1].childNodes[2].className != "fa fa-refresh fa-lg refresh-module-icon gutter-left-xs"){
-            window.setTimeout(waitUntilRefresh, 100);
-            return -1;
-        }
-        else{
-            window.setTimeout(click_refresh_button(maxReport), 100);
-            return 1;
-        }
-    }
 }
 
-//////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////
-    /*
-    click_refresh_button() reapplies the coloring to all of the tickets after the refresh button is clicked.
-    */
-//////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////
-
-function click_refresh_button(maxReport){
-    var i;
-    var next_page = document.getElementsByClassName("pager-link");
-    for(i = 0; i < next_page.length; i++){
-        next_page[i].addEventListener ("click", click_page_button);
-    }
-    var tickets = ((((((maxReport.reportElement.childNodes)[1]).childNodes)[1]).childNodes)[3]);
-    tickets = tickets.children;
-    if(toggleColorButton.getAttribute("style") === "border-style: solid; padding: 5px; border-width: 1px; border-radius: 5px;"){
-        return;
-    }
-    else{
-        sleep(500);
-        setColors(tickets);
-    }
-}
-
-//////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////
-    /*
-    click_page_button() is executed when you click on the page buttons at the bottom of each report. It applies the coloring to the newly loaded tickets after
-    switching pages on the ticket report that the script is applied to. It loops on itself until the new tickets are done loading and then applies the coloring to them.
-    */
-//////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////
-
-function click_page_button(){
-    // Listens for click of next page buttons
-    var maxReport = getMaxReport();
-    var hasColor = 0;
-    if(!maxReport){
-        window.setTimeout(click_page_button, 100);
-        return;
-    }
-    else if (maxReport === -1){
-        console.log("No reports found after page switch!");
-        return -1;
-    }
-    var next_page = document.getElementsByClassName("pager-link");
-    for(var i = 0; i < next_page.length; i++){
-        next_page[i].addEventListener ("click", click_page_button);
-    }
-    var tickets = ((((((maxReport.reportElement.childNodes)[1]).childNodes)[1]).childNodes)[3]);
-    tickets = tickets.children;
-    if(toggleColorButton.getAttribute("style") === "border-style: solid; padding: 5px; border-width: 1px; border-radius: 5px;"){ //If the tickets are colored already then remove the coloring on them.
-        removeColors(tickets);
-    }
-    else{
-        var ticketBackgroundColor = tickets[0].getAttribute("style");
-        if(ticketBackgroundColor != null){ //If the color is null then it runs the function again because the tickets on the new page have not loaded yet. Otherwise it sets the color on the newly loaded tickets.
-            window.setTimeout(click_page_button, 100);
-            return;
-        }
-        setColors(tickets);
-    }
-    tickets = ((((((maxReport.reportElement.childNodes)[1]).childNodes)[1]).childNodes)[3]);
-    tickets = tickets.children;
-    if(tickets[0].getAttribute("style") == null && hasColor == 1){
-        window.setTimeout(click_page_button, 100)
-    }
-}
 
 //////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////
     /*
@@ -271,21 +179,12 @@ function daysSinceModified(ticketModifiedDate){
     return diffDays;
 }
 
+
 //////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////
     /*
-    sleep() waits for "ms" milliseconds before returning to allow the program to continue execution.
+    function executed when the toggle modify button is clicked. Toggles the color coding attribute between status and last modified date.
     */
 //////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////
-function sleep(ms) {
-  return new Promise(resolve => setTimeout(resolve, ms));
-}
-
-async function demo() {
-  console.log('Taking a break...');
-  await sleep(2000);
-  console.log('Two seconds later');
-}
-
 function clickToggleModify(){
     if(modified){
         modified = false;
