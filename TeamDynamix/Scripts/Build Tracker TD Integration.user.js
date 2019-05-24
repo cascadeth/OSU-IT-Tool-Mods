@@ -1,7 +1,7 @@
 // ==UserScript==
 // @name         Build Tracker TD Integration
 // @namespace    http://tampermonkey.net/
-// @version      1.1
+// @version      1.2
 // @description  Adds a button on each ticket that opens a build tracker page for the ticket. 
 // @             If the ticket has a build associated with it then it opens the build page.
 // @             If it does not have a build associated with it, but has a non-finalized interview associated with it then it will open the non-finaliazed interview.
@@ -88,11 +88,11 @@ function insertButton(buttonMode){
 }
 
 function clickBTButtonBuild(){ //Activated when the BT Button is pressed and there is a build for the ticket. Redirects to the corresponding build page.
-    var ticketNumber = document.getElementById("thTicket_copyControl_btnCopyID").value //Grabs the ticket number off of the ticket page.
+    var ticketNumber = document.getElementById("btnCopyID").childNodes[1].innerHTML;//Grabs the ticket number off of the ticket page.
     window.open("https://tools.is.oregonstate.edu/build-tracker/builds/" + ticketNumber);
 }
 function clickBTButtonInterview(){//Activated when the BT Button is pressed and there is no build for the ticket. Redirects to the possible interview page for the ticket.
-    var ticketNumber = document.getElementById("thTicket_copyControl_btnCopyID").value; //Grabs the ticket number off of the end of the URL
+    var ticketNumber = document.getElementById("btnCopyID").childNodes[1].innerHTML; //Grabs the ticket number off of the end of the URL
     window.open("https://tools.is.oregonstate.edu/build-tracker/interviews/" + ticketNumber +"?checkInterviewTicketNumber" + ticketNumber);
 }
 function checkForRealInterview(){ //Checks to see if an interview exists for the ticket alread and, if there is no interview, it redirects to the "Create Interview" page.
