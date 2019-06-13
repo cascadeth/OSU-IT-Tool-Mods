@@ -1,14 +1,14 @@
 /* ==UserStyle==
 @name           dark-wood
 @namespace      oregonstate.teamdynamix.com
-@version        1.1.7
+@version        1.3.1
 @description    A dark wood them for TeamDynamix
 @author         cascadeth <cascadeth@gmail.com>
 @homepageURL    https://github.com/cascadeth/OSU-IT-Tool-Mods
 @license        GPL v3
 ==/UserStyle== */
 
-@-moz-document domain("oregonstate.teamdynamix.com") {
+@-moz-document url-prefix("https://oregonstate.teamdynamix.com/TDNext") {
     
     /*Main Background Color*/
     body, #divHeader {
@@ -36,7 +36,7 @@
     
     /*Table Header Background*/
     .TDGridHeader {
-        background-color: #A3A3A3 !important;
+        background-color: grey !important;
     }
     /*Applications Menu Background, All Rows Background, and header*/
     #ApplicationsMenu, tr, .ButtonCellTop {
@@ -50,7 +50,7 @@
 
     /*User Information Font*/
     .gutter-bottom, .disp-group {
-        color: #AFAFAF;
+        color: grey;
     }
     .control-label {
         color: white !important;
@@ -97,7 +97,7 @@
     }
     /*Border Color*/
     .panel-default {
-        border-color: #7C7C7C;
+        border-color: grey;
     }
     
     /*Update Comments*/
@@ -149,6 +149,39 @@
     
     .checkbox *{
         color: #555;
+    }
+    
+    /*Side panel in IT Tab*/
+    .modal-content {
+        background: #444;
+    }
+    
+    .filter-section {
+        background: grey !important;
+        color: white;
+        border-color: grey !important;
+    }
+    
+    #lbStatus_ms_drop *, #lbStatus_ms_drop * * {
+        color: #333;
+    }
+    
+    .popover * {
+        background: #333;
+        border-color: #555;
+    }
+    
+    .pull-right a * {
+        color: grey 
+    }
+    
+}
+
+@-moz-document url-prefix("https://oregonstate.teamdynamix.com/TDNext/Apps/Shared/FileOpen.aspx") {
+    
+    body {
+        color: #DDD;
+        background: #333
     }
     
 }

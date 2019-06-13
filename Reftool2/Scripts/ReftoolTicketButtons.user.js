@@ -17,7 +17,6 @@ else if(URL.indexOf("phonelog") >=0){
     console.log("initial load");
     window.setTimeout(fill_form_generic, 100);
 }
-
 function fill_form_generic(){
     try{
         var status = document.getElementById("attribute1306");
